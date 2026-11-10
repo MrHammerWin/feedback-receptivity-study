@@ -1,4 +1,7 @@
 import json
+import subprocess
+import sys
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
@@ -6,7 +9,7 @@ import pytest
 from crmn_agent import codex_provider
 from crmn_agent.codex_provider import AUTHORIZED_CAMPAIGNS, CodexProvider, reserve_call
 from crmn_agent.providers import BudgetExceeded, Provider
-from crmn_agent.public_authorization import authorize, campaign_maximum
+from crmn_agent.public_authorization import RESOURCE_PROFILES, authorize, campaign_maximum
 from crmn_agent.schemas import Decision
 
 
@@ -16,6 +19,8 @@ def test_new_fifty_call_owner_campaign_is_portable_and_does_not_reset(tmp_path):
     ledger = config.with_name('allowance.json')
     assert value['allow_subscription'] is True and value['allow_paid'] is False
     assert value['authorized_campaigns'] == {'local-demo': 50}
+    assert value['max_calls'] == 1000 and value['max_total_tokens'] == 1_000_000
+    assert value['resource_profile'] == 'smoke'
     for expected in range(1, 51):
         assert reserve_call(ledger, 50, 'local-demo', authorized_campaigns=value['authorized_campaigns']) == expected
     with pytest.raises(BudgetExceeded, match='exhausted'):
@@ -23,6 +28,59 @@ def test_new_fifty_call_owner_campaign_is_portable_and_does_not_reset(tmp_path):
     with pytest.raises(FileExistsError):
         authorize(config.parent, 'local-demo', 50, 'owner-selected-model', True)
     assert len(ledger.with_suffix('.attempts.jsonl').read_text().splitlines()) == 50
+
+
+def test_recorded_resource_profile_keeps_the_separate_owner_launch_allowance(tmp_path):
+    config = authorize(tmp_path / 'replica', 'local-replica', 2, 'fixture', True,
+                       resource_profile='recorded-study')
+    value = json.loads(config.read_text())['provider']
+    ledger = config.with_name('allowance.json')
+    assert {name: value[name] for name in ('max_calls', 'max_total_tokens')} == {
+        'max_calls': 20_000, 'max_total_tokens': 200_000_000}
+    assert value['subscription_max_launches'] == 2
+    assert json.loads(ledger.read_text())['limit'] == 2
+    for expected in (1, 2):
+        assert reserve_call(ledger, 2, 'local-replica', authorized_campaigns=value['authorized_campaigns']) == expected
+    with pytest.raises(BudgetExceeded, match='exhausted'):
+        reserve_call(ledger, 2, 'local-replica', authorized_campaigns=value['authorized_campaigns'])
+    assert len(ledger.with_suffix('.attempts.jsonl').read_text().splitlines()) == 2
+
+
+def test_recorded_profile_can_cover_full_qa_logical_calls_without_inference(tmp_path):
+    config = authorize(tmp_path / 'qa', 'local-qa', 1560, 'fixture', True,
+                       resource_profile='recorded-study')
+    value = json.loads(config.read_text())['provider']
+    provider = Provider(value)
+    # The 120-question protocol has 1,560 logical calls. Validate its process
+    # guards directly: this does not construct CodexProvider or launch anything.
+    provider.usage.calls = 1560
+    provider.usage.input_tokens = 23_000_000
+    provider._check_budget(100_000, 500)
+    assert not config.with_name('allowance.attempts.jsonl').exists()
+    assert value['max_calls'] == RESOURCE_PROFILES['recorded-study']['max_calls']
+
+
+def test_unknown_resource_profile_creates_no_allowance(tmp_path):
+    with pytest.raises(ValueError, match='resource profile'):
+        authorize(tmp_path / 'invalid', 'local-invalid', 50, 'fixture', True,
+                  resource_profile='unknown')
+    assert not (tmp_path / 'invalid').exists()
+
+
+def test_recorded_profile_cli_creates_configuration_without_launching_a_model(tmp_path):
+    destination = tmp_path / 'cli-profile'
+    root = Path(__file__).parents[1]
+    subprocess.run([
+        sys.executable, '-m', 'crmn_agent.public_authorization',
+        '--directory', str(destination), '--campaign', 'fixture-cli-profile',
+        '--max-launches', '2', '--model', 'fixture-no-model-access',
+        '--resource-profile', 'recorded-study', '--i-authorize-subscription-use',
+    ], env={'PYTHONPATH': str(root / 'src')}, capture_output=True, text=True, check=True, timeout=15)
+    provider = json.loads((destination / 'provider.json').read_text())['provider']
+    assert provider['max_calls'] == 20_000 and provider['max_total_tokens'] == 200_000_000
+    assert provider['subscription_max_launches'] == 2
+    assert json.loads((destination / 'allowance.json').read_text())['limit'] == 2
+    assert not (destination / 'allowance.attempts.jsonl').exists()
 
 
 def test_missing_consent_and_unknown_campaign_make_no_reservation(tmp_path):

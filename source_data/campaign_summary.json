@@ -1,0 +1,19 @@
+{
+  "authorized": 5000,
+  "reserved_launches": 4416,
+  "remaining_not_spent": 584,
+  "paid_api_calls": 0,
+  "primary_qa_questions": 120,
+  "repeat1_questions": 10,
+  "native_episodes": 100,
+  "launch_partition": {
+    "engineering_and_diagnostics": 560,
+    "primary_qa": 1122,
+    "primary_native": 2639,
+    "repeat1_infrastructure_only_censored_attempt": 1,
+    "completed_repeat1": 94
+  },
+  "primary_questions_and_repeat_not_pooled": true,
+  "failures_consume_allowance": true,
+  "raw_authorization_ledger_distributed": false
+}

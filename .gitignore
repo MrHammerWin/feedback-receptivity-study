@@ -19,3 +19,5 @@ baseline_assets/
 *.parquet
 *.log
 auth.json
+rebuilt_figures/
+/topic_sensitivity.json

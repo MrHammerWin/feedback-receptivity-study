@@ -28,5 +28,9 @@ jobs:
         run: python tools/check_public_tree.py .
       - name: Run scripted tests without network
         run: python -m pytest -q -p no:cacheprovider
+      - name: Recompute published numerical results
+        run: python scripts/verify_scored_data.py --source-data source_data --json
+      - name: Rebuild study figures without models
+        run: python analysis/plot_study.py --stats source_data/aggregated_stats.json --out "$RUNNER_TEMP/study-figures" --phase main --cohort main-v5 --model gpt-5.6-luna --repeat-id 0 --source-sha256 007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5 --qa-source-identity d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc --require-all-figures
       - name: Lint
         run: ruff check .

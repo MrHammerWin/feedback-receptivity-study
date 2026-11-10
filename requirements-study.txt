@@ -1,0 +1,10 @@
+# Direct versions recorded for the study; this is not a transitive lock file.
+pydantic==2.14.2
+numpy==2.5.4
+textcraft==0.0.3
+alfworld==0.4.2
+textworld==1.7.0
+pyarrow==21.0.0
+matplotlib==3.11.2
+pytest==8.4.2
+ruff==0.17.3

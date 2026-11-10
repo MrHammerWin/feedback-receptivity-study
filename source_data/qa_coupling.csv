@@ -1,0 +1,17 @@
+﻿phase,cohort,model,source_identity,repeat_id,reasoning_effort,condition,a,b,n,final_prompt_pair_n,same_route_n,identical_final_prompt_n,identical_final_output_n,same_final_action_n,shared_draft_mismatch_n
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,correct_advice,controlled,grounding_only,120,120,93,93,95,115,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,correct_advice,controlled,always_critique,120,120,93,93,95,115,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,correct_advice,controlled,facts_only,120,120,4,4,12,102,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,correct_advice,controlled,no_feedback,120,0,0,0,6,102,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,false_advice,controlled,grounding_only,120,120,100,100,100,117,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,false_advice,controlled,always_critique,120,120,100,100,100,117,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,false_advice,controlled,facts_only,120,120,1,1,9,87,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,false_advice,controlled,no_feedback,120,0,0,0,4,89,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,correct_advice,controlled,grounding_only,10,10,8,8,8,10,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,correct_advice,controlled,always_critique,10,10,8,8,8,10,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,correct_advice,controlled,facts_only,10,10,0,0,0,10,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,correct_advice,controlled,no_feedback,10,0,0,0,1,8,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,false_advice,controlled,grounding_only,10,10,7,7,7,10,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,false_advice,controlled,always_critique,10,10,7,7,7,10,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,false_advice,controlled,facts_only,10,10,1,1,1,7,0
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,false_advice,controlled,no_feedback,10,0,0,0,0,5,0

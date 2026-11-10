@@ -1,0 +1,264 @@
+{
+  "schema_version": "qa-topic-sensitivity-v1",
+  "input_row_n": 1300,
+  "status": "defined_groups",
+  "independence_unit": "Question pair; conditions, policies and repeats are not additional independent questions",
+  "interpretation": "Preplanned descriptive topic sensitivity, not a replacement primary test or an equivalence test",
+  "groups": [
+    {
+      "phase": "main",
+      "cohort": "main-v5",
+      "model": "gpt-5.6-luna",
+      "source_identity": "d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc",
+      "repeat_id": 0,
+      "reasoning_effort": "low",
+      "condition": "false_advice",
+      "endpoint": "retention",
+      "a": "controlled",
+      "b": "grounding_only",
+      "candidate_question_n": 120,
+      "missing_policy_pair_n": 0,
+      "ineligible_pair_n": 0,
+      "initial_correctness_missing_pair_n": 0,
+      "initially_wrong_pair_n": 26,
+      "missing_topic_pair_n": 0,
+      "draft_digest_verified_pair_n": 94,
+      "advice_digest_verified_pair_n": 94,
+      "primary_exact": {
+        "n": 94,
+        "a_only": 3,
+        "b_only": 0,
+        "difference": 0.031914893617021274,
+        "interval95": [
+          -0.04046232444165532,
+          0.09995601352758116
+        ],
+        "interval_method": "conservative exact discordant-cell Bonferroni",
+        "mcnemar_exact_two_sided_p": 0.25
+      },
+      "topic_n": 20,
+      "expected_topic_n": 20,
+      "eligible_topic_n": 20,
+      "topic_pair_n": {
+        "mmlu_anatomy": 4,
+        "mmlu_astronomy": 4,
+        "mmlu_business_ethics": 5,
+        "mmlu_clinical_knowledge": 4,
+        "mmlu_college_medicine": 4,
+        "mmlu_computer_security": 4,
+        "mmlu_global_facts": 5,
+        "mmlu_high_school_macroeconomics": 5,
+        "mmlu_high_school_microeconomics": 5,
+        "mmlu_high_school_psychology": 6,
+        "mmlu_human_aging": 5,
+        "mmlu_human_sexuality": 4,
+        "mmlu_management": 4,
+        "mmlu_marketing": 6,
+        "mmlu_moral_disputes": 6,
+        "mmlu_moral_scenarios": 4,
+        "mmlu_nutrition": 4,
+        "mmlu_public_relations": 4,
+        "mmlu_sociology": 5,
+        "mmlu_world_religions": 6
+      },
+      "cluster_bootstrap": {
+        "status": "defined",
+        "seed": 20261110,
+        "requested_replicates": 10000,
+        "computed_replicates": 10000,
+        "defined_replicates": 10000,
+        "zero_denominator_replicates": 0,
+        "difference": 0.031914893617021274,
+        "interval95": [
+          0.0,
+          0.06741573033707865
+        ],
+        "degenerate": false,
+        "method": "Whole-topic resampling with replacement; all eligible pairs retained; linear percentile95"
+      },
+      "leave_one_topic_out": {
+        "status": "defined",
+        "defined_n": 20,
+        "rows": [
+          {
+            "omitted_topic": "mmlu_anatomy",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_astronomy",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_business_ethics",
+            "remaining_pair_n": 89,
+            "difference": 0.02247191011235955
+          },
+          {
+            "omitted_topic": "mmlu_clinical_knowledge",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_college_medicine",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_computer_security",
+            "remaining_pair_n": 90,
+            "difference": 0.022222222222222223
+          },
+          {
+            "omitted_topic": "mmlu_global_facts",
+            "remaining_pair_n": 89,
+            "difference": 0.033707865168539325
+          },
+          {
+            "omitted_topic": "mmlu_high_school_macroeconomics",
+            "remaining_pair_n": 89,
+            "difference": 0.033707865168539325
+          },
+          {
+            "omitted_topic": "mmlu_high_school_microeconomics",
+            "remaining_pair_n": 89,
+            "difference": 0.033707865168539325
+          },
+          {
+            "omitted_topic": "mmlu_high_school_psychology",
+            "remaining_pair_n": 88,
+            "difference": 0.03409090909090909
+          },
+          {
+            "omitted_topic": "mmlu_human_aging",
+            "remaining_pair_n": 89,
+            "difference": 0.033707865168539325
+          },
+          {
+            "omitted_topic": "mmlu_human_sexuality",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_management",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_marketing",
+            "remaining_pair_n": 88,
+            "difference": 0.022727272727272728
+          },
+          {
+            "omitted_topic": "mmlu_moral_disputes",
+            "remaining_pair_n": 88,
+            "difference": 0.03409090909090909
+          },
+          {
+            "omitted_topic": "mmlu_moral_scenarios",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_nutrition",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_public_relations",
+            "remaining_pair_n": 90,
+            "difference": 0.03333333333333333
+          },
+          {
+            "omitted_topic": "mmlu_sociology",
+            "remaining_pair_n": 89,
+            "difference": 0.033707865168539325
+          },
+          {
+            "omitted_topic": "mmlu_world_religions",
+            "remaining_pair_n": 88,
+            "difference": 0.03409090909090909
+          }
+        ],
+        "difference_range": [
+          0.022222222222222223,
+          0.03409090909090909
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "phase": "main",
+      "cohort": "main-v5",
+      "model": "gpt-5.6-luna",
+      "source_identity": "d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc",
+      "repeat_id": 1,
+      "reasoning_effort": "low",
+      "condition": "false_advice",
+      "endpoint": "retention",
+      "a": "controlled",
+      "b": "grounding_only",
+      "candidate_question_n": 10,
+      "missing_policy_pair_n": 0,
+      "ineligible_pair_n": 0,
+      "initial_correctness_missing_pair_n": 0,
+      "initially_wrong_pair_n": 3,
+      "missing_topic_pair_n": 0,
+      "draft_digest_verified_pair_n": 7,
+      "advice_digest_verified_pair_n": 7,
+      "primary_exact": {
+        "n": 7,
+        "a_only": 0,
+        "b_only": 0,
+        "difference": 0.0,
+        "interval95": [
+          -0.4652755999733035,
+          0.4652755999733035
+        ],
+        "interval_method": "conservative exact discordant-cell Bonferroni",
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      "topic_n": 8,
+      "expected_topic_n": 20,
+      "eligible_topic_n": 6,
+      "topic_pair_n": {
+        "mmlu_anatomy": 1,
+        "mmlu_college_medicine": 1,
+        "mmlu_computer_security": 1,
+        "mmlu_high_school_macroeconomics": 0,
+        "mmlu_high_school_psychology": 1,
+        "mmlu_human_aging": 1,
+        "mmlu_sociology": 0,
+        "mmlu_world_religions": 2
+      },
+      "cluster_bootstrap": {
+        "status": "undefined_topic_coverage",
+        "seed": 20261110,
+        "requested_replicates": 10000,
+        "computed_replicates": 0,
+        "defined_replicates": 0,
+        "zero_denominator_replicates": 0,
+        "difference": 0.0,
+        "interval95": [
+          null,
+          null
+        ],
+        "degenerate": false,
+        "method": "Whole-topic resampling with replacement; all eligible pairs retained; linear percentile95"
+      },
+      "leave_one_topic_out": {
+        "status": "undefined",
+        "defined_n": 0,
+        "rows": [],
+        "difference_range": [
+          null,
+          null
+        ]
+      },
+      "warnings": [
+        "Observed topic universe differs from expected coverage; cluster interval is undefined"
+      ]
+    }
+  ]
+}

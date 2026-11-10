@@ -1,0 +1,128 @@
+{
+  "schema_version": "public-numeric-export-v1",
+  "rescored": false,
+  "raw_questions_evidence_quotes_instructions_distributed": false,
+  "physical_cli_ledger_exported": false,
+  "physical_ledger_note": "No global physical ledger is claimed by this core-case export",
+  "files": [
+    {
+      "file": "aggregated_stats.json",
+      "sha256": "3fd796e11a8eef6592f98fcfcb723947f309faab18474f7345e5ff7cd43d0b61"
+    },
+    {
+      "file": "native_costs.csv",
+      "sha256": "89fc51bcb657de137981a280aae92687b42f24576f92069701b1aa1aacaeef49"
+    },
+    {
+      "file": "native_diagnostics.csv",
+      "sha256": "127b3b344c3297ee16f9f8e86111e4cf4a77e984817f23b24fae0eb57aef2a57"
+    },
+    {
+      "file": "native_episode_costs.csv",
+      "sha256": "af1824a20ee5356c73afba53aa9bbc926741f80dad3632008a3774fdc98a7863"
+    },
+    {
+      "file": "native_failures.csv",
+      "sha256": "e7a753000ecb74dc08645c9e0f350eb6b68d76dfcf6f0a8c5a05f709b101ebf2"
+    },
+    {
+      "file": "native_format_sensitivity.csv",
+      "sha256": "7458eb04502e68f4868d9addea1883e6ae3f689589543511b3b7222b7effc6a0"
+    },
+    {
+      "file": "native_format_units.csv",
+      "sha256": "aabe649e068dcdca53b05745b2aaa4899f0b5a788170b49d9b2a9c63a727ed83"
+    },
+    {
+      "file": "native_input_fidelity.csv",
+      "sha256": "861476f6553030945901b5cb8b6f5c9d98c1346df9640fc764fc4dc8c13f25f4"
+    },
+    {
+      "file": "native_pairs.csv",
+      "sha256": "77816b889d56b757fc50563713f526d3e35f5009d1e6f4cb8683d821d2016add"
+    },
+    {
+      "file": "native_run_plan.json",
+      "sha256": "fea3c727a5b6fe439f9455f09d5f34f76cd600544caef6dd82d381d032de798e"
+    },
+    {
+      "file": "native_scored_numeric.csv",
+      "sha256": "073b8ed3f1c13f6cfc54670dc1547d259290cdcf67260b04fb70a0b57278249e"
+    },
+    {
+      "file": "native_summary.csv",
+      "sha256": "3b13a41d7786501edbbd4637bfe35c8dd7c2fbe50c7ce7c813ac80f4712cae5c"
+    },
+    {
+      "file": "qa_coupling.csv",
+      "sha256": "bbbd96e124cac7f0b680479d91ad946e54d248af4b786b77321a5631a9c0ca2f"
+    },
+    {
+      "file": "qa_coverage.csv",
+      "sha256": "a82f34ad74e132455f9ae7f2c735819b1e098403d72b85385e482d961bd9bc83"
+    },
+    {
+      "file": "qa_draft_summary.csv",
+      "sha256": "f614de4f2174fcd019b8fbfdc789b514e50afde31cc6bd016c594415baf61cf5"
+    },
+    {
+      "file": "qa_format_sensitivity.csv",
+      "sha256": "631e9c3337ba7eb8fd8120486bc074f0d97e3e14c74c9baf8d928a72aa07d085"
+    },
+    {
+      "file": "qa_format_units.csv",
+      "sha256": "16fdede6206c625894b1ed1f0ac5f6b2112fe59698c2a6d611a0a68021d043e8"
+    },
+    {
+      "file": "qa_manifest.json",
+      "sha256": "a69d1d497ef8f9620d99bfa6663e3a0ed7190c9de71040d61688cf09af38067c"
+    },
+    {
+      "file": "qa_pairs.csv",
+      "sha256": "9f8ffaf53c822d5380589c0faf82a50c13cc0277de1067cf7c2038580d9b0114"
+    },
+    {
+      "file": "qa_profiles.csv",
+      "sha256": "63fe7dc92ae1dc7cf20288f40586cf08fd005d29f0c55e0a4de68bca255d750e"
+    },
+    {
+      "file": "qa_proxy_transfer.csv",
+      "sha256": "d5d3b68eaa2a2a062e1f825eaddf16a284f97a25745cec5502055956ca7b79c9"
+    },
+    {
+      "file": "qa_routes.csv",
+      "sha256": "6b4e1f9dc038eb78fc6d9a7b4bc587335dc20c0002bedb4d6982e71ca6ef3675"
+    },
+    {
+      "file": "qa_scored_numeric.csv",
+      "sha256": "171b9b78ae54792cef5c5adc2e67041f5f88d1fd30478f79366db43dd2da357b"
+    },
+    {
+      "file": "qa_summary.csv",
+      "sha256": "905de6f10a00b61b494ef1adf427ab87484910db806dc22d4eac40485b819f65"
+    }
+  ],
+  "original_analysis_csv_sha256": {
+    "qa_scored_numeric.csv": "a97e67f2903267c31e9036040926c3e1d8d508649b1a4fa4134c100a6a786046",
+    "native_scored_numeric.csv": "3c1f461064d79458f0f2339e128ecfb2bb25e821db81bde08c75c9cd2f314fe8",
+    "qa_summary.csv": "905de6f10a00b61b494ef1adf427ab87484910db806dc22d4eac40485b819f65",
+    "qa_pairs.csv": "9f8ffaf53c822d5380589c0faf82a50c13cc0277de1067cf7c2038580d9b0114",
+    "qa_routes.csv": "6b4e1f9dc038eb78fc6d9a7b4bc587335dc20c0002bedb4d6982e71ca6ef3675",
+    "qa_draft_summary.csv": "f614de4f2174fcd019b8fbfdc789b514e50afde31cc6bd016c594415baf61cf5",
+    "qa_profiles.csv": "63fe7dc92ae1dc7cf20288f40586cf08fd005d29f0c55e0a4de68bca255d750e",
+    "qa_coupling.csv": "bbbd96e124cac7f0b680479d91ad946e54d248af4b786b77321a5631a9c0ca2f",
+    "qa_proxy_transfer.csv": "d5d3b68eaa2a2a062e1f825eaddf16a284f97a25745cec5502055956ca7b79c9",
+    "qa_format_units.csv": "16fdede6206c625894b1ed1f0ac5f6b2112fe59698c2a6d611a0a68021d043e8",
+    "qa_format_sensitivity.csv": "631e9c3337ba7eb8fd8120486bc074f0d97e3e14c74c9baf8d928a72aa07d085",
+    "qa_coverage.csv": "a82f34ad74e132455f9ae7f2c735819b1e098403d72b85385e482d961bd9bc83",
+    "native_summary.csv": "3b13a41d7786501edbbd4637bfe35c8dd7c2fbe50c7ce7c813ac80f4712cae5c",
+    "native_pairs.csv": "77816b889d56b757fc50563713f526d3e35f5009d1e6f4cb8683d821d2016add",
+    "native_costs.csv": "89fc51bcb657de137981a280aae92687b42f24576f92069701b1aa1aacaeef49",
+    "native_failures.csv": "e7a753000ecb74dc08645c9e0f350eb6b68d76dfcf6f0a8c5a05f709b101ebf2",
+    "native_episode_costs.csv": "af1824a20ee5356c73afba53aa9bbc926741f80dad3632008a3774fdc98a7863",
+    "native_format_units.csv": "aabe649e068dcdca53b05745b2aaa4899f0b5a788170b49d9b2a9c63a727ed83",
+    "native_format_sensitivity.csv": "7458eb04502e68f4868d9addea1883e6ae3f689589543511b3b7222b7effc6a0",
+    "native_diagnostics.csv": "127b3b344c3297ee16f9f8e86111e4cf4a77e984817f23b24fae0eb57aef2a57",
+    "native_input_fidelity.csv": "861476f6553030945901b5cb8b6f5c9d98c1346df9640fc764fc4dc8c13f25f4"
+  }
+}

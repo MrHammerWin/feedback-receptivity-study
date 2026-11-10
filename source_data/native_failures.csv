@@ -1,0 +1,6 @@
+﻿phase,cohort,benchmark,model,source_sha256,protocol_id,variant,repeat_id,reasoning_effort,configured_max_calls,failure_type,count,n
+main,main-v5,alfworld,gpt-5.6-luna,007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5,6e53fb754504,feedback,0,low,64,episode_compute_cap,2,12
+main,main-v5,alfworld,gpt-5.6-luna,007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5,6e53fb754504,grounding_only,0,low,64,episode_compute_cap,3,12
+main,main-v5,alfworld,gpt-5.6-luna,007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5,6e53fb754504,raw_actor,0,low,64,episode_compute_cap,4,12
+main,main-v5,textcraft,gpt-5.6-luna,007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5,7fb1913c9862,feedback,0,low,64,episode_compute_cap,3,8
+main,main-v5,textcraft,gpt-5.6-luna,007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5,7fb1913c9862,grounding_only,0,low,64,episode_compute_cap,4,8

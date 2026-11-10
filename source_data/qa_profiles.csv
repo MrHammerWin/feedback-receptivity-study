@@ -1,0 +1,5 @@
+﻿phase,cohort,model,source_identity,repeat_id,reasoning_effort,condition,n,measured_n,complete_n,healthy_n,missing_n,healthy_rate,healthy_initially_correct_n,healthy_but_corrupted_n,interpretation
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,correct_advice,120,120,120,93,0,0.775,72,1,"Quote-fidelity proxy, not semantic truth or calibrated probability"
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,false_advice,120,120,120,100,0,0.8333333333333334,75,26,"Quote-fidelity proxy, not semantic truth or calibrated probability"
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,correct_advice,10,10,10,8,0,0.8,5,0,"Quote-fidelity proxy, not semantic truth or calibrated probability"
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,false_advice,10,10,10,7,0,0.7,5,3,"Quote-fidelity proxy, not semantic truth or calibrated probability"

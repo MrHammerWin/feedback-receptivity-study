@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.23622pt" height="447.874016pt" viewBox="0 0 510.23622 447.874016" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Feedback study plotter</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 447.874016 
+L 510.23622 447.874016 
+L 510.23622 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 24.389291 66.804608 
+L 124.727244 66.804608 
+Q 133.452283 66.804608 133.452283 65.13359 
+L 133.452283 31.527566 
+Q 133.452283 29.856549 124.727244 29.856549 
+L 24.389291 29.856549 
+Q 15.664252 29.856549 15.664252 31.527566 
+L 15.664252 65.13359 
+Q 15.664252 66.804608 24.389291 66.804608 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #f2f5f7; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 143.146772 66.804608 
+L 243.484724 66.804608 
+Q 252.209764 66.804608 252.209764 65.13359 
+L 252.209764 31.527566 
+Q 252.209764 29.856549 243.484724 29.856549 
+L 143.146772 29.856549 
+Q 134.421732 29.856549 134.421732 31.527566 
+L 134.421732 65.13359 
+Q 134.421732 66.804608 143.146772 66.804608 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #f2f5f7; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 261.904252 66.804608 
+L 362.242205 66.804608 
+Q 370.967244 66.804608 370.967244 65.13359 
+L 370.967244 31.527566 
+Q 370.967244 29.856549 362.242205 29.856549 
+L 261.904252 29.856549 
+Q 253.179213 29.856549 253.179213 31.527566 
+L 253.179213 65.13359 
+Q 253.179213 66.804608 261.904252 66.804608 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #f2f5f7; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 380.661732 66.804608 
+L 480.999685 66.804608 
+Q 489.724724 66.804608 489.724724 65.13359 
+L 489.724724 31.527566 
+Q 489.724724 29.856549 480.999685 29.856549 
+L 380.661732 29.856549 
+Q 371.936693 29.856549 371.936693 31.527566 
+L 371.936693 65.13359 
+Q 371.936693 66.804608 380.661732 66.804608 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #f2f5f7; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 131.087832 48.330578 
+Q 133.45114 48.330578 134.808218 48.330578 
+" clip-path="url(#p0b88aee2f0)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 131.608218 46.730578 
+L 134.808218 48.330578 
+L 131.608218 49.930578 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 249.845312 48.330578 
+Q 252.208621 48.330578 253.565699 48.330578 
+" clip-path="url(#p0b88aee2f0)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 250.365699 46.730578 
+L 253.565699 48.330578 
+L 250.365699 49.930578 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 368.602793 48.330578 
+Q 370.966101 48.330578 372.323179 48.330578 
+" clip-path="url(#p0b88aee2f0)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 369.123179 46.730578 
+L 372.323179 48.330578 
+L 369.123179 49.930578 
+z
+" clip-path="url(#p0b88aee2f0)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.755906" y="19.257694" transform="rotate(-0 12.755906 19.257694)">А  Выбор следующего действия</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(32.876643 45.947453)">Наблюдение, цель,</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(33.728674 54.775906)">правила и история</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(179.153451 45.465062)">Актор:</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(152.375326 54.775906)">черновик команды</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(294.984556 40.463062)">Критик:</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(274.137978 50.878984)">отдельный вызов</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(279.444916 60.882984)">той же модели</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(399.929521 45.465062)">Нужна правка</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(405.847615 55.522875)">черновика?</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start" x="22.450394" y="89.521219" transform="rotate(-0 22.450394 89.521219)">Нет правки: исполнить черновик. Есть правка: перейти к пробам и выбору канала.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c5962" x="22.450394" y="100.204561" transform="rotate(-0 22.450394 100.204561)">В истории остаются наблюдения и команды; критика и ответы проб не добавляются.</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_9">
+    <path d="M 29.236535 165.046526 
+L 480.999685 165.046526 
+Q 489.724724 165.046526 489.724724 162.957754 
+L 489.724724 142.998375 
+Q 489.724724 140.909603 480.999685 140.909603 
+L 29.236535 140.909603 
+Q 20.511496 140.909603 20.511496 142.998375 
+L 20.511496 162.957754 
+Q 20.511496 165.046526 29.236535 165.046526 
+z
+" clip-path="url(#p4f7add502c)" style="fill: #edf5fa; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 34.08378 218.42626 
+L 238.63748 218.42626 
+Q 247.36252 218.42626 247.36252 216.337487 
+L 247.36252 182.452961 
+Q 247.36252 180.364189 238.63748 180.364189 
+L 34.08378 180.364189 
+Q 25.35874 180.364189 25.35874 182.452961 
+L 25.35874 216.337487 
+Q 25.35874 218.42626 34.08378 218.42626 
+z
+" clip-path="url(#p4f7add502c)" style="fill: #eaf3fa; stroke: #0072b2; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 271.59874 218.42626 
+L 476.152441 218.42626 
+Q 484.87748 218.42626 484.87748 216.337487 
+L 484.87748 182.452961 
+Q 484.87748 180.364189 476.152441 180.364189 
+L 271.59874 180.364189 
+Q 262.873701 180.364189 262.873701 182.452961 
+L 262.873701 216.337487 
+Q 262.873701 218.42626 271.59874 218.42626 
+z
+" clip-path="url(#p4f7add502c)" style="fill: #fff4df; stroke: #ad7600; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 133.937008 167.164989 
+Q 133.937008 172.126485 133.937008 176.081751 
+" clip-path="url(#p4f7add502c)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 135.537008 172.881751 
+L 133.937008 176.081751 
+L 132.337008 172.881751 
+z
+" clip-path="url(#p4f7add502c)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 376.299213 167.164989 
+Q 376.299213 172.126485 376.299213 176.081751 
+" clip-path="url(#p4f7add502c)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 377.899213 172.881751 
+L 376.299213 176.081751 
+L 374.699213 172.881751 
+z
+" clip-path="url(#p4f7add502c)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.755906" y="132.840483" transform="rotate(-0 12.755906 132.840483)">Б  Изолированные пробы точности цитирования</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="255.11811" y="155.196549" transform="rotate(-0 255.11811 155.196549)">Модель видит начало наблюдения (до 1800 символов) и выбранную строку source_fragment.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(93.908333 191.645583)">Изменённая строка</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(75.591583 201.11338)">+ исходная строка в совете</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(85.826208 211.87588)">Удалось восстановить?</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(333.795528 191.72374)">Выбранная строка</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(328.7852 202.443958)">+ совет её изменить</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(329.184309 211.589521)">Сохранил дословно?</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c5962" x="22.450394" y="236.299673" transform="rotate(-0 22.450394 236.299673)">Индикаторы точного совпадения строк, а не истинности высказывания или плана.</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_14">
+    <path d="M 24.389291 374.304365 
+L 165.928819 374.304365 
+Q 174.653858 374.304365 174.653858 371.547186 
+L 174.653858 283.930155 
+Q 174.653858 281.172976 165.928819 281.172976 
+L 24.389291 281.172976 
+Q 15.664252 281.172976 15.664252 283.930155 
+L 15.664252 371.547186 
+Q 15.664252 374.304365 24.389291 374.304365 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #eaf3fa; stroke: #0072b2; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 95.159055 376.454522 
+Q 95.159055 379.052022 95.159055 380.643291 
+" clip-path="url(#p0dae5e2c8e)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 96.759055 377.443291 
+L 95.159055 380.643291 
+L 93.559055 377.443291 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 184.348346 374.304365 
+L 325.887874 374.304365 
+Q 334.612913 374.304365 334.612913 371.547186 
+L 334.612913 283.930155 
+Q 334.612913 281.172976 325.887874 281.172976 
+L 184.348346 281.172976 
+Q 175.623307 281.172976 175.623307 283.930155 
+L 175.623307 371.547186 
+Q 175.623307 374.304365 184.348346 374.304365 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #eaf7f2; stroke: #009e73; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 255.11811 376.454522 
+Q 255.11811 379.052022 255.11811 380.643291 
+" clip-path="url(#p0dae5e2c8e)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 256.71811 377.443291 
+L 255.11811 380.643291 
+L 253.51811 377.443291 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 344.307402 374.304365 
+L 485.846929 374.304365 
+Q 494.571969 374.304365 494.571969 371.547186 
+L 494.571969 283.930155 
+Q 494.571969 281.172976 485.846929 281.172976 
+L 344.307402 281.172976 
+Q 335.582362 281.172976 335.582362 283.930155 
+L 335.582362 371.547186 
+Q 335.582362 374.304365 344.307402 374.304365 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #f0f0f0; stroke: #6c6c6c; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 415.077165 376.454522 
+Q 415.077165 379.052022 415.077165 380.643291 
+" clip-path="url(#p0dae5e2c8e)" style="fill: none; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 416.677165 377.443291 
+L 415.077165 380.643291 
+L 413.477165 377.443291 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #46515a; stroke: #46515a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 29.236535 413.364405 
+L 480.999685 413.364405 
+Q 489.724724 413.364405 489.724724 410.607226 
+L 489.724724 387.324378 
+Q 489.724724 384.567199 480.999685 384.567199 
+L 29.236535 384.567199 
+Q 20.511496 384.567199 20.511496 387.324378 
+L 20.511496 410.607226 
+Q 20.511496 413.364405 29.236535 413.364405 
+z
+" clip-path="url(#p0dae5e2c8e)" style="fill: #ffffff; stroke: #677681; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.755906" y="269.520792" transform="rotate(-0 12.755906 269.520792)">В  Контроллер допуска и реальное действие</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(40.614961 299.863155)">Восстановил и сохранил;</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(49.185883 309.173999)">цитата присутствует</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(95.159055 317.73467)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(53.225664 329.875155)">Допустить критику</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(95.159055 337.74267)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(48.692602 349.883155)">Контекст + черновик</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(59.301352 359.468827)">+ текст критика</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(183.392454 300.059186)">Пробы полны, строка сохранена;</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(191.601423 309.173999)">нет исправления или цитаты</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(255.11811 317.73467)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(202.588782 329.875155)">Передать только факты</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(255.11811 337.74267)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(208.651657 349.883155)">Контекст + черновик</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(206.13272 360.369545)">+ цитаты наблюдения</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(377.566009 299.916967)">Строка изменена</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(360.343447 309.176561)">или неполное измерение</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(415.077165 317.73467)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(356.911618 330.071186)">Новый выбор из контекста</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(415.077165 337.74267)"/>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(361.286447 349.883155)">Без текущего черновика</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'" transform="translate(368.943837 360.083186)">и без текста критика</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="255.11811" y="401.227849" transform="rotate(-0 255.11811 401.227849)">Одна реальная команда → штатный ответ среды → следующий шаг</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c5962" x="12.755906" y="431.302677" transform="rotate(-0 12.755906 431.302677)">Недоступный черновик также направляется в новый выбор. Пробы не исполняются в среде.</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c5962" x="12.755906" y="442.051654" transform="rotate(-0 12.755906 442.051654)">В QA-опыте критик заменён фиксированным советом; начальный черновик общий для политик.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0b88aee2f0">
+   <rect x="12.755906" y="11.19685" width="484.724409" height="92.834319"/>
+  </clipPath>
+  <clipPath id="p4f7add502c">
+   <rect x="12.755906" y="124.547554" width="484.724409" height="116.042899"/>
+  </clipPath>
+  <clipPath id="p0dae5e2c8e">
+   <rect x="12.755906" y="261.106838" width="484.724409" height="153.176627"/>
+  </clipPath>
+ </defs>
+</svg>

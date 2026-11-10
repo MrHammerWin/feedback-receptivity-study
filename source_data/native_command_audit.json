@@ -1,0 +1,662 @@
+{
+  "schema_version": "independent-native-command-audit-v1",
+  "episodes": 100,
+  "tasks": 20,
+  "identical_initial_frames_across_five_variants": 20,
+  "overall": {
+    "executed_commands_bound_to_raw_cache": 1751,
+    "empty_action": 0,
+    "surrounding_whitespace": 0,
+    "leading_greater_than": 0,
+    "action_label": 0,
+    "code_fence": 0,
+    "multiline_or_tab": 0,
+    "outer_quotation": 0,
+    "non_ascii_action": 0,
+    "controller_unrecognized_actions_bound_to_raw_LLM_Decision": 168
+  },
+  "groups": [
+    {
+      "benchmark": "alfworld",
+      "variant": "feedback",
+      "episodes": 12,
+      "status_success": 10,
+      "executed_commands": 255,
+      "unexecuted_turn_calls": 1,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 255,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 0,
+      "outside_list_and_rejected": 0,
+      "format_normalization_would_match_public_list": 0,
+      "status_episode_compute_cap": 2
+    },
+    {
+      "benchmark": "alfworld",
+      "variant": "grounding_only",
+      "episodes": 12,
+      "status_success": 9,
+      "executed_commands": 244,
+      "unexecuted_turn_calls": 1,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 244,
+      "outside_public_command_list": 1,
+      "explicit_native_rejection": 1,
+      "outside_list_and_rejected": 1,
+      "format_normalization_would_match_public_list": 0,
+      "status_episode_compute_cap": 3,
+      "rejection_native_nothing_happens": 1
+    },
+    {
+      "benchmark": "alfworld",
+      "variant": "raw_actor",
+      "episodes": 12,
+      "status_success": 8,
+      "executed_commands": 396,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 396,
+      "outside_public_command_list": 28,
+      "explicit_native_rejection": 28,
+      "outside_list_and_rejected": 28,
+      "format_normalization_would_match_public_list": 0,
+      "status_episode_compute_cap": 4,
+      "rejection_native_nothing_happens": 28
+    },
+    {
+      "benchmark": "alfworld",
+      "variant": "reflact_paper",
+      "episodes": 12,
+      "status_success": 12,
+      "executed_commands": 228,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 228,
+      "outside_public_command_list": 1,
+      "explicit_native_rejection": 1,
+      "outside_list_and_rejected": 1,
+      "format_normalization_would_match_public_list": 0,
+      "rejection_native_nothing_happens": 1
+    },
+    {
+      "benchmark": "alfworld",
+      "variant": "stateact",
+      "episodes": 12,
+      "status_success": 12,
+      "executed_commands": 171,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 171,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 0,
+      "outside_list_and_rejected": 0,
+      "format_normalization_would_match_public_list": 0
+    },
+    {
+      "benchmark": "textcraft",
+      "variant": "feedback",
+      "episodes": 8,
+      "status_success": 5,
+      "executed_commands": 102,
+      "unexecuted_turn_calls": 5,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 0,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 61,
+      "outside_list_and_rejected": 0,
+      "rejection_unrecognized_command": 60,
+      "format_normalization_would_match_public_list": 0,
+      "status_episode_compute_cap": 3,
+      "rejection_insufficient_materials": 1
+    },
+    {
+      "benchmark": "textcraft",
+      "variant": "grounding_only",
+      "episodes": 8,
+      "status_success": 4,
+      "executed_commands": 145,
+      "unexecuted_turn_calls": 4,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 0,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 112,
+      "outside_list_and_rejected": 0,
+      "rejection_get_item_unavailable_or_craftable": 2,
+      "format_normalization_would_match_public_list": 0,
+      "status_episode_compute_cap": 4,
+      "rejection_unrecognized_command": 108,
+      "rejection_insufficient_materials": 1,
+      "rejection_recipe_mismatch": 1
+    },
+    {
+      "benchmark": "textcraft",
+      "variant": "raw_actor",
+      "episodes": 8,
+      "status_success": 8,
+      "executed_commands": 83,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 0,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 17,
+      "outside_list_and_rejected": 0,
+      "format_normalization_would_match_public_list": 0,
+      "rejection_unrecognized_command": 13,
+      "rejection_get_item_unavailable_or_craftable": 2,
+      "rejection_insufficient_materials": 2
+    },
+    {
+      "benchmark": "textcraft",
+      "variant": "reflact_paper",
+      "episodes": 8,
+      "status_success": 8,
+      "executed_commands": 57,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 0,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 5,
+      "outside_list_and_rejected": 0,
+      "format_normalization_would_match_public_list": 0,
+      "rejection_get_item_unavailable_or_craftable": 4,
+      "rejection_insufficient_materials": 1
+    },
+    {
+      "benchmark": "textcraft",
+      "variant": "stateact",
+      "episodes": 8,
+      "status_success": 8,
+      "executed_commands": 70,
+      "unexecuted_turn_calls": 0,
+      "empty_action": 0,
+      "surrounding_whitespace": 0,
+      "leading_greater_than": 0,
+      "action_label": 0,
+      "code_fence": 0,
+      "multiline_or_tab": 0,
+      "outer_quotation": 0,
+      "non_ascii_action": 0,
+      "with_public_command_list": 0,
+      "outside_public_command_list": 0,
+      "explicit_native_rejection": 6,
+      "outside_list_and_rejected": 0,
+      "format_normalization_would_match_public_list": 0,
+      "rejection_insufficient_materials": 5,
+      "rejection_get_item_unavailable_or_craftable": 1
+    }
+  ],
+  "source_episode_hashes": [
+    {
+      "file": "alfworld-main-00/episodes/alfworld-main-00--feedback.json",
+      "sha256": "3c7a6a2b9865941de14c8fd26852f2615de87651db563b04599e8a6c061ac847"
+    },
+    {
+      "file": "alfworld-main-00/episodes/alfworld-main-00--grounding_only.json",
+      "sha256": "12d74c79a122f4c2a757022e3b065abce8049b338e802cc92b6e75472f2d19da"
+    },
+    {
+      "file": "alfworld-main-00/episodes/alfworld-main-00--raw_actor.json",
+      "sha256": "9d0ce4cea886ee619621423e7508b4d103052defe79d65a64b296380da859041"
+    },
+    {
+      "file": "alfworld-main-00/episodes/alfworld-main-00--reflact_paper.json",
+      "sha256": "fbef4b098c9fdf0ab9d2f037db711c2e2ef0f66554ed25be2636de716c7294cc"
+    },
+    {
+      "file": "alfworld-main-00/episodes/alfworld-main-00--stateact.json",
+      "sha256": "213f31e76ce31121716b1cbae9ff9464a4437beeec34c48afdccee21356fe1bb"
+    },
+    {
+      "file": "alfworld-main-01/episodes/alfworld-main-01--feedback.json",
+      "sha256": "5a05c5bde83cc05f7365f0037ee7101ce0eb5577886cffa26d527d2b08be6276"
+    },
+    {
+      "file": "alfworld-main-01/episodes/alfworld-main-01--grounding_only.json",
+      "sha256": "844f228255110d387868706dfe4cea8dc1c1f414c192f3175ca9c90ea3849f2d"
+    },
+    {
+      "file": "alfworld-main-01/episodes/alfworld-main-01--raw_actor.json",
+      "sha256": "37a29809f2073bb7b9716e38541b4935334f7daff5215ca61a9e1189e7e155ca"
+    },
+    {
+      "file": "alfworld-main-01/episodes/alfworld-main-01--reflact_paper.json",
+      "sha256": "6854355064e448089bab8faf7d1e97eb4239cdebf739ddcb9743d5b5e4b294da"
+    },
+    {
+      "file": "alfworld-main-01/episodes/alfworld-main-01--stateact.json",
+      "sha256": "c01b684faa8637dd7c856849bc4fb0c58fbe62437c5224a23f58f70ac0d541d3"
+    },
+    {
+      "file": "alfworld-main-02/episodes/alfworld-main-02--feedback.json",
+      "sha256": "eee23bf5289e750e06fda74fc8f40df0c097645d87dd6a8735ba34b200f80613"
+    },
+    {
+      "file": "alfworld-main-02/episodes/alfworld-main-02--grounding_only.json",
+      "sha256": "dee8ccbf42ba5eade066cf773f3bea273f91afc9d68f8275cc4a9d000fae9c22"
+    },
+    {
+      "file": "alfworld-main-02/episodes/alfworld-main-02--raw_actor.json",
+      "sha256": "338daf1e20061b6aa890e894ecbc164346dd6f39e7933610b29a1be8847883d1"
+    },
+    {
+      "file": "alfworld-main-02/episodes/alfworld-main-02--reflact_paper.json",
+      "sha256": "c6fac38c947871b6bd9738ea8db586af9b82a3d44cd69da008394f6d219a5b55"
+    },
+    {
+      "file": "alfworld-main-02/episodes/alfworld-main-02--stateact.json",
+      "sha256": "8eeec429bf86ac43fb6270fea98a94db6cc082d54e2a86c58b4c742afb8ab0a0"
+    },
+    {
+      "file": "alfworld-main-03/episodes/alfworld-main-03--feedback.json",
+      "sha256": "bfe47f8a02996d18283ef50ce6967f80283779d8c052fad90d4cec929c74b1bd"
+    },
+    {
+      "file": "alfworld-main-03/episodes/alfworld-main-03--grounding_only.json",
+      "sha256": "39a43f805e22fe3917f4ebabaecce440c0427ed2cc3d1b4c96178ec6b8edccfe"
+    },
+    {
+      "file": "alfworld-main-03/episodes/alfworld-main-03--raw_actor.json",
+      "sha256": "f900f6617b7fea451baf20735a0b4dd8228ca0ba9ccae8e7b2657448887855bf"
+    },
+    {
+      "file": "alfworld-main-03/episodes/alfworld-main-03--reflact_paper.json",
+      "sha256": "408d2466354dbc9de28f5d0e2d488e6dbca0953bf18aa3597f06d6c12caa1ca9"
+    },
+    {
+      "file": "alfworld-main-03/episodes/alfworld-main-03--stateact.json",
+      "sha256": "cf562db3894762990fdaa042ac60d23f744a60b38896e3341c59cd97aae82457"
+    },
+    {
+      "file": "alfworld-main-04/episodes/alfworld-main-04--feedback.json",
+      "sha256": "bc01198d40c313a51052dcc1b77084e99eabb2b12b778ffbe0a35ae569c83419"
+    },
+    {
+      "file": "alfworld-main-04/episodes/alfworld-main-04--grounding_only.json",
+      "sha256": "f3168380a6484d22f6fd70e9c9adaf11df538e2f68c4f43386142aa4c6cdc723"
+    },
+    {
+      "file": "alfworld-main-04/episodes/alfworld-main-04--raw_actor.json",
+      "sha256": "7efde58151bb1a7bbbf77c4998a84b2d1d1282d815e439a0e9b85678731500e8"
+    },
+    {
+      "file": "alfworld-main-04/episodes/alfworld-main-04--reflact_paper.json",
+      "sha256": "c70a869e9b9cb1f16fdbdd493853ed631f640512f13b631147e664bcefba4153"
+    },
+    {
+      "file": "alfworld-main-04/episodes/alfworld-main-04--stateact.json",
+      "sha256": "990b68ea2b475990fd82f65dd56ccb3c4d2ea71eab6dcaedd60becebe1d0abee"
+    },
+    {
+      "file": "alfworld-main-05/episodes/alfworld-main-05--feedback.json",
+      "sha256": "c4ae739b92fdca4eaeb565c947ac9ffe3c64733156d79a3a904b00616ec82602"
+    },
+    {
+      "file": "alfworld-main-05/episodes/alfworld-main-05--grounding_only.json",
+      "sha256": "78da9505e760b95e36298d1392734c744a1f6fba8d2f17e01204eeb25a205c33"
+    },
+    {
+      "file": "alfworld-main-05/episodes/alfworld-main-05--raw_actor.json",
+      "sha256": "1a27810edaece40a5b7c5f7f6910f1bebe9515cf4024b473aaf950494eaa7581"
+    },
+    {
+      "file": "alfworld-main-05/episodes/alfworld-main-05--reflact_paper.json",
+      "sha256": "c0b189b52ebf0871bb33e10c4677f79b171ceb2bbf2cf52cc9e498fa08fa2056"
+    },
+    {
+      "file": "alfworld-main-05/episodes/alfworld-main-05--stateact.json",
+      "sha256": "e69d3545e0ac553e9aa693fc585980c9dc93c8454daf6c9c2de7e0402f5422a5"
+    },
+    {
+      "file": "alfworld-main-06/episodes/alfworld-main-06--feedback.json",
+      "sha256": "abdd3e6875e0590dfbdbea79d1318fca0a4d36c192920b00a55fb4f637ac5c77"
+    },
+    {
+      "file": "alfworld-main-06/episodes/alfworld-main-06--grounding_only.json",
+      "sha256": "ddb857c843ecd61b6c7054282afbf4d79e2615c20dff9a83a3951a742504852f"
+    },
+    {
+      "file": "alfworld-main-06/episodes/alfworld-main-06--raw_actor.json",
+      "sha256": "aacbc13ee4229c0c2075049c511eeba117824c9120d323d06e9395b1c074d442"
+    },
+    {
+      "file": "alfworld-main-06/episodes/alfworld-main-06--reflact_paper.json",
+      "sha256": "32c53a3ae35bab55ca315c2c72badd31f964e0a5907ed69a2dca5f6b577e5c2f"
+    },
+    {
+      "file": "alfworld-main-06/episodes/alfworld-main-06--stateact.json",
+      "sha256": "19181b2c67d3837fdc78e67802d35be671fcf30ad847fa4130e56ed9ccbe50ce"
+    },
+    {
+      "file": "alfworld-main-07/episodes/alfworld-main-07--feedback.json",
+      "sha256": "d48926f0550ff26f1e8048437eb32c8a1de80bd1f2959b43803c20877320c664"
+    },
+    {
+      "file": "alfworld-main-07/episodes/alfworld-main-07--grounding_only.json",
+      "sha256": "36fa0945a3785724f121d6ef11c781260654f57e29c06bd4c1ba0cfdddf4993d"
+    },
+    {
+      "file": "alfworld-main-07/episodes/alfworld-main-07--raw_actor.json",
+      "sha256": "a4b39e997c83304c3ee76d252248ee31e92ef40e76bd04fb261e081cfdf57c2b"
+    },
+    {
+      "file": "alfworld-main-07/episodes/alfworld-main-07--reflact_paper.json",
+      "sha256": "dcf049e492107f600f06708ad67cdadbfebe54cee8c7444702ae543768ce529f"
+    },
+    {
+      "file": "alfworld-main-07/episodes/alfworld-main-07--stateact.json",
+      "sha256": "e8fc60fd5cfeed921fd33b32c324b94821ef6902ae0b66c86facf7ba8d1fa3d5"
+    },
+    {
+      "file": "alfworld-main-08/episodes/alfworld-main-08--feedback.json",
+      "sha256": "f9b89bb71f1d5b45c6d6d59658e29224c686f1477e657908d9dd798290b41831"
+    },
+    {
+      "file": "alfworld-main-08/episodes/alfworld-main-08--grounding_only.json",
+      "sha256": "305bfcc3b9e0399f0ed59d3a2c42e5575a5d8e405056fd54707621aa62e2ca72"
+    },
+    {
+      "file": "alfworld-main-08/episodes/alfworld-main-08--raw_actor.json",
+      "sha256": "46f1a74e96043ce354d9eb2741f1d2ed40ed2af6f756b3e0933bc1541f87010d"
+    },
+    {
+      "file": "alfworld-main-08/episodes/alfworld-main-08--reflact_paper.json",
+      "sha256": "0eecb396b316c33a25fcf831197f5d7a2d5f24b94e1eb0d6c654f06019b13ecf"
+    },
+    {
+      "file": "alfworld-main-08/episodes/alfworld-main-08--stateact.json",
+      "sha256": "9a680dfecd3735be2146d09bf705424f54fa3548069b991b9fcc9260bff9bda0"
+    },
+    {
+      "file": "alfworld-main-09/episodes/alfworld-main-09--feedback.json",
+      "sha256": "033c3a08c1e6024119c4064c5abf0f7ae96239951e247c45f4a1319ae31188ff"
+    },
+    {
+      "file": "alfworld-main-09/episodes/alfworld-main-09--grounding_only.json",
+      "sha256": "afa118d4bc18d53bfe0bfeb2993410b6c73654759979d55468a8ff9a4be1b90d"
+    },
+    {
+      "file": "alfworld-main-09/episodes/alfworld-main-09--raw_actor.json",
+      "sha256": "248989fb32a4b85a85b9c59cc67610a5a35df5323fe1455545c1013b0b032dbf"
+    },
+    {
+      "file": "alfworld-main-09/episodes/alfworld-main-09--reflact_paper.json",
+      "sha256": "fb9ca3c532da44a9016e327768695ce91f291ea3a708c8bb24688a64394a7d56"
+    },
+    {
+      "file": "alfworld-main-09/episodes/alfworld-main-09--stateact.json",
+      "sha256": "557767f4c0e076171f212d1f697388a155ea616cd8723f53d071a02dfd2e5cf8"
+    },
+    {
+      "file": "alfworld-main-10/episodes/alfworld-main-10--feedback.json",
+      "sha256": "d057dae270b0bc7cd85adae012d0c1be81511ce3a93f6634748c0375bc07e8f5"
+    },
+    {
+      "file": "alfworld-main-10/episodes/alfworld-main-10--grounding_only.json",
+      "sha256": "8f1316bd5b50031436c4feb530eb0fed7f451adeda71bc7b1839677cb7d7b66f"
+    },
+    {
+      "file": "alfworld-main-10/episodes/alfworld-main-10--raw_actor.json",
+      "sha256": "a75310357ea08726288e9035fc46015430e8624067159e4b660374939bbd601e"
+    },
+    {
+      "file": "alfworld-main-10/episodes/alfworld-main-10--reflact_paper.json",
+      "sha256": "d626f211d1954aed601aae4bb182d67fffa7e1c0c55c1ccb44aedde854c671f9"
+    },
+    {
+      "file": "alfworld-main-10/episodes/alfworld-main-10--stateact.json",
+      "sha256": "7b7bbb4ff602805412e3cabcef1abe1b361f21298a84fe158a3e0af1df55a96a"
+    },
+    {
+      "file": "alfworld-main-11/episodes/alfworld-main-11--feedback.json",
+      "sha256": "921e8e821e80f5da97870a3a8b95c8ad3b4f8a18c02c71b9822bc263bb7a6807"
+    },
+    {
+      "file": "alfworld-main-11/episodes/alfworld-main-11--grounding_only.json",
+      "sha256": "f4c28c043d5aeb73ec5c8d8907805e193eae921147c536b9c5299f8ca3bc98f1"
+    },
+    {
+      "file": "alfworld-main-11/episodes/alfworld-main-11--raw_actor.json",
+      "sha256": "40b38550a751cc414aa2d6dc5df72d55951dfb4d5b4752733238639837dea6b6"
+    },
+    {
+      "file": "alfworld-main-11/episodes/alfworld-main-11--reflact_paper.json",
+      "sha256": "1b454902fdd5bb2740b3c9bde97156ff57187b9fa3f4ef5faff7c06b9c6e28f1"
+    },
+    {
+      "file": "alfworld-main-11/episodes/alfworld-main-11--stateact.json",
+      "sha256": "ccbbf789c2e35eaacc4f916ba33d070707ac87265feedbe56eea05113ee0e177"
+    },
+    {
+      "file": "textcraft-main-00/episodes/textcraft-main-00--feedback.json",
+      "sha256": "af9e6a19b8a206adcc81205da37c648ce4645d23db2dc2ddac30a400d303bb8a"
+    },
+    {
+      "file": "textcraft-main-00/episodes/textcraft-main-00--grounding_only.json",
+      "sha256": "0aa5a4c510db7665a9efbebb36b1e6cc8b3f2cb24507aba2e489ad4d286af1e9"
+    },
+    {
+      "file": "textcraft-main-00/episodes/textcraft-main-00--raw_actor.json",
+      "sha256": "43f137148d2d81dbc58ad17a98bee5f19d8b35ad6b54c98937d7d8c1f66c7606"
+    },
+    {
+      "file": "textcraft-main-00/episodes/textcraft-main-00--reflact_paper.json",
+      "sha256": "eb84bcb510b96ce7871b3e667c5816c48b3f4468be2b019bae1f7bde796148e1"
+    },
+    {
+      "file": "textcraft-main-00/episodes/textcraft-main-00--stateact.json",
+      "sha256": "df6dafcf1638001c2a4184e0dad3c838c60605c462e60b33ecc554d113782033"
+    },
+    {
+      "file": "textcraft-main-01/episodes/textcraft-main-01--feedback.json",
+      "sha256": "b09d23973a76d9525b2a28394028e14a4d478334729a6c04fd061a68904a317d"
+    },
+    {
+      "file": "textcraft-main-01/episodes/textcraft-main-01--grounding_only.json",
+      "sha256": "a7ac40cfa6257d53c8ba8259a9dfd710579d404f2dfa3ced6d750fa84ed16091"
+    },
+    {
+      "file": "textcraft-main-01/episodes/textcraft-main-01--raw_actor.json",
+      "sha256": "a92fd155985c92635b8006a11b904d6ea538b289e50f23d0f0678827e403a61b"
+    },
+    {
+      "file": "textcraft-main-01/episodes/textcraft-main-01--reflact_paper.json",
+      "sha256": "e08c6b0c961b6409b27ad4402872ad634e7c21c5e48a63e3733d70342f4b58f3"
+    },
+    {
+      "file": "textcraft-main-01/episodes/textcraft-main-01--stateact.json",
+      "sha256": "4a5e257ea7716fa998193a55630419e5141b8ba6b407ad7d32e89f9fd740ded4"
+    },
+    {
+      "file": "textcraft-main-02/episodes/textcraft-main-02--feedback.json",
+      "sha256": "69f14c6915c0b7b8634d73d5ad58ce02cbbe578482791291120374b962b2965c"
+    },
+    {
+      "file": "textcraft-main-02/episodes/textcraft-main-02--grounding_only.json",
+      "sha256": "b4923b42553e05921b8898a0569811e571ab2e53b07c6176959d61465cf00147"
+    },
+    {
+      "file": "textcraft-main-02/episodes/textcraft-main-02--raw_actor.json",
+      "sha256": "81e7ec02edf0b658383778c558c4e032d0ab4891857e02d8507924806d1da0f1"
+    },
+    {
+      "file": "textcraft-main-02/episodes/textcraft-main-02--reflact_paper.json",
+      "sha256": "8ace4516006aeb7a79268cec3d3107f76e4a2f1c86ed4def682287fdd9356204"
+    },
+    {
+      "file": "textcraft-main-02/episodes/textcraft-main-02--stateact.json",
+      "sha256": "6041028c0df48ddef9ba79795dfb611be68d8dd37f6643049ae2615269df7e67"
+    },
+    {
+      "file": "textcraft-main-03/episodes/textcraft-main-03--feedback.json",
+      "sha256": "fab6806ad13eaf85d38cf654a597a5b5164ab48fca3cd1e9a78f75bc1c6a2e81"
+    },
+    {
+      "file": "textcraft-main-03/episodes/textcraft-main-03--grounding_only.json",
+      "sha256": "4ae86a1e2ea4a303c840d132b2f6bf63d8ca65adcd497219c700496d8a3fe032"
+    },
+    {
+      "file": "textcraft-main-03/episodes/textcraft-main-03--raw_actor.json",
+      "sha256": "1066db904c79c7804bc4f067314911e89da295b260bce7eb30044d685d57c514"
+    },
+    {
+      "file": "textcraft-main-03/episodes/textcraft-main-03--reflact_paper.json",
+      "sha256": "fc6ef08cf64ec08313b79eed5cbeb13439c7c99ce2994931116eb4257662d2bd"
+    },
+    {
+      "file": "textcraft-main-03/episodes/textcraft-main-03--stateact.json",
+      "sha256": "a16a14bcf4fe32a79ba54fc19ad4337bab49cf5f06ad2a85a3ce988a4a734f4d"
+    },
+    {
+      "file": "textcraft-main-04/episodes/textcraft-main-04--feedback.json",
+      "sha256": "21fc237f7d1e441b9b877becc84fab0b02864cacac86606954574a9456a95088"
+    },
+    {
+      "file": "textcraft-main-04/episodes/textcraft-main-04--grounding_only.json",
+      "sha256": "bd59b8cc2113823a60d1f68be48db749d50f8c5bce32a508095959cfe1875c02"
+    },
+    {
+      "file": "textcraft-main-04/episodes/textcraft-main-04--raw_actor.json",
+      "sha256": "cc19601d793a93cafbd36805e7790a425f447ec16bd576eb084b5b3bd303725d"
+    },
+    {
+      "file": "textcraft-main-04/episodes/textcraft-main-04--reflact_paper.json",
+      "sha256": "46f48fc7e5279e7182e2efc3b96b408b0426a0fab9a7f10208f3c7a584592b31"
+    },
+    {
+      "file": "textcraft-main-04/episodes/textcraft-main-04--stateact.json",
+      "sha256": "9853e2c050383ac1d6b12e78ad3e2e0e20624ec4922ae9d24686653f1987fe1d"
+    },
+    {
+      "file": "textcraft-main-05/episodes/textcraft-main-05--feedback.json",
+      "sha256": "46eaf69fa31c8308329736304af20dccd209d661d1846b46c944b551ddf0a0e4"
+    },
+    {
+      "file": "textcraft-main-05/episodes/textcraft-main-05--grounding_only.json",
+      "sha256": "f2be7c134de0a39223595e6eb4f67a783921ddf742c09418a71ffb5e9209dfc6"
+    },
+    {
+      "file": "textcraft-main-05/episodes/textcraft-main-05--raw_actor.json",
+      "sha256": "59540da9dce3453b47bae5235082bc3ebdf7eae462bf88b98365b68046954d1c"
+    },
+    {
+      "file": "textcraft-main-05/episodes/textcraft-main-05--reflact_paper.json",
+      "sha256": "32849bb5b2d987fbcfb8f98bb635861a0e529b2631beb8ef389dcf59e9f56499"
+    },
+    {
+      "file": "textcraft-main-05/episodes/textcraft-main-05--stateact.json",
+      "sha256": "14e633ed901b1eb672efe890d8fcce1ef4abd06749c0a96240343378c8dbed26"
+    },
+    {
+      "file": "textcraft-main-06/episodes/textcraft-main-06--feedback.json",
+      "sha256": "52509a56e8700c9f38d81cf67fa5f2c8b36525e848fa62b36c345d910f1ac532"
+    },
+    {
+      "file": "textcraft-main-06/episodes/textcraft-main-06--grounding_only.json",
+      "sha256": "f16576d9e69e54efacb9962da324f3de094eedbb04a4a7a8ed32d8c502ad3a02"
+    },
+    {
+      "file": "textcraft-main-06/episodes/textcraft-main-06--raw_actor.json",
+      "sha256": "324b332b3d99ba372d6ecede3a6156266011809b07e7174171a5e90f3527dd86"
+    },
+    {
+      "file": "textcraft-main-06/episodes/textcraft-main-06--reflact_paper.json",
+      "sha256": "119a1c2a2059e0b30ddd503a5f57b165dc166ecd5aafc5e259b06b21563359f7"
+    },
+    {
+      "file": "textcraft-main-06/episodes/textcraft-main-06--stateact.json",
+      "sha256": "f51e3d30284c8114098f5a5584257298b071e93700be1060dd3a5561248e36f6"
+    },
+    {
+      "file": "textcraft-main-07/episodes/textcraft-main-07--feedback.json",
+      "sha256": "d8b80bb45eb53d916633da62301b41d85634682477c2348c360905f1c4918495"
+    },
+    {
+      "file": "textcraft-main-07/episodes/textcraft-main-07--grounding_only.json",
+      "sha256": "fdb07455d3edc4c8f413a60b25b2bd41121f34464c6b05bee146ce5d4f4be330"
+    },
+    {
+      "file": "textcraft-main-07/episodes/textcraft-main-07--raw_actor.json",
+      "sha256": "4b7cf004c8a49144f408bc28fc92a6b731910b06b0886958576570f7dfe6b06f"
+    },
+    {
+      "file": "textcraft-main-07/episodes/textcraft-main-07--reflact_paper.json",
+      "sha256": "c03206d138ad038511c78d9654dbcfbef23634cbdd4ff3649ff70d417afbfc43"
+    },
+    {
+      "file": "textcraft-main-07/episodes/textcraft-main-07--stateact.json",
+      "sha256": "30544804b630591709df0b2bc342b4d5d540142f2c51bfe0c7f2eb7654487a20"
+    }
+  ],
+  "normalized_actions_executed": 0,
+  "counterfactual_successes_estimated": false,
+  "new_model_calls": 0,
+  "frozen_runtime_modified": false,
+  "limits": [
+    "Public-list mismatch is separate from native rejection; TextCraft supplies no enumerated list.",
+    "Repeated feedback text is not proof that hidden environment state never changed.",
+    "Error strings and model reflections describe observed behavior, not identified causal effects."
+  ]
+}

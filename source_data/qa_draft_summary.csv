@@ -1,0 +1,3 @@
+﻿phase,cohort,model,source_identity,repeat_id,reasoning_effort,question_n_started,valid_initial_n,initial_correct_n,initial_wrong_n,initial_accuracy,interval95,unit
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,0,low,120,120,94,26,0.7833333333333333,"[0.6988714869343304, 0.853318505707898]",one shared draft per question; advice conditions not double-counted
+main,main-v5,gpt-5.6-luna,d5cf6bd22ebd1344fc545c11d5452ae8bf42326a402332008c4a7582247dbdcc,1,low,10,10,7,3,0.7,"[0.3475471499400026, 0.9332604888222655]",one shared draft per question; advice conditions not double-counted

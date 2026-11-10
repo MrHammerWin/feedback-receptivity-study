@@ -1,0 +1,850 @@
+{
+  "schema_version": "public-qa-id-manifest-v1",
+  "original_manifest_sha256": "ce62e4b6e47b82cba7435a30b6dc5fa2712307b3a72939b8a13048fef47b59a4",
+  "splits": {
+    "dev": [
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00198",
+        "row_sha256": "e505f9f7676b299c162f9b05ebda582501b5763a782c21159a7c4dc6953545c9",
+        "question_sha256": "09ba75689b18e68ee467519407a2fc4ff7bf2781545b2b7a9f40559596e95521",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00260",
+        "row_sha256": "5ade428a0b57933e0002e8f60cc8013fad56524d007c757a955ff963a09f0966",
+        "question_sha256": "1e30cca0908d2f3e85a87b4e5697a4a4102ea93523dd63e89c3942bab7b6c809",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00059",
+        "row_sha256": "bd044f829185ca4224a74748df7f8cc05ffc40a84ce02793632f12e60a5cef09",
+        "question_sha256": "6c7de88b1be34b0490e51869f236148da278c094326102c11011211efffeae64",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00088",
+        "row_sha256": "c8af2995de887e2c3aaf6a7b21e91163b267ff7a1a513d64eb18a87329d1a02d",
+        "question_sha256": "e630f9329a4f57e33080937dffbf4de01f5499a107f6e53f5d02da5d699046fd",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00149",
+        "row_sha256": "486a79ca84bd304ed3f51fa65938037da4b790acd1d2daf1c15cae0747806ac2",
+        "question_sha256": "62ac3b6eb30c149fe224f162cdf40658b2c317e85b2f83ad6a4be25169b38967",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00068",
+        "row_sha256": "303e7d3ea0cd8f4484824cca74df86c42a453b632d1b467fc1684aff0354cfb6",
+        "question_sha256": "dec9b31363ebb2fd2392583c315dccb4f8e96f1e9f219908d077660482cd91b2",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00027",
+        "row_sha256": "710cbee7b0314bd1fda767e89967ed5870f4b9d13c1f756137b89ea733c157d6",
+        "question_sha256": "a04a465a2741775726de3c5e9e87438c847a201ab7581504a87fe1f186eb9e38",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00050",
+        "row_sha256": "03feebbcb04075c0c90c185b1525e0963b9a2429126b25bef4645f3dd426b84e",
+        "question_sha256": "f87c6191c07e0860e18a739948e669cbef5cd8b973d3e7ed7cfa67d30966ec20",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00367",
+        "row_sha256": "f4b291decc0287d020b4a1e838b707bbc43455352010a21a46a07e25bf0f4c9d",
+        "question_sha256": "57d144796831a4885f777122f489c1fa26ce2951aad95a30be30eb8f2e98e583",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00030",
+        "row_sha256": "7f1c1318b29d9850ea15e8171f0fa4899578d48a4805cd48df99e0444a51d4db",
+        "question_sha256": "27f47ab48d0e1cf70a95048c602c4fb03ecc17a06dc767d9f48567fa1f4a40b5",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00250",
+        "row_sha256": "1ce18b52cfb918c9d6b99d219dd289b13e9a1960eb5f25920ba7fcec34fb1704",
+        "question_sha256": "e228a07aa39751d30d4cecf0370ce25e977e209f4669b0cfa2e5d1f7fefc4dff",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_management_00000",
+        "row_sha256": "d660a22195ce46d9c9ca4e13595c4bc2ad8a31676e0192d34fa01dafb686ecc2",
+        "question_sha256": "30d494df2f652c263388ebd1758a6bea2e067894c46ecd4bed737236e9def47b",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00038",
+        "row_sha256": "faece990a9b6b8d484df66a07dd70bf77964573686c13c034b0877aa796fff6a",
+        "question_sha256": "675f5ba5f189cfd6802745488fa1ef5f306baab5ccc91649dfa82157a88764ed",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00088",
+        "row_sha256": "ec700a958cbadc2206dffec2fda8d8ded61944638a75422dc25003cda08aa032",
+        "question_sha256": "7b76ef34fb17d48ec5e52f548a9c6241cc55b313f9d1f1e4e5d2790ddcfab386",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00429",
+        "row_sha256": "39ddb7edd55be51010c706999e0a4b88880e277c48a4b36ead305521975a754f",
+        "question_sha256": "189a14200f378bb093f758eeb0dd0bfaf9f4661b5ce28f80c15f234e5eb5b2d8",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00025",
+        "row_sha256": "c32bda9f4e68416de9565388163ed311dac23abce232ce52021597b23bbf93ad",
+        "question_sha256": "1691c48d44031c8a8135bfcb2205f6ef0c8e01b8bf2cdc53f1512420398f9c84",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00134",
+        "row_sha256": "27d500af3175e2d71718ed7566f5dd7af995e77ddc84d10765d06542ecaaf50f",
+        "question_sha256": "c8fa7176697ee52304a6bd2fe3d1dcaea4de832585efd72298b9919bf9615c9a",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00028",
+        "row_sha256": "2fda83ce77d63bc9e7838897e2e6e7023e9997eac4a92d8c7ee5024b7349800a",
+        "question_sha256": "4fab27879490db196410711cc8359a2d97aa27a044b039c14c39d823670f63f4",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00061",
+        "row_sha256": "0d6084cf8422b9db64fd741cac5c79f598f584812ced0e61966c57323fb3c6e3",
+        "question_sha256": "c457a64208b641a14a13ae85fbc2818f0ca83df548b4582e550a015711f6d9ef",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00104",
+        "row_sha256": "a7e76a66e6c5cdd1abda589167298a70b122f8b86439ee4a6791fe2f6970b0f1",
+        "question_sha256": "fb5c5d7a15613a3fba1bd993c1f008ab719853a7c6454f13f138fb6f88ace013",
+        "source_dataset": "mmlu_sociology"
+      }
+    ],
+    "test": [
+      {
+        "id": "waferqa_mmlu_human_aging_00106",
+        "row_sha256": "cde67f51dd1a6adc3dc3c160b1210a7ff1818b92e55dc9b803380f75533190c6",
+        "question_sha256": "2a82e692f093a2875c6894dc76d7f74df6584362d4bc5dc7526e644276622a89",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00519",
+        "row_sha256": "bdc08880698838bec569eb7d5a0b7ac7a6ba7bf49c9c04579a07cea1f54cc22f",
+        "question_sha256": "43bd85759a6e1a10e3374c68656f540a73a79f5a6bae1c9d65b7cdd21bf40dcb",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00165",
+        "row_sha256": "35cc37f83095a3545bc68281813bf934deb3b5f909d6598e5b5263cfa6414708",
+        "question_sha256": "6aaed16cfd15f6596642314020eba8a2951c161b47180612bd42ca340de5daf9",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00214",
+        "row_sha256": "f67dde9a535e79ab407a8688a70de8226738d310df7dfbe0f6d3e78abc961912",
+        "question_sha256": "1eec189213ab490002e104d21e8ebbc661d2796f5e07041ee968bac208daf5db",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00135",
+        "row_sha256": "a4922a4f2805f79af7147cb878d2d42694c137bae50d586733185a12d00df2bb",
+        "question_sha256": "343941863a793500960e58db2527cef23e958b7479b9ef6c12a897aada10640b",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00103",
+        "row_sha256": "6ad9eae466a842db41034895a45fd1c3bcd2452a7972f5338a5fc755975bb962",
+        "question_sha256": "84a791e6c505cf9e33ffb5fdbf44e017ea00f01cd05ba0033afd127115a58284",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00010",
+        "row_sha256": "40b3bbdf1eceeb928b0be83147fc5b2ea7efd22949c82e2f40331e5382f9ce43",
+        "question_sha256": "e18982fe74f1338438b90802bb979105fb003db47c10b4ef98c80357cfc0af98",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00046",
+        "row_sha256": "7e0dd1d144ad8bd3e7eaa3e6a3d1357646b1028ea9afef585246bc691e7187db",
+        "question_sha256": "5302df5be0967e75f4a70bacc8ad41dae7e2680a299f12cc135fb414ed2f351c",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00167",
+        "row_sha256": "ccceef4879f07369233e735341cc0ad8bcc25169aba83a1785542f7e0628d2aa",
+        "question_sha256": "d04d4b092ca44b666f9d1ee1369b8ad6c9d3896c9e51768ebdfae0718ea453fc",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00154",
+        "row_sha256": "10736df2428842162022b210b70382c99076dc4421c450526965410aad8eebd8",
+        "question_sha256": "a81c611c03358ddc72e6876ff4bb3382afd0f50c2770c3384292c4bd7509059e",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00121",
+        "row_sha256": "8ea87396df2e4ee3e0274e34e1d0cd6108868d5c7757959ec38b990ea35f729a",
+        "question_sha256": "d6d3e9d89c65646b7b2fd71155fe9a3ac09037104d811262a17b95382e609206",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00147",
+        "row_sha256": "c67bc320723330792596b5ccbeb34d6bdf2da0d8ffd14996d8769b6174de1817",
+        "question_sha256": "ecb5a8aa3ca589a2f614ae99a504b62f9abdc5632feb94ad717d29774ebc739a",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00018",
+        "row_sha256": "ae0963762722c90ea61e6388ef6f0de214511a1d070eb0f56b2f76698bfa9891",
+        "question_sha256": "780c1eabc93b8fb8e6a321828589f21441e86b45a8da1a9a7ac72a96e2069764",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00126",
+        "row_sha256": "195fb9ccf0f4e20187fcc1ba6a852cf062447fc83310403a479aebc3d5be473f",
+        "question_sha256": "ba23e38e067362ceeffd20089133a389d93b881578ba159436a8bca37759d4c1",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00004",
+        "row_sha256": "6dbfc60619a60d7cd877772738471ecfee3569de503608d323de1f07b3bd8037",
+        "question_sha256": "16b5c5bd420f9e8bc7fa77d8935bd32de47f9f6accad0f5013bfa65df315c067",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00234",
+        "row_sha256": "b04dc3af9ade6b3931535469a359eea0f26986fcb46fbd435a1432570bc6fd92",
+        "question_sha256": "fc4f85f9dc57b14e76b4823a427350e34aa86611ad5bb81dee67e31b572dc428",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00108",
+        "row_sha256": "044129c9e97beccdad74096ddb4bdfee8bdc9bb6dc4814b58b4252cb8cf53cdc",
+        "question_sha256": "67146cbad29eed6c6f7371fee3ace3b3629049a40a28a75f30c0042245ffe9b3",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00028",
+        "row_sha256": "c5291e230b91b8d011ba7e0aefded5730d427d885c691a0c4da1b49fefa7b8e0",
+        "question_sha256": "0261b49ebb356c71116a32e446ba2b840da07a49cb275f4c4a595b61d0392608",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00150",
+        "row_sha256": "ee81c5ae05d94295fdb0b7a2474786e70cc4c73fec33b27e13df8405ca392e14",
+        "question_sha256": "2c6075a4527fde0077640bc8dcfd251197686511146c8614f95acaa12b8a47cd",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00166",
+        "row_sha256": "aea05121a0a7bebf8e315910f1985e7a086dca01a12958fe090f0eae917f09f1",
+        "question_sha256": "5bf2d3f35ddac7dc45a1e5c313402462856d49b4149ef7eef2a3a4720861918a",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00158",
+        "row_sha256": "9d9fd6b19934b86e5a74b6e246414c9ffd6e0fa8297a9a363c8d97071d6e37c1",
+        "question_sha256": "db3f0660a2e4ffdbb8135cb7eb9d786efe8d42fa41e028b8fd944b55ffa1eaac",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00089",
+        "row_sha256": "2dc8e85937e82c5feb5ecd293404815a81ea30f21760faa41c30a62687a33a51",
+        "question_sha256": "28f109af8adbb15a975d5909bc140812446b39e32440c7cc0c2eafe108287883",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00108",
+        "row_sha256": "c47ead6e51f10ea36bb31290fc8df611e68610d44d5322714c3644fd28496212",
+        "question_sha256": "f40c6036d64c03f76e935d3553f21791c3937eec418aba1005a83d43982fc4e1",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_management_00102",
+        "row_sha256": "f0e95d231ccdab050c90caaebf219105bcb499fd33c75f092fa522daded184b2",
+        "question_sha256": "4e825aed642583d165b63f29f49c44227b4e7467d4b02f158d628ba2f63ee91b",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00057",
+        "row_sha256": "e9435bc1d416c04014bfc0ebab801060db717544332d67e7411e3834ace0eb3b",
+        "question_sha256": "8f358e47e35d2d05c2ad4eac9d7acf5696c5df8251cb2ddc8d869d1216633575",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_management_00078",
+        "row_sha256": "937eed56b2f82d7389c5234c8eef69c1d68a62e0b5f21c6cf536a51d1419f3f2",
+        "question_sha256": "8fc32552da7259a0d071c97ba1dca34a1c5e567ab9ae82230a83287cba0541b3",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00056",
+        "row_sha256": "5a9bd4398086e3a94c37ec3a1347cdc07c1d0121754641f013c96933d9ff3fda",
+        "question_sha256": "8ade6e178ebad8d447048b2aab5a052a967781dc3b7d54670f3917c06f818107",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00174",
+        "row_sha256": "93ce932a3e2221f9e6ae17326edfe30606a5ce18f8786d3cc10b6132aa57e3b3",
+        "question_sha256": "051c00b9c0bb620bf8627a92722def50b63f66883cffc40b166c72ebb9a5419e",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00033",
+        "row_sha256": "692e03a517e35acdd659ba0b7b4f7d2c1af6c2a3cce3348558763eab32e3ba0f",
+        "question_sha256": "54215b568d230c7b10b1e7c09aa01212450988d61dc320d1725fd2e24e86bffa",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_management_00029",
+        "row_sha256": "30a580a1b578e1ca4efda8663cdc460ee595de9e55a2cfae5813465d63fb7410",
+        "question_sha256": "40d3c353bbe746243aa5f6a24f9aa7f962b0910c52ee829fa9d457375d999788",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00051",
+        "row_sha256": "166998f21674b1dc12385d43685f5d8b3a37c3abf5ac04196981f640617c284d",
+        "question_sha256": "29d73391b250bdded3cc223883b6480da93bfa36cc5b92d3d92a489704688764",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00015",
+        "row_sha256": "b0f625ef8a9ab535acfff80577dcb428933153efce2b79218a965174bcee63eb",
+        "question_sha256": "ee566e1cd376527b2714b396f65ed6c5e2690dd4fcc9f061c827ea5100e56f89",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00082",
+        "row_sha256": "26f88d0d80c696c215d0a944bd3963f8d50e5ee3a6f1a6188cb1d3374c9beb2d",
+        "question_sha256": "64836cb1cd2ec2309630d4df75fcff0661c84d85de345568161d0c47d3def3b4",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00077",
+        "row_sha256": "42d05bb0081aa7f242a9b14db991511c5a4c0178ea6bc435e41d713159e821a1",
+        "question_sha256": "8c7961d2fe291d27470b3db6b7acd7e04311b96b9b7400604539e58c1f541835",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00107",
+        "row_sha256": "011c067b18ab50a07eef79a603d26dc2e4a02a96ec61c9f0de68acb685ee0bc9",
+        "question_sha256": "128304d9f00a314244c87ce641739dd859c756646d5f977bdc5c2460cd02b9e9",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00416",
+        "row_sha256": "5241db8de28c21dadaf3ffb9f214bf11df96bc92ff6b4198820ed99aa7fbe966",
+        "question_sha256": "ec6973326ce3f4497bfd657ae1cf9af85750c39662825b6a6ad1ef20c6ba5f9e",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00192",
+        "row_sha256": "7662772cff4aa6ee254a1d11ce9756bb3d5acccb8df43a8943628b67dba4da40",
+        "question_sha256": "450ef09e3ae6f306e94931f7b79fd1c017093be2887fa4e9cbdd5f82e490aae2",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00010",
+        "row_sha256": "8064367d3a8127a5fe7510eade9a00379a2aadff5714bc71869d0f0b6b5f1685",
+        "question_sha256": "76398904287e4952d92d0a2300fc72157b9d11a023790a074af817d56132a05f",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00107",
+        "row_sha256": "0315ff3237921758d19e51e08a338385bb75385c7da24791363abe1e30efadae",
+        "question_sha256": "96e838b53a4c97dbd654de55e9c31e7c7bbb0f20bd63b29ad065ede5848fe136",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00215",
+        "row_sha256": "5baa610ae4665fe11e5f63dc49352b1e0fe56907bb02ef24015f2f892d5a5003",
+        "question_sha256": "3643c22510b8e6b989e9c4e3d260cdb4bbe8e5ff9e1a41c3946782bea2772fe6",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00338",
+        "row_sha256": "5a9d21217eb69f24eb0b644a36f3761b1c417624fea7bcfcd891593f4c7aa817",
+        "question_sha256": "035ffa2da43f4f6fd3c6a57ec34ad8bcdb6e0fa8c97a29ef60db2e769eaa87f9",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00086",
+        "row_sha256": "5f158ac73df79be52ff3f46382f71aed02f7f131a9ae1fa1c4b7e75568400e6a",
+        "question_sha256": "bc9fe89453046ae85fb5a5c60fd71718ff7c66f3afb95bada27b05a692db0b1f",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00274",
+        "row_sha256": "043aee157024dd7adcad1e0271638c363d594d375d91a0de9a7bc84c7edd37e0",
+        "question_sha256": "d8aa558b2f3477b2645ef9e41573d7fd2188677ea9a78a405e2b041964e585eb",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00116",
+        "row_sha256": "3bffe3e12eefd6d0977de29854a65eb8b14dabae3e77a8ba65e8fddca77c506a",
+        "question_sha256": "c7961d1773e282d93c31fe586c1632f6bd4415fa9f0d24d740750ecb1482092d",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00000",
+        "row_sha256": "37ae12ebf7d5bcd401aea6a566d2932c19f18cbdb4005a4868d810109ea609f1",
+        "question_sha256": "9cb48e2aa088e7aa9337854bd9c8aefad91de645afab5cdd45021fbb95a945e4",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00087",
+        "row_sha256": "14d2c00330074989901a149ff535802c4c637c5f3a63853f1ead90723130a778",
+        "question_sha256": "2926eb8068b48d28b36ad51a67adee73632405f9f66b3ddb4bde410157121064",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00198",
+        "row_sha256": "bebab957dc746f7b20a4252b656d83451ee83d821fb5f5182045e1c9a3881b58",
+        "question_sha256": "637e5c1f47383a099f807547f4d957cb67652f8220b16fe87b91d07d13ddc856",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00098",
+        "row_sha256": "de46b3350390574cd09f698e84d87039e2c6460b8667618e0ec4c6fa8fc93f1c",
+        "question_sha256": "45d29bdc03e83c955c9b635b182827e5e40880159f5264156e6a9112555b3832",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00368",
+        "row_sha256": "5b0ecaf56826e1ef290583405fbfe2bafe69db5601228b2ff23b9c031a1cb1c9",
+        "question_sha256": "77f326ad8744a1499a899a5fe8a61328c01008fee7f313117428ad494e53dfcd",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00226",
+        "row_sha256": "2029e2c2725b09d6c4be8d7ef755e6640d4f42e2a4a88dde6c9986a15c7780ae",
+        "question_sha256": "46e939ba98fe99bcd39cb1833706678a68f09985cb6c8cb74d52f82bf4f30d09",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00070",
+        "row_sha256": "9864adf1f87ee5b7aab0f8c14b18612f6b2ff386584229b0ed1418ba285e35cf",
+        "question_sha256": "f3a58c4a752374902e83a796a11bcdc94e65463c1445f657101046286ac64fd6",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00079",
+        "row_sha256": "8f9450fb5bbb61e708e9c3ca3981be4298a8f49d9ab6ba9c616f8f184a192b22",
+        "question_sha256": "cd0025171bb72bbce2ebaab6bcf70697aa63e4d867fe42ceb9c6794adeee57de",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00224",
+        "row_sha256": "4bee8a79c215edc22512f210d84f165c9cb8049037fcdaca5f623260934a9191",
+        "question_sha256": "4b5d57c300a684a671bb96c8fca7e0c6de53c9ef928bf77722d7ff725d1ace22",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00126",
+        "row_sha256": "72d0c48e702101e62d7943cb73742cea346d4ac9dcc2ab046ba5d8d4d70e1892",
+        "question_sha256": "be8ddfb3bb44367e680955e1f4fb9f0b73dced598c7f2ca4ba0fe0d8fd102120",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00153",
+        "row_sha256": "8aa4b98238e53aeed7b666fb02e209fba5cf912b3e28baf956c422a1fba507f3",
+        "question_sha256": "e0ca9d484f72a431adf76fab5808bdb102897d0b1b14ba2c14812109090642f5",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00052",
+        "row_sha256": "190ef362169254e314b33b23b639cb3e136384c58fac76f2c3e89e5221355d51",
+        "question_sha256": "f410c1640429984e9a0bea34761eb1fbc3b13c30b2d3ae9062f3a4c2887ae44c",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00304",
+        "row_sha256": "a72ed2e18d9ffcee72a8df128d717684d39b736491fe26615b519566fd508225",
+        "question_sha256": "7682e1599bc84b890128f71f4fb3dd4a25b2c08b8e7c90ac57c6d63ff322eaf1",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00026",
+        "row_sha256": "88cdf66b15de806ff47ff29e08f2918a24f673257cf345789af3945e5b480d2a",
+        "question_sha256": "a99237888a64b68913b993032b8403b76c53696b54520741ea97cec9376efc2c",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00162",
+        "row_sha256": "8f1cf451a20ed962c8dbad9cb545b5f18dc5f8e37a65c9661d19aaab3cc4f7c3",
+        "question_sha256": "6c863da0506a3e0f2f5020486261926260f25510e8e0b507c1a72e4d3c732d1f",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00371",
+        "row_sha256": "85bd781f3b03e29e5ca11444b77ea052c05ccc0abdfaed88929fa1e4f12e733d",
+        "question_sha256": "bafe4eeb2136ea44f27bc9e294519a46d136ecc42b3f8beee01798e33b9035f8",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00073",
+        "row_sha256": "3924fa72075f3983924055f206c96646c4e074b0da5208e4474f811a9b5f5d90",
+        "question_sha256": "08360e181f1425712c116cf5153f1488be54fa80a018b9bace4fcbda51a50834",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00046",
+        "row_sha256": "cb96cde5e4c63c60d04743ce775de1b16986366ec2a1da83e8e736944009744d",
+        "question_sha256": "aa1bb79f9d74152e2f894f94d61807914d80764822425cd9bb7e2fbb78efd8cb",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_psychology_00285",
+        "row_sha256": "6098beda0905a3b75ed5a16a05dba87572ca9bdce51692b20e6663f072d78145",
+        "question_sha256": "00a3551003313b74e588f183d5167757e5c298f6f4559710a65c35d0b36c047c",
+        "source_dataset": "mmlu_high_school_psychology"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00066",
+        "row_sha256": "ba3135b29b0fa9d4a84ef040be5111da7072168c4254fc91de1d31a1c5b8c880",
+        "question_sha256": "da7d2c021752c297cf0d3bad35e4d33c558170f0da8640ec23c74d661a32f009",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00009",
+        "row_sha256": "305134f9520da2eb2de258883ab1cda8d0acb03aa4990bf9aa2cdf65413dc381",
+        "question_sha256": "85543ccf17f0ed03bcc2826c70da8a2622cb63370f7be305662b95f17c722215",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00254",
+        "row_sha256": "1782edf650b47a36e0278f590eb73340f040b5e2ffc0fd29887b07c1f8444b0b",
+        "question_sha256": "d3ad2a25063d654a3a951f26fc56fa232cda0edfaa4bdd9dbb3ea2f5c6f0ba66",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00186",
+        "row_sha256": "cc48f63392bbf84db1b7716051863c56e305321d24f65eb12ba669650e2d8019",
+        "question_sha256": "03446352dfe3e3ccad6580fd38c83d0af2c50f95bb067806fa8c172567c9d982",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_human_aging_00100",
+        "row_sha256": "6357d9c26ca472fd733f18a6528390511d1f0ed8cc3ad03dc419f8c87af3eec2",
+        "question_sha256": "239058711081f23fade66a82c6308e668c568fc57ac42ca75e93a0f01b1984e8",
+        "source_dataset": "mmlu_human_aging"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_microeconomics_00229",
+        "row_sha256": "b974c48ef4a079f61f227fca83f03459be94ef3f47f935f25047c1dd11af110e",
+        "question_sha256": "bd2d44c34947c0358971cd65528d1c926387f960560d15f9876fd1f087fefb41",
+        "source_dataset": "mmlu_high_school_microeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00800",
+        "row_sha256": "e87252e061f97112c735c6f423ca875a64b95610b6ac0e4da87b40a2b5e7bc2e",
+        "question_sha256": "bf563aa9346091d21fcf2b2f5f498de939678958768128673a665920908061b0",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00081",
+        "row_sha256": "7457e7f668ead39385de88a0ce92f4b9f36d9f80bd19864793c4b0a650698e9c",
+        "question_sha256": "43aad39210cfd7adbda736df4278a657aedbdf92281e3c33709c8f69816b76be",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00038",
+        "row_sha256": "d7608afa4cf480343096a1a2b16098fd1511dbe55e811ec32a44c190b4f8c8ff",
+        "question_sha256": "05ee5208e6362907098d6a3fa111e1c952c3ceeab2228f1193ae7681144f1376",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00051",
+        "row_sha256": "3afeec74d9a6ca139fc737ad22715ed9e4108a8cab7714fb969b3a4b17e4b33d",
+        "question_sha256": "edc0f19f089647dd246fa380137d2bd7fbfe35cfda61d673a461442f6224ff3d",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00005",
+        "row_sha256": "bb0ca38cb4f7469cd9748be503fcdaef576d8f3234cf256d4ff79955ca9ceb80",
+        "question_sha256": "d0de44684d28d15fc1c260af247d63dc370ca3eb9d11a0ef8b5c31f48ee53526",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00148",
+        "row_sha256": "03931adab045c8667e7bbee72501ab5d4d09a31c9569833101aa919223c66ce8",
+        "question_sha256": "5bbb1e2b4f06413ad71e9d74353fb52f5f9c42ad6a11ad2782e4ec5408bcf31c",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00234",
+        "row_sha256": "07e3be87384cb05b201e4275796792c218dd12adde21add9ef7a1209fc6fe55b",
+        "question_sha256": "7e4a3faf258573f07ec761c36840ac376d64a7d3f225a8ef7abacb16ca05a106",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00316",
+        "row_sha256": "930e7d8434da8981a5767d649b92fa8ee176c6eea6154b449a7ad809d1cf6bac",
+        "question_sha256": "e188d381ee92cf1157db19675f8ec013af9bc4547495abcea39eeb433061a953",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00067",
+        "row_sha256": "e40d5f1438e39a82f48c435e143a84264db453c74df3195c2456a08e39ff5750",
+        "question_sha256": "31e1d992e868332f5761811fb66887d64a123dfb87389c5786fc7a2740fe831f",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00083",
+        "row_sha256": "8bc609899a08430968fb5b10fda6b3b3c993fbb22d5b6a62eae3590b80665074",
+        "question_sha256": "6c1c46383d4f1947c1003a19a1073e937520f86d41acb061badf654b52eef7c7",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_college_medicine_00090",
+        "row_sha256": "079475329a05b4fe5c6ae8d705b4610378d14fb6a94453e7d9b9f0d54b69e91d",
+        "question_sha256": "65c85114bfc4cbe184603cece58c328f3ce9c0cdca582bcb8fe73636ca2cad71",
+        "source_dataset": "mmlu_college_medicine"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00038",
+        "row_sha256": "c39734f4b30c2b6e08acc25fe0ab934e2dbdd111f42ce78fbe368bb18c8255d8",
+        "question_sha256": "2a3a9b087beddae149ffbb2721c621f2a515e10e1294b2abe514ce205895b13f",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_anatomy_00103",
+        "row_sha256": "5d72a9301a6a977307df57943a03d00621e3ddaaee99b09a7145bfee40e66556",
+        "question_sha256": "7efd3895d44dccd50155e4d869bc0c8bcfc37f8cc25968f1c4e6495f4d2ce327",
+        "source_dataset": "mmlu_anatomy"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00042",
+        "row_sha256": "f1db10171d8b0c534c24a85f092c970c89fe82a69b30a3afaf7568d5d18340de",
+        "question_sha256": "ddd0cf0f093a218e3e860b99147f0dec984de89aacca95de655e64848c1d970d",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00068",
+        "row_sha256": "8ad9dfe702c2001277cd0d44defc891bc732f9ab0a24313bbae56746feb85e52",
+        "question_sha256": "1827525289eb4bf69df0c99a1f72bf3940467b9eceebddeb0d71cefaad9cd086",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00042",
+        "row_sha256": "72e091f3d0ab7566718dac6ea4d72535e8037ae2dc5acaba8af255075259a763",
+        "question_sha256": "571a041f9fca7890e264d2864d009fc28a856d732d3d61bdc401ce5516c70c52",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00025",
+        "row_sha256": "2d068e1f1ecf3663b25bdb384e488c5383e2b48b61e033b4840664ae09152498",
+        "question_sha256": "efb1a4706a070e39da89e50a1fd66a740ffa7a9aeaac670f82ef6badbb657d17",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_management_00010",
+        "row_sha256": "e85cbe9cf9571487bdfbf1b908819d01d6655664dda801975e73a52589861088",
+        "question_sha256": "97a51114bc9a4f47c291b5c763be85895b313ac4348b043cc1ade216fa1c4cb7",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00009",
+        "row_sha256": "bd232eb529e15077acec32ad11d669775c1ee1a3b29c16ab77af4bcf9cf56faa",
+        "question_sha256": "a16506f37d3915f0e6a18912d991d71a964047a4e83aba63a1ac8f852937bb5b",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00043",
+        "row_sha256": "b6eae430835820ec9d98018d0eb85696efc2d073950e3154c242fb4f76136c6f",
+        "question_sha256": "04031a72486ca99e18819ab13e998038d344cea90e89c4d549c33942277d578f",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00075",
+        "row_sha256": "1182ddc01e655ab3b0f9c8d60c76afbf06edcac9261f898c1dd027380e85c43c",
+        "question_sha256": "9def3e69e86001492c7b657390b949ba57f76771e45332214df9e8560e496445",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00100",
+        "row_sha256": "f664ba7c30231648f868a658446ad2292f5f7476d34648265f3b1643000a00af",
+        "question_sha256": "3c494970abb7a87e7ba688e5a7b347de1a1dc88ee207688de2875e40ad7f6a69",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00086",
+        "row_sha256": "251f8d8c762b8ce187c1077363fc688496fdedd146fd05118030d37d5e9d266a",
+        "question_sha256": "de807e2121ff33fecbf6e6ae6359b94680d754c19afd7065a587f4f17d5eb5d3",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00028",
+        "row_sha256": "f9bd8fb83572180b227533f46e955675cee4896ee6983bef507f8411f853c3a1",
+        "question_sha256": "362b359e188a6b7e0be4ed5f0b0bbae3be44a24db669db1de68715769f22c2c8",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00636",
+        "row_sha256": "0d4057b7a345239e5cf219ff2970b1afc27c2abeab9466e0e56a3e4500ebc5fc",
+        "question_sha256": "d63b36de92738faaa79d411ad2d2d939e8f159801048b801f076ad37f6641ad3",
+        "source_dataset": "mmlu_moral_scenarios"
+      },
+      {
+        "id": "waferqa_mmlu_world_religions_00156",
+        "row_sha256": "afd89c86e22795f3f861f5a1f901557b016209af82b9f27958b2a97203d141ad",
+        "question_sha256": "59403937cb9790033ab060a26c71baed303bc1aff8478d90a617e31b1060aa9a",
+        "source_dataset": "mmlu_world_religions"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00083",
+        "row_sha256": "b6001356148d10bf4ba7cd6b46fa17f7fb9dbd2eb55237c199364f172627ce79",
+        "question_sha256": "266ff765ddb21b6385be0165ee618b2772d05398468f4b2cc44e31cdf705fffb",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_human_sexuality_00069",
+        "row_sha256": "4e63203022ef4fef476657bd4268c420e69b6722fca3690028bfb7b532c70ac2",
+        "question_sha256": "c168480a9f7bbad98d55fce7cf218fa476873722333603dadc18cd064e0988e8",
+        "source_dataset": "mmlu_human_sexuality"
+      },
+      {
+        "id": "waferqa_mmlu_management_00016",
+        "row_sha256": "b67be61dbb05c5c88758868573daae3ce958321f310d4c1e22fe72222a78f13f",
+        "question_sha256": "7a6c6e194c7b8e8d9d7fcf9ffd561c6cc1fc8a8146eb32224aa3a11f0469ffcf",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_management_00099",
+        "row_sha256": "a7989ca947cf4b4fbc46e4a7be34c1645a8a25114d76cb4d8418f6b272ccf256",
+        "question_sha256": "9602d3da05e8a3222b42b45219f6b310254a1138a3c0f93a308772c9fbfa256f",
+        "source_dataset": "mmlu_management"
+      },
+      {
+        "id": "waferqa_mmlu_moral_disputes_00251",
+        "row_sha256": "d57df677b5467cb481331c173be530ec681f2808a457022b3e4c3781979463d2",
+        "question_sha256": "1df5dcb30b8e84120a326cefb439f696253379afdc008f4dc8f508ecf9cf7a5e",
+        "source_dataset": "mmlu_moral_disputes"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00081",
+        "row_sha256": "047e243de555acbec41d704651478ce60504bab7a22eed876e659740762c78a8",
+        "question_sha256": "ee6c6f7ff428e8e91a3e7ae7b605fe753e4e2df1ee3668afc73e4fd349385b78",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00205",
+        "row_sha256": "6f7c480a138533e07bb1fd3f5967caabe2a4af53e3680b3dcf8f810cb482a374",
+        "question_sha256": "47faef9451d46942c066101e177dde40fda6529cf1fc355f6720406bc7c2ac6b",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00068",
+        "row_sha256": "aff466f9a38c65ed33757015c2d33be16ea87c93f4258ef1c1108a8f095bbc76",
+        "question_sha256": "12b2479dc95a329b43417feddff14ae7c47cbc851214df5d131ddaeedbcfe7e5",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00197",
+        "row_sha256": "80649b271a0b748070095ac2cc73a46d8e34b4c73ae3e227d919cf8ae3c72b2d",
+        "question_sha256": "2dbbec9ccdbf76193417487dd0237204afb4fbf4abfbbae35c37da67d56c2e14",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00088",
+        "row_sha256": "354d6cdf4324dd67b166dbce156a22a4a977d3c7a9b535b181652e45dc71ebad",
+        "question_sha256": "f6e80a8f21d492616a76300e152b971182ab0a3dba1aef2ecd09471b54704b37",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_astronomy_00142",
+        "row_sha256": "57649d1f92c4fd911a2ee94f82928ac814d9c0137248ce4973c7f8055d98a537",
+        "question_sha256": "47be265365393b0e631b4a5f4b883ccebb8114c12423bb1314d1489dc9b2c347",
+        "source_dataset": "mmlu_astronomy"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00059",
+        "row_sha256": "8f1e92dbb048c1704300c115b146448029b6285ec47d3af1fb96e50bd7c65a2d",
+        "question_sha256": "d1ae41c852be8872e1d6edcab2758272e4327c1b26b3969115031402749ca6bf",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00232",
+        "row_sha256": "c1f10e5b11bdb67eb3f72179e48659ab3b9741c534cbae968312fe4a546a2800",
+        "question_sha256": "5200e8c5ef333086edf071f97f0dc155b30551e04d3449972040383bcd0b3aa0",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_global_facts_00069",
+        "row_sha256": "49d1274e87b7037e28ceb4dd1601f882c8d0f10827e1a834a478bcc07e9cb568",
+        "question_sha256": "ad0489ec190ee5fc93c1ca977c2e8058312e4e138c4697c0fb5877fdadca04d1",
+        "source_dataset": "mmlu_global_facts"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00104",
+        "row_sha256": "9afae1854828fea019a9af4bd0c4449c2047d7dde3d1f64b114db823ea61f924",
+        "question_sha256": "a337299419f565736b543dc11f59c171ce9b011a8bbc6a7e18ebfffd45c9a158",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_public_relations_00024",
+        "row_sha256": "2c81c6651b2f67603fd83329d9bd3a5ebd9da701473d531a10b30f4178f3b082",
+        "question_sha256": "a8bf1bbc63b07f19eef2de4e7b8f9ca1a025c4b91cbc9bd52f935deed4a8f7dd",
+        "source_dataset": "mmlu_public_relations"
+      },
+      {
+        "id": "waferqa_mmlu_nutrition_00303",
+        "row_sha256": "6295788c39347a02448b98b41d06ddf172133170fe60fa11c60111877a68c892",
+        "question_sha256": "e45bc2e205d95fd20f167089d3931c4cfb05c59b101a031bbd96ba1875cac9dd",
+        "source_dataset": "mmlu_nutrition"
+      },
+      {
+        "id": "waferqa_mmlu_sociology_00003",
+        "row_sha256": "ed78d19a7e60200e74607509684b19b27f9e27ba1c0a2a4f810559a883c27c9d",
+        "question_sha256": "882c07d4ba30f55e8788754c723c3b19053d3c220ee93e20636251d1d92a0709",
+        "source_dataset": "mmlu_sociology"
+      },
+      {
+        "id": "waferqa_mmlu_computer_security_00063",
+        "row_sha256": "6691b2bd495cc60cab975dfa182b2967ba783787c309cff1e1d2968fdfd77a7e",
+        "question_sha256": "9d390e678ba26c309ba36e5b826756ea708e4d246d5e00549fd88044bccc7a0b",
+        "source_dataset": "mmlu_computer_security"
+      },
+      {
+        "id": "waferqa_mmlu_clinical_knowledge_00243",
+        "row_sha256": "7204060e4aa13c8dc33daa0aaefb1a8b9667329e3565bf2b2270a24fbec26dc1",
+        "question_sha256": "e3ee074ca541a28bee442e31a40a55f3fd2ecf57a5ff086020a1bf19d6a44594",
+        "source_dataset": "mmlu_clinical_knowledge"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00161",
+        "row_sha256": "6a48e552f7ebdc01643b554cda96c16aa4aa10df8f38099626465d7c260dc611",
+        "question_sha256": "438f254dd534f20491becded9817508c21696ef0961a770a955cfec2f76f5204",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_marketing_00054",
+        "row_sha256": "eb84bf44b3075c3359aa6012a256b35a1a0f613f5d73e9b55c2dbd7d121ee53e",
+        "question_sha256": "b3d9113289794bcf6b3c5484902746d7241f7679c1010985e1c028c08d6e8529",
+        "source_dataset": "mmlu_marketing"
+      },
+      {
+        "id": "waferqa_mmlu_business_ethics_00096",
+        "row_sha256": "60ec3423476dc17a99c109e8c464ada8fcb4dccc9dc21b7b22b607eead6360ff",
+        "question_sha256": "04710849ef8a51263d0739413624605537747e866a1f9fbbddbcadf4f1092656",
+        "source_dataset": "mmlu_business_ethics"
+      },
+      {
+        "id": "waferqa_mmlu_high_school_macroeconomics_00348",
+        "row_sha256": "881ebf24bff4bb8dcc6065cf271ac1e9f8d5d6a26a4266479edbbf855a272980",
+        "question_sha256": "33cacb70b1b199baf4dcdc63f3baf48e29385c7be41b80ce7f80948145f5243f",
+        "source_dataset": "mmlu_high_school_macroeconomics"
+      },
+      {
+        "id": "waferqa_mmlu_moral_scenarios_00457",
+        "row_sha256": "60cbdb5b2c7057223f7c6937e48c49fe747ee4ee8ebf219e88f6b6f0b6f2b0fc",
+        "question_sha256": "db6b0e34f439463712c45f3f0f35ca429210d010bfd5d8ecfd34a39501058c9a",
+        "source_dataset": "mmlu_moral_scenarios"
+      }
+    ]
+  }
+}
