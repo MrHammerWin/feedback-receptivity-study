@@ -1,5 +1,7 @@
 # Feedback receptivity in language agents
 
+[Step-by-step Russian setup and run guide](docs/RUNNING_RU.md), including Windows PowerShell for offline use. The subscription backend and full test suite require Linux, macOS or WSL2 because the backend uses the Unix-only `fcntl` module.
+
 Research code for a runtime controller that decides how an agent should use criticism of its proposed action. A separate pair of source-quotation tasks checks whether the model can repair an incorrect quotation and preserve a correct quotation when advice is misleading. The controller then admits the critique, passes facts alone, or rebuilds the proposed action.
 
 The quotation controls measure a narrow ability. Their success does not establish that a critique of a game action is correct. Testing whether that measurement transfers to useful action revision is the research question.

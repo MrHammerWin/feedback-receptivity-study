@@ -63,11 +63,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "9ccec36196ecd14f8488868b0d8de66d1ba5648ec52d3aa29132a4bee3eacba2"
+      "sha256": "6e7f606d29f03e08fcbfccdb2a4a9ac83fcb4c1a78b071a9ce21ca862b32befe"
     },
     {
       "path": "README.ru.md",
-      "sha256": "2568576c487c8e19faea88b50c24a4f0d1ae11302d103747798e83b819efc532"
+      "sha256": "8af41a2713088ac8d5419144b1d533c498872e7e7118c01e02dc3648f4df1bb4"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -108,6 +108,10 @@
     {
       "path": "analysis/topic_sensitivity.py",
       "sha256": "65db365d99f44f30f8b07986cbee7a34c221552fe232d3ccd0e8b59ea63c546b"
+    },
+    {
+      "path": "docs/RUNNING_RU.md",
+      "sha256": "2d244069786ed716fa1acb8c8ac8a8e3dda4f9294b6657dfb6809d958b48efe5"
     },
     {
       "path": "examples/offline_demo.py",
@@ -533,7 +537,8 @@
     "Release-only subscription transport allows explicit owner-configured new campaigns; recorded study campaign ceilings cannot be changed. Agent policies/prompts are untouched.",
     "Numerical source data, exact statistical verification and four reproducible vector figures added after primary collection closed.",
     "Explicit recorded-study reproduction resource profile matches studied process guards without increasing persistent owner launch allowances.",
-    "Default strict controller, prompts and original primary scores retained; post-hoc span sensitivity is a separate offline saved-response analysis."
+    "Default strict controller, prompts and original primary scores retained; post-hoc span sensitivity is a separate offline saved-response analysis.",
+    "Documentation-only readability revision: Russian step-by-step guide, native Windows offline instructions and explicit POSIX/WSL subscription-backend requirement; scientific runtime and recorded data unchanged."
   ],
   "excluded": [
     "Git history from private source repository",
