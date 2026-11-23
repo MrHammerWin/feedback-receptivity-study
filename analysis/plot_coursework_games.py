@@ -61,7 +61,7 @@ def read_panels():
 def render(panels, *, success_chart, filename):
     figure, axes = plt.subplots(2, 1, figsize=(6.3, 4.85))
     figure.subplots_adjust(left=.255, right=.97, top=.905, bottom=.14, hspace=.82)
-    for axis, (title, tasks, successes, calls) in zip(axes, panels):
+    for axis, (title, tasks, successes, calls) in zip(axes, panels, strict=True):
         if success_chart:
             values = [100 * count / tasks for count in successes]
             labels = [f"{count} из {tasks}" for count in successes]
@@ -84,7 +84,7 @@ def render(panels, *, success_chart, filename):
         axis.tick_params(axis="y", length=0, pad=7)
         axis.grid(axis="x", color="#DFE3E7", linewidth=.6)
         axis.set_axisbelow(True)
-        for position, (value, label) in enumerate(zip(values, labels)):
+        for position, (value, label) in enumerate(zip(values, labels, strict=True)):
             axis.text(value + (1.5 if success_chart else .9), position, label, ha="left", va="center", fontsize=10)
 
     figure.savefig(filename, dpi=300, facecolor="white", metadata={"Date": None})
