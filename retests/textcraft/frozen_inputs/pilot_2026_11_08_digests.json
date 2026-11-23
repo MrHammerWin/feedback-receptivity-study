@@ -1,0 +1,38 @@
+{
+  "role": "pilot_2026_11_08",
+  "coverage_verified": true,
+  "visibility": "goal-digests-only; private coverage evidence is not distributed",
+  "source_file_field": "Compatibility field: availability marker, not an original source path.",
+  "rows": [
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "447649282cd93cab2e0297264b2cf2920d0f2e1fd18180f399c8c47667037abb"
+    },
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "7875a9495f78f89ba6849588ca6169962b5ea50dc5ce241becbab3498c75f7ac"
+    },
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "7d338381ca88cbe5c43a7ccca4734f98d417935448baffe0b67fef5a7ac2478d"
+    },
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "8ca39ae6366fc41b1d7bdfee9e121c5239d1ebe3788b42fe7170acec09617bc6"
+    },
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "abd7e03c8c418d167fd6c25f7978535693c89990c586921bfb8c09f8747d9012"
+    },
+    {
+      "phase": "pilot_2026_11_08",
+      "source_file": "private-record-not-distributed",
+      "task_id": "e23cddee6202e2f49d77543005fbf6e1baaad0346d86c3e8327fbc39d889d308"
+    }
+  ]
+}

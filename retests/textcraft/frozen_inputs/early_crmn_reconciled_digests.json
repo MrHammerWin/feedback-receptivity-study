@@ -1,0 +1,23 @@
+{
+  "role": "early_crmn_reconciled",
+  "coverage_verified": true,
+  "visibility": "goal-digests-only; private coverage evidence is not distributed",
+  "source_file_field": "Compatibility field: availability marker, not an original source path.",
+  "rows": [
+    {
+      "phase": "early_crmn_reconciled",
+      "source_file": "private-record-not-distributed",
+      "task_id": "4835d235328ec63b840dd94bb6887ed0d3d9b8dc45a205586bf88f89184adae1"
+    },
+    {
+      "phase": "early_crmn_reconciled",
+      "source_file": "private-record-not-distributed",
+      "task_id": "5a6194975130d41c20fd4294e783e684cb8ea20d88d091395a0706f0c398fd6a"
+    },
+    {
+      "phase": "early_crmn_reconciled",
+      "source_file": "private-record-not-distributed",
+      "task_id": "739b80ed4a7aa2c58c62eb924bc908c75ed4879faf02b6f5486358d5b5d5a429"
+    }
+  ]
+}

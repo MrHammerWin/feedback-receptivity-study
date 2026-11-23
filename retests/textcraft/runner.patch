@@ -1,0 +1,436 @@
+--- a/src/crmn_agent/environments.py
++++ b/src/crmn_agent/environments.py
+@@ -17,6 +17,13 @@
+     background: str = ''
+ 
+ 
++OPEN_COMMANDS_NOTE = (
++    'TextCraft accepts open commands. An empty available_actions list means that commands '
++    'are composed using the rules below. In the action field, return exactly one get, craft, '
++    'or inventory command. Never return a sentence about no actions being available. '
++)
++
++
+ class TextCraftEnv:
+     protocol = 'textcraft-pypi-0.0.3; official ADaPT task split not asserted'
+ 
+@@ -29,6 +36,7 @@
+         self.env = None
+         self.seed = seed
+         self.recipe_text = ''
++        self.open_commands_note = config.get('textcraft_open_commands_note', False)
+ 
+     def reset(self) -> Observation:
+         if self.env is not None:
+@@ -51,7 +59,8 @@
+                  'use oak planks instead of the generic tag planks. '
+                  'To make several batches, repeat the recipe command; changing its leading number '
+                  'does not repeat the recipe.')
+-        return f'{rules}\n{self.recipe_text}\nLatest observation: {feedback}'
++        note = OPEN_COMMANDS_NOTE if self.open_commands_note else ''
++        return f'{note}{rules}\n{self.recipe_text}\nLatest observation: {feedback}'
+ 
+     def step(self, action: str) -> Observation:
+         text, reward, done, truncated, _ = self.env.step(action)
+--- a/src/crmn_agent/experiment.py
++++ b/src/crmn_agent/experiment.py
+@@ -1,23 +1,198 @@
+-"""Frozen-task evaluation with per-step checkpoints and source fingerprints."""
++"""Frozen TextCraft retest with per-step checkpoints and a distinct launch ledger."""
+ import argparse
+ import hashlib
+ import importlib.metadata
+ import json
++import os
++import re
++import sys
+ import time
+ from dataclasses import asdict
+ from datetime import UTC, datetime
+ from pathlib import Path
+ from zipfile import ZipFile
+ 
+-from .environments import make_env
++from .environments import OPEN_COMMANDS_NOTE, make_env
+ from .providers import (
+     BackendTransportError,
+     BudgetExceeded,
+     EpisodeBudgetExceeded,
+     ModelOutputError,
+-    make_provider,
+ )
+-from .published_baselines import PublishedAgent
++from .public_authorization import RESOURCE_PROFILES
++
++
++VARIANTS = ('feedback', 'feedback_open_commands', 'grounding_only', 'raw_actor')
++CAMPAIGN = 'textcraft-open-commands-retest'
++LIMIT = 5120
++EPISODE_CAP = 32
++MODEL = 'gpt-5.6-luna'
++PUBLISHED_PLAN_SHA256 = 'fea3c727a5b6fe439f9455f09d5f34f76cd600544caef6dd82d381d032de798e'
++PILOT_ROLES = {'prior_main', 'pilot_2026_11_08', 'engineering_2026_11_10', 'early_crmn_reconciled'}
++SHA256 = re.compile(r'[0-9a-f]{64}')
++
++
++def sha256(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def read_json(path):
++    return json.loads(Path(path).read_text(encoding='utf-8'))
++
++
++def initial_inputs_sha256(env, obs):
++    inputs = [obs.text, obs.mission, obs.actions, env.recipe_text]
++    return sha256(json.dumps(inputs, ensure_ascii=False, separators=(',', ':')).encode('utf-8'))
++
++
++def validate_design(tasks):
++    if not isinstance(tasks, list) or len(tasks) != 40:
++        raise ValueError('Exactly forty distinct TextCraft goals are required')
++    keys, ids = set(), set()
++    for task in tasks:
++        key, task_id = task['key'], task['task_id']
++        if (task['benchmark'] != 'textcraft' or type(task['seed']) is not int or task['seed'] < 0
++                or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,100}', key)
++                or key in keys or task_id in ids or not SHA256.fullmatch(task_id)
++                or not SHA256.fullmatch(task['initial_inputs_sha256'])
++                or sorted(task['variants']) != sorted(VARIANTS)):
++            raise ValueError('Invalid TextCraft task, duplicate goal/key or unapproved variant order')
++        keys.add(key)
++        ids.add(task_id)
++    return ids
++
++
++def verified_pilot_ids(data, role):
++    if data.get('role') != role or data.get('coverage_verified') is not True or not data.get('rows'):
++        raise ValueError('Pilot export lacks verified source coverage')
++    ids = set()
++    for row in data['rows']:
++        if not row.get('phase') or not row.get('source_file'):
++            raise ValueError('Every pilot goal must reference its source record')
++        old_id = row.get('task_id')
++        if old_id:
++            if not SHA256.fullmatch(old_id):
++                raise ValueError('Invalid pilot goal digest')
++            ids.add(old_id)
++        item = row.get('item_id', '').removeprefix('minecraft:')
++        if row.get('mission'):
++            match = re.fullmatch(r'craft ([a-z0-9 _]+)\.?', row['mission'].strip().lower())
++            if not match:
++                raise ValueError('Pilot goal must identify the crafted item')
++            from_mission = '_'.join(match[1].replace('_', ' ').split())
++            if item and item != from_mission:
++                raise ValueError('Pilot goal and crafted item disagree')
++            item = from_mission
++        if item:
++            if not re.fullmatch(r'[a-z0-9_]+', item):
++                raise ValueError('Invalid pilot goal item')
++            ids.add(sha256(('craft ' + item.replace('_', ' ') + '.').encode('utf-8')))
++        if not (old_id or item):
++            raise ValueError('A seed is not enough to identify a pilot goal')
++    return ids
++
++
++def verify_pilot_audit(audit_path, manifest_hash, selected_ids):
++    path = Path(audit_path).resolve(strict=True)
++    audit = read_json(path)
++    if audit.get('status') != 'complete' or audit.get('manifest_sha256') != manifest_hash:
++        raise ValueError('Pilot reconciliation is incomplete or for a different manifest')
++    ids = audit['excluded_task_ids']
++    if not isinstance(ids, list) or not all(isinstance(i, str) and SHA256.fullmatch(i) for i in ids):
++        raise ValueError('Invalid pilot exclusion list')
++    excluded = set(ids)
++    if selected_ids & excluded:
++        raise ValueError('Selected goals overlap prior runs')
++    seen, derived = set(), set()
++    for source in audit['sources']:
++        role, relative = source['role'], Path(source['path'])
++        if role not in PILOT_ROLES or relative.is_absolute() or '..' in relative.parts:
++            raise ValueError('Invalid role or relative path for pilot evidence')
++        actual = (path.parent / relative).resolve(strict=True)
++        if not actual.is_relative_to(path.parent):
++            raise ValueError('Pilot evidence path must remain inside the audit directory')
++        content = actual.read_bytes()
++        if not content or sha256(content) != source['sha256']:
++            raise ValueError('Pilot evidence changed or is empty')
++        if role == 'prior_main':
++            if source['sha256'] != PUBLISHED_PLAN_SHA256:
++                raise ValueError('Use the pinned published Native task plan as prior_main evidence')
++            ids = {row['task_id'] for row in json.loads(content)['tasks'] if row['benchmark'] == 'textcraft'}
++            if len(ids) != 8 or not ids <= excluded:
++                raise ValueError('Some prior primary TextCraft tasks are missing from the exclusions')
++        else:
++            ids = verified_pilot_ids(json.loads(content), role)
++        derived.update(ids)
++        seen.add(role)
++    if seen != PILOT_ROLES:
++        raise ValueError('The pilot, engineering, early CRMN and published main goals must be reconciled')
++    if derived != excluded:
++        raise ValueError('The exclusion list does not match the audited pilot and published sources')
++    return sha256(path.read_bytes())
++
++
++def check_provider(config):
++    provider = config['provider']
++    expected = {
++        'backend': 'codex', 'model': MODEL, 'reasoning_effort': 'low',
++        'allow_subscription': True, 'allow_paid': False, 'subscription_campaign': CAMPAIGN,
++        'subscription_max_launches': LIMIT, 'authorized_campaigns': {CAMPAIGN: LIMIT},
++        'stop_on_transport_error': True, 'resource_profile': 'recorded-study',
++        **RESOURCE_PROFILES['recorded-study'],
++    }
++    if any(type(provider.get(k)) is not type(v) or provider[k] != v for k, v in expected.items()):
++        raise ValueError('The separate TextCraft subscription-only authorization is required')
++    if provider.keys() - (expected.keys() | {
++        'subscription_ledger', 'subscription_checkpoint', 'subscription_min_interval_seconds',
++        'isolated_dir', 'study_cache_dir', 'timeout_seconds',
++    }):
++        raise ValueError('Unrecognized provider setting')
++    ledger = Path(provider['subscription_ledger']).resolve(strict=True)
++    checkpoint = Path(provider['subscription_checkpoint']).resolve(strict=True)
++    output = Path(config['results_dir']).resolve()
++    if (not output.is_relative_to(ledger.parent) or output == ledger.parent
++            or checkpoint.parent != ledger.parent or checkpoint == ledger):
++        raise ValueError('Results and checkpoint must be inside the separate TextCraft authorization directory')
++    allowance = read_json(ledger)
++    if (allowance.get('campaign') != CAMPAIGN or allowance.get('limit') != LIMIT
++            or allowance.get('paid_api') is not False):
++        raise ValueError('Wrong allowance ledger for the TextCraft retest')
++    stop = read_json(checkpoint).get('stop_after')
++    if type(stop) is not int or not 0 < stop <= LIMIT:
++        raise ValueError('The new campaign checkpoint is closed or invalid')
++    return {**provider, 'max_calls_per_episode': EPISODE_CAP}, output
++
++
++def start_env(task, variant):
++    return make_env('textcraft', 'default', task['seed'],
++                    {'textcraft_open_commands_note': variant != 'feedback'})
++
++
++def verified_observation(env, task, variant):
++    obs = env.reset()
++    if (env.task_id != task['task_id'] or env.task_id != sha256(obs.mission.encode('utf-8'))
++            or initial_inputs_sha256(env, obs) != task['initial_inputs_sha256']):
++        raise ValueError(f'Frozen TextCraft inputs differ for {task["key"]} / {variant}')
++    note = OPEN_COMMANDS_NOTE if variant != 'feedback' else ''
++    if obs.background.startswith(OPEN_COMMANDS_NOTE) != bool(note):
++        raise ValueError('TextCraft note was applied to the wrong comparison arm')
++    return obs, obs.background.removeprefix(note) if note else obs.background
++
++
++def preflight_tasks(tasks):
++    # Compare every arm before authenticating a provider, then recheck its own reset before agent.act.
++    baselines = {}
++    for task in tasks:
++        for variant in task['variants']:
++            env = start_env(task, variant)
++            try:
++                _, background = verified_observation(env, task, variant)
++                background_hash = sha256(background.encode('utf-8'))
++                if baselines.setdefault(task['key'], background_hash) != background_hash:
++                    raise ValueError('TextCraft backgrounds differ beyond the tested note')
++            finally:
++                env.close()
++    return baselines
+ 
+ 
+ def dump(path, value):
+@@ -37,118 +212,95 @@
+     return digest.hexdigest()
+ 
+ 
+-def build_agent(provider, variant, benchmark, task_id, options):
++def build_agent(provider, variant):
+     if variant == 'raw_actor':
+         from .ablations import DraftOnlyAgent
+-        return DraftOnlyAgent(provider, **options)
+-    if variant in {'stateact', 'reflact_paper'}:
+-        return PublishedAgent(provider, variant, benchmark, task_id)
+-    if variant == 'feedback':
+-        from .feedback_control import FeedbackAgent
+-        return FeedbackAgent(provider, **options)
+-    if variant in {'grounding_only', 'critic_only', 'facts_only'}:
+-        from .feedback_control import FeedbackAgent
+-        mode = {'grounding_only': 'grounding_only', 'critic_only': 'always_critique',
+-                'facts_only': 'facts_only'}[variant]
+-        return FeedbackAgent(provider, **{'probe_policy': 'never', 'gate_mode': mode,
+-                                         'revision_only': True, **options})
+-    raise ValueError('Unknown experiment variant')
++        return DraftOnlyAgent(provider, history_turns=100)
++    if variant not in VARIANTS:
++        raise ValueError('Unknown TextCraft retest variant')
++    from .feedback_control import FeedbackAgent
++    grounding = variant == 'grounding_only'
++    return FeedbackAgent(provider, history_turns=100, revision_only=True,
++                         probe_policy='never' if grounding else 'on_revision',
++                         gate_mode='grounding_only' if grounding else 'controlled')
+ 
+ 
+ def run(config_path):
+     config_path = Path(config_path)
+-    config = json.loads(config_path.read_text())
+-    if config['provider']['backend'] != 'codex':
+-        raise ValueError('This campaign permits only the authorized subscription backend')
+-    frozen = json.loads(Path(config['manifest']).read_text())
++    config = read_json(config_path)
++    if set(config) != {'provider', 'manifest', 'pilot_audit', 'results_dir'}:
++        raise ValueError('Expected a frozen TextCraft configuration without overrides')
++    if (os.environ.get('PYTHONHASHSEED') != '0' or sys.implementation.name != 'cpython'
++            or sys.flags.hash_randomization != 0):
++        raise ValueError('Set PYTHONHASHSEED=0 before starting CPython')
++    manifest_path = Path(config['manifest'])
++    tasks = read_json(manifest_path)['tasks']
++    manifest_hash = sha256(manifest_path.read_bytes())
++    audit_hash = verify_pilot_audit(config['pilot_audit'], manifest_hash, validate_design(tasks))
++    provider_config, output = check_provider(config)
++    packages = {name: importlib.metadata.version(name) for name in ('pydantic', 'numpy', 'textcraft', 'gymnasium')}
++    if packages['textcraft'] != '0.0.3':
++        raise ValueError('TextCraft 0.0.3 is required for the retest')
++    bases = preflight_tasks(tasks)
+     source_hash = fingerprint()
+-    output = Path(config['results_dir'])
+     output.mkdir(parents=True, exist_ok=True)
+     record_path = output / 'run.json'
+-    config_hash = hashlib.sha256(config_path.read_bytes()).hexdigest()
+-    manifest_hash = hashlib.sha256(Path(config['manifest']).read_bytes()).hexdigest()
++    config_hash = sha256(config_path.read_bytes())
++    identity = {'config_sha256': config_hash, 'source_sha256': source_hash, 'manifest_sha256': manifest_hash,
++                'pilot_audit_sha256': audit_hash, 'packages': packages, 'python_version': sys.version,
++                'initial_base_backgrounds': bases}
+     if record_path.exists():
+-        previous = json.loads(record_path.read_text())
+-        if previous['config_sha256'] != config_hash or previous['source_sha256'] != source_hash:
+-            raise ValueError('Cannot mix runs after changing code or configuration')
+-        if previous['manifest_sha256'] != manifest_hash:
+-            raise ValueError('Cannot resume after changing the frozen task manifest')
++        previous = read_json(record_path)
++        if any(previous.get(k) != v for k, v in identity.items()):
++            raise ValueError('Cannot mix runs after changing code, configuration, inputs or pilot audit')
+     else:
+-        packages = {}
+-        for name in ('pydantic', 'numpy', 'textcraft', 'alfworld', 'textworld'):
+-            packages[name] = importlib.metadata.version(name)
++        if any(output.iterdir()):
++            raise ValueError('A new, empty results directory is required')
+         dump(record_path, {'created_at': datetime.now(UTC).isoformat(), 'config': config,
+-                           'config_sha256': config_hash, 'source_sha256': source_hash,
+-                           'manifest_sha256': manifest_hash,
+-                           'packages': packages, 'paid_api': False,
+-                           'comparison': 'published scaffolds on shared model, not absolute SOTA leaderboard'})
+-    provider_config = {**config['provider'], 'max_calls_per_episode': config.get('episode_call_cap', 1000)}
++                           **identity, 'paid_api': False, 'episode_call_cap': EPISODE_CAP,
++                           'variants': VARIANTS, 'comparison': 'TextCraft open-command instruction retest'})
+     snapshot = output / 'source_snapshot.zip'
+     if not snapshot.exists():
+         with ZipFile(snapshot, 'w') as zipped:
+             for source in sorted(Path(__file__).parent.rglob('*')):
+                 if source.is_file() and '__pycache__' not in source.parts and source.suffix in {'.py', '.txt', '.json'}:
+                     zipped.write(source, 'crmn_agent/' + str(source.relative_to(Path(__file__).parent)))
+-    scoped = bool(provider_config.get('study_cache_dir'))
+-    if scoped and config.get('replay_prefixes'):
+-        raise ValueError('Scoped study cache cannot be combined with legacy replay')
+-    if scoped:
+-        from .study_provider import ScopedCodexProvider
+-        provider_config['study_source_identity'] = hashlib.sha256(
+-            (source_hash + manifest_hash + config_hash).encode()).hexdigest()
+-        provider_config['task_kind'] = 'native'
+-        provider = ScopedCodexProvider(provider_config, output / 'model_calls.jsonl')
+-    elif config.get('replay_prefixes'):
+-        from .replay_provider import ReplayCodexProvider
+-        provider = ReplayCodexProvider(provider_config, output / 'model_calls.jsonl')
+-    else:
+-        provider = make_provider(provider_config, output / 'model_calls.jsonl')
+-    for task in frozen['tasks']:
+-        if task['key'] not in config.get('task_keys', [t['key'] for t in frozen['tasks']]):
+-            continue
+-        for variant in config['variants']:
++    from .codex_provider import CodexProvider
++    provider = CodexProvider(provider_config, output / 'model_calls.jsonl')
++    for task in tasks:
++        for variant in task['variants']:
+             episode_file = output / 'episodes' / f"{task['key']}--{variant}.json"
+             if episode_file.exists():
+-                previous = json.loads(episode_file.read_text())
+-                resumable = previous.get('status') == 'campaign_budget_censored'
+-                if previous.get('finished') and not (resumable and scoped and config.get('resume_from_cache')):
++                previous = read_json(episode_file)
++                if previous.get('finished') and previous.get('status') not in {
++                    'campaign_budget_censored', 'infrastructure_censored'
++                }:
+                     continue
+-                if not (scoped and config.get('resume_from_cache') and resumable):
+-                    raise ValueError('Interrupted episode must be explicitly adjudicated, not silently repeated')
+-                archive = output / 'partial_checkpoints' / (episode_file.stem + f'--{time.time_ns()}.json')
+-                dump(archive, previous)
+-            env = make_env(task['benchmark'], 'default', task['seed'], config)
++                raise ValueError('Interrupted episode must be explicitly adjudicated, not silently repeated')
++            env = start_env(task, variant)
+             started = time.monotonic()
+             before = asdict(provider.usage)
+-            replay_seconds_before = getattr(provider, 'replayed_seconds', 0.0)
+-            if config.get('replay_prefixes'):
+-                key = task['key'] + '--' + variant
+-                prefix = config['replay_prefixes'].get(key)
+-                provider.set_replay_prefix(Path(prefix) if prefix else None)
+             provider.begin_episode()
+             try:
+-                obs = env.reset()
+-                if env.task_id != task['task_id']:
+-                    raise ValueError('Frozen task identity changed')
+-                agent = build_agent(provider, variant, task['benchmark'], env.task_id,
+-                                    config.get('agent_options', {}).get(variant, {}))
++                obs, background = verified_observation(env, task, variant)
++                if sha256(background.encode('utf-8')) != bases[task['key']]:
++                    raise ValueError('The actual episode background differs from its verified starting frame')
++                agent = build_agent(provider, variant)
+                 episode = {'key': task['key'], 'benchmark': task['benchmark'], 'seed': task['seed'],
+                            'task_id': env.task_id, 'variant': variant, 'protocol': env.protocol,
++                           'initial_inputs_sha256': task['initial_inputs_sha256'],
++                           'initial_base_background_sha256': bases[task['key']],
+                            'model': provider.model, 'source_sha256': source_hash,
+                            'success': False, 'status': 'running', 'finished': False, 'trajectory': []}
+                 dump(episode_file, episode)
+-                for step in range(config['horizons'][task['benchmark']]):
++                for step in range(100):
+                     used = provider.usage.calls - before['calls']
+-                    if used >= config.get('episode_call_cap', 1000):
++                    if used >= EPISODE_CAP:
+                         episode['status'] = 'episode_compute_cap'
+                         break
+                     try:
+                         step_before = asdict(provider.usage)
+-                        if scoped:
+-                            provider.begin_scope(f"{task['key']}--{variant}--step-{step}", 'sequence')
+                         turn = agent.act(obs.text, obs.mission, obs.actions, step, obs.background)
+-                        if scoped:
+-                            provider.assert_scope_exhausted()
+                         nxt = env.step(turn.action)
+                         agent.feedback(nxt.success, nxt.terminated)
+                         episode['trajectory'].append({
+@@ -184,20 +336,18 @@
+                 else:
+                     episode['status'] = 'action_horizon'
+                 episode['steps'] = len(episode['trajectory'])
+-                if config.get('replay_prefixes'):
+-                    provider.assert_replay_exhausted()
+                 episode['usage'] = {k: v - before[k] for k, v in asdict(provider.usage).items()}
+                 completed_calls = sum(t.get('usage', {}).get('calls', 0) for t in episode['trajectory'])
+                 episode['unexecuted_turn_calls'] = episode['usage']['calls'] - completed_calls
+                 episode['execution_wall_seconds'] = time.monotonic() - started
+-                episode['historical_replay_seconds'] = getattr(provider, 'replayed_seconds', 0.0) - replay_seconds_before
+-                episode['wall_seconds'] = episode['execution_wall_seconds'] + episode['historical_replay_seconds']
+-                episode['response_reuse'] = bool(config.get('replay_prefixes') or scoped)
++                episode['historical_replay_seconds'] = 0.0
++                episode['wall_seconds'] = episode['execution_wall_seconds']
++                episode['response_reuse'] = False
+                 episode['finished'] = True
+                 dump(episode_file, episode)
+                 print(json.dumps({k: episode[k] for k in ('key', 'variant', 'success', 'status', 'steps', 'usage')}), flush=True)
+                 if episode['status'] in {'campaign_budget_censored', 'infrastructure_censored'}:
+-                    return
++                    raise RuntimeError(f'TextCraft retest stopped: {episode["status"]}')
+             finally:
+                 env.close()
+ 

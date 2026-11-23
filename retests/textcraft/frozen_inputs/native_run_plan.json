@@ -1,0 +1,245 @@
+{
+  "schema_version": "feedback-native-run-plan-v1",
+  "model": "gpt-5.6-luna",
+  "source_sha256": "007ece6461170fb34900dd21417414f9221ff17246952821c17ecc3d881089c5",
+  "reasoning_effort": "low",
+  "horizons": {
+    "alfworld": 100,
+    "textcraft": 100
+  },
+  "episode_call_cap": 64,
+  "environment_protocols": {
+    "alfworld": "ALFWorld 0.4.2 textworld PDDL, public admissible commands, no expert/facts access",
+    "textcraft": "textcraft-pypi-0.0.3; official ADaPT task split not asserted"
+  },
+  "variants": [
+    "raw_actor",
+    "stateact",
+    "reflact_paper",
+    "grounding_only",
+    "feedback"
+  ],
+  "tasks": [
+    {
+      "key": "alfworld-main-00",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_and_place_simple-SoapBottle-None-Toilet-424/trial_T20190907_004321_405868/game.tw-pddl",
+      "seed": 33,
+      "task_type": "pick_and_place_simple",
+      "initial_observation_sha256": "e52b60e2c46e14fe9e852772930a3fe6765bbde0afb89acf290bd6f3b5c4c59a",
+      "game_sha256": "f1b7e4f0c4577a1473a19a99f67b312a987db37b5a222bae25ee0a04e17bf323"
+    },
+    {
+      "key": "textcraft-main-00",
+      "benchmark": "textcraft",
+      "task_id": "9467c934d2cd592d6aec7720ccc9a73ea5067798a72981d94f2baa93cad8b66d",
+      "seed": 100192,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 12,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "lower"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "8df0e8aca7d7dcbfe4ff030d39dfd032e45d13c73740a37414eeb3191bc136d7"
+    },
+    {
+      "key": "alfworld-main-01",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Knife-None-CounterTop-10/trial_T20190909_110445_675754/game.tw-pddl",
+      "seed": 53,
+      "task_type": "pick_clean_then_place_in_recep",
+      "initial_observation_sha256": "19743d9e9b5d76b02662940f29d2426cbc60ed301027a0aa8b94e0a3a9872060",
+      "game_sha256": "217adb71b5f1abc35fe3882fc5fc47e09e7050db0b72b78321c5a8e26dd361e7"
+    },
+    {
+      "key": "textcraft-main-01",
+      "benchmark": "textcraft",
+      "task_id": "1bae90f363d8e7daf96b9cd70ca6757daf2f0b95a82f83c843be5863d3d034cd",
+      "seed": 100341,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 15,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "middle"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "65d034e6b1257f6f99ae00ded83c0dd45417619a46e6346661165f87f2fd2576"
+    },
+    {
+      "key": "alfworld-main-02",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145356_918528/game.tw-pddl",
+      "seed": 99,
+      "task_type": "pick_heat_then_place_in_recep",
+      "initial_observation_sha256": "c47cde4c3dd6c5d42464f3e621c1393394187abaab93508a6d7bd35c30539c8b",
+      "game_sha256": "5d5f615248cae750fac8693fe71004c11b9e86735342350f54cc585446511ebe"
+    },
+    {
+      "key": "alfworld-main-03",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_114545_244903/game.tw-pddl",
+      "seed": 85,
+      "task_type": "pick_cool_then_place_in_recep",
+      "initial_observation_sha256": "1c6aa6e39646474459021ce57d3c37dc811c37777a97f5b11dc425a7d64aedee",
+      "game_sha256": "87e84971b6c6df4ff2716f3c4ceccab8a59936b9c98b8ed49ec27c2732d734af"
+    },
+    {
+      "key": "textcraft-main-02",
+      "benchmark": "textcraft",
+      "task_id": "4c2e8cf3525bce3e0ac286ee8bdc89338b0443fa8111302f350ae01bfbb10949",
+      "seed": 100110,
+      "complexity": {
+        "public_dependency_depth": 3,
+        "public_recipe_count": 25,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "upper"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "aac54e12c66c9ff901414564658431d21fe91b6e830560ade8ea9c85f0a0427e"
+    },
+    {
+      "key": "alfworld-main-04",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/look_at_obj_in_light-Pencil-None-DeskLamp-308/trial_T20190908_220604_010430/game.tw-pddl",
+      "seed": 16,
+      "task_type": "look_at_obj_in_light",
+      "initial_observation_sha256": "acb74abe41baacaf9f9f3c62af88c9f84d13e88386721e86c57ba8c0d421fc03",
+      "game_sha256": "ccdbf65a68032de72d068f735d7909bf53badc25b15df1e039fe9cb7735379b9"
+    },
+    {
+      "key": "textcraft-main-03",
+      "benchmark": "textcraft",
+      "task_id": "0cc00862f8296d0ca2e688668a3c288717914020338eb0841ea88a887521a568",
+      "seed": 100037,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 13,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "lower"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "5f76bf3db499d9f51d98c6a9a088ff9f664fb86c0a3cbd5f4984a484efa728ac"
+    },
+    {
+      "key": "alfworld-main-05",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163327_486300/game.tw-pddl",
+      "seed": 126,
+      "task_type": "pick_two_obj_and_place",
+      "initial_observation_sha256": "552010ba75f1fec9e156bc78646c75ccd1b43659ad94c62ff9d94d295d524326",
+      "game_sha256": "2f60029dc6b8a3cfb1ddb44e93ac376e2d028dfb96893ed0e43a1c40cbe13b8c"
+    },
+    {
+      "key": "alfworld-main-06",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/game.tw-pddl",
+      "seed": 24,
+      "task_type": "pick_and_place_simple",
+      "initial_observation_sha256": "3f66c05c594e8457e335ca7eb6aba8ed14c418b2e3271c28adbf3bcc248f18fe",
+      "game_sha256": "243070e9185346caf15150581748d463c8c815c7ceed7f4fd1a9e887e181211e"
+    },
+    {
+      "key": "textcraft-main-04",
+      "benchmark": "textcraft",
+      "task_id": "57a45191290ae90a903f2d8c9cc0ddc9b6cf3b92fcf9d48cab6bfc6679a37461",
+      "seed": 100272,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 16,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "middle"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "3e80b0c51b266869b72b94caaad308952f0e403f5b13c89f5797e1eb2c379fe6"
+    },
+    {
+      "key": "alfworld-main-07",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-424/trial_T20190907_074124_966890/game.tw-pddl",
+      "seed": 69,
+      "task_type": "pick_clean_then_place_in_recep",
+      "initial_observation_sha256": "f9b94200a8a9efddf555fd00cb64f1cae7d8aea36b242c528c6327267d24c002",
+      "game_sha256": "659704024876f5a38fd4a4f8ba0a5189aa2d4531c9a61078a805de86d3c90a82"
+    },
+    {
+      "key": "textcraft-main-05",
+      "benchmark": "textcraft",
+      "task_id": "5cf30c8bd1589af4f34fbe6fcf52bec9b3c8ed2f98c15a820cb869a8f35e51ba",
+      "seed": 100105,
+      "complexity": {
+        "public_dependency_depth": 3,
+        "public_recipe_count": 13,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "upper"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "f908f4148ab2d873b606e464be98f77a61494b2ebedd5f2e8315f600fe215aef"
+    },
+    {
+      "key": "alfworld-main-08",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Egg-None-GarbageCan-10/trial_T20190908_113610_425142/game.tw-pddl",
+      "seed": 105,
+      "task_type": "pick_heat_then_place_in_recep",
+      "initial_observation_sha256": "d67c0db510b66ceb4c3b9f80c14348f602be682c07289d6f62283b4ac2dd6f0e",
+      "game_sha256": "25a45edb5798f8f94fd34fe518b45d3b4c809843eb5e2456b48431f611188b71"
+    },
+    {
+      "key": "alfworld-main-09",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102644_926781/game.tw-pddl",
+      "seed": 92,
+      "task_type": "pick_cool_then_place_in_recep",
+      "initial_observation_sha256": "1876d56cb05f20d8952180354367fcdf7b1d5e880651a63b6460204ffcdbf5f8",
+      "game_sha256": "e381cae1e5708aa7f2bc707d4a6d65b0aa30f7cd21ee2e40a86c7ae5278506e6"
+    },
+    {
+      "key": "textcraft-main-06",
+      "benchmark": "textcraft",
+      "task_id": "edb000f4e0a8d1ab62b26f5c225708aaf47fc58eff99d7696b2fd990c3a08f03",
+      "seed": 100380,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 9,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "lower"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "f125a3046b2184f20c133ddafc2467c8aac03d5689be07c0442bcd328cf2624c"
+    },
+    {
+      "key": "alfworld-main-10",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/look_at_obj_in_light-Mug-None-DeskLamp-308/trial_T20190908_201421_021646/game.tw-pddl",
+      "seed": 13,
+      "task_type": "look_at_obj_in_light",
+      "initial_observation_sha256": "9918fcb674b6db761dcd469707d72ad6c869d02a1bbf0347ebfa1563c178efb4",
+      "game_sha256": "9ae7011acc368c0d91a7355e99d9c8fc28d73817846d47ee0c3e8bacef92405c"
+    },
+    {
+      "key": "textcraft-main-07",
+      "benchmark": "textcraft",
+      "task_id": "917d74193625b240c3162f01ee62f691ce6309a131e4421c25220c221310f99a",
+      "seed": 100370,
+      "complexity": {
+        "public_dependency_depth": 2,
+        "public_recipe_count": 15,
+        "definition": "Minimum dependency depth over displayed recipe alternatives; quantities/batches ignored",
+        "stratum": "middle"
+      },
+      "initial_observation_sha256": "681543726400122cf64256313bfcd4d83c235a721da1e2a9e4421a1488c20b9a",
+      "public_background_sha256": "cb91d24d1f6ef5ef537f55feb45355319db0c804a3821a550a480ab288237e1e"
+    },
+    {
+      "key": "alfworld-main-11",
+      "benchmark": "alfworld",
+      "task_id": "json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_051056_585414/game.tw-pddl",
+      "seed": 119,
+      "task_type": "pick_two_obj_and_place",
+      "initial_observation_sha256": "c0cf6ec4a6f27eb5e5557d104c6a23108f518a2aeda3aa7e10efd9ea7d85626b",
+      "game_sha256": "41b83872881dda417ce81fe9c72ad18ce70fd57fc8479f78972197ed346c22a4"
+    }
+  ],
+  "original_plan_sha256": "010f3ecb74f844a7eddd24dbf3e0cbc42044d8340aad002b71119de75a44953f"
+}

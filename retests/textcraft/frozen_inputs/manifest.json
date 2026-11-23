@@ -1,0 +1,564 @@
+{
+  "tasks": [
+    {
+      "key": "textcraft-retest-00",
+      "benchmark": "textcraft",
+      "seed": 49,
+      "task_id": "bc5fa3d035901d91538fa0f5d635f49ae29b72621d42b5d1f0afc0d6ca378c22",
+      "depth": 3,
+      "initial_inputs_sha256": "191b737174406cb3626ed494da6a8bcd7249860c8e055fa3943f52b1661de213",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-01",
+      "benchmark": "textcraft",
+      "seed": 106,
+      "task_id": "8b7c42ce66240807cbdf5e3512d56cc6bdfceb9a28944daa616b649011da8061",
+      "depth": 3,
+      "initial_inputs_sha256": "dda5cd9b35d7fe8a339c69391396d10fc3c44eff6839f65f4b6c947397e7b807",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-02",
+      "benchmark": "textcraft",
+      "seed": 103,
+      "task_id": "c2df4b0c76f41d227a0c851e9ad0707cdf284f3fd1943712377b0cfe5a86cfe5",
+      "depth": 3,
+      "initial_inputs_sha256": "86e7109c590fb31da3d313bf6ae2c0b524e734345d8256dae9bf6b8018ccd42a",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-03",
+      "benchmark": "textcraft",
+      "seed": 35,
+      "task_id": "b526223950a76feb8040d97e1b8a67eb4ea089d54fd652b2a7cf8dd33c0ff1bb",
+      "depth": 3,
+      "initial_inputs_sha256": "eaa29011004b25718acd6b7041f224128736d1ec398e4257e50df79b5d2451dc",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-04",
+      "benchmark": "textcraft",
+      "seed": 250,
+      "task_id": "76c1c735e13407f9e647ace01dd568b8c255dbdcc52ed599786bb51a1906086e",
+      "depth": 2,
+      "initial_inputs_sha256": "a8d852a8abc577b4b4b7a6255a7c70cfabaff8e8f6ad93b13149ea13a4d20c85",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-05",
+      "benchmark": "textcraft",
+      "seed": 58,
+      "task_id": "3374c3b89c5f12c78cbbec6cf089f14ffa61746d2df8881faea45e82faba0d08",
+      "depth": 3,
+      "initial_inputs_sha256": "48f1a6911248deb7205783c8a4d625f757aff9975b564018d9719673a9c1eaa8",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-06",
+      "benchmark": "textcraft",
+      "seed": 316,
+      "task_id": "fa26a9244bd4755dac2004b4cf0ca21d21c381871a70cea263442ee5c5129e82",
+      "depth": 2,
+      "initial_inputs_sha256": "6a400a0318ed693a3fdb6b662176f11f851d1b24ad17f9ed76ceb6cea9f9fc33",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-07",
+      "benchmark": "textcraft",
+      "seed": 122,
+      "task_id": "e128654f5378571e9f7eb27ebfefa8c0d724d8eb93a3734966db27a8b133dd58",
+      "depth": 3,
+      "initial_inputs_sha256": "d88ae0732846c119d25001b01e4cf17dd6c006709860bc896c28a824f7957821",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-08",
+      "benchmark": "textcraft",
+      "seed": 14,
+      "task_id": "7236b7fa69ada834dd6f41244c4005f72797aaf8afd03d942768d9cb4f9c4a50",
+      "depth": 3,
+      "initial_inputs_sha256": "29413bb818231b10ceba9e08db0315149119c5829b349222869d80faa3159b80",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-09",
+      "benchmark": "textcraft",
+      "seed": 110,
+      "task_id": "a6875efed8053f71f2e9f62c3109aa27d682d9cb5950fe3aacc031330627c780",
+      "depth": 3,
+      "initial_inputs_sha256": "04ce08f04f054edeae06d8c0e3082c1b0b932cd10042ff650f94c1151e4830fb",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-10",
+      "benchmark": "textcraft",
+      "seed": 347,
+      "task_id": "8419f305858028fec20828994d0fbe3f40d49419b94c4e5568984d5e018b2f42",
+      "depth": 2,
+      "initial_inputs_sha256": "5b38006e06cba127137fd5cf441b74238c008b656995f4ab074f4ae564bd66bf",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-11",
+      "benchmark": "textcraft",
+      "seed": 372,
+      "task_id": "f630a8122b4f0201f54712cf9b9429d2faa72e2cf832d9cf44d397c4463eefaa",
+      "depth": 2,
+      "initial_inputs_sha256": "0e363ad2ef87f4d24bd4ab9053f2354b143328c05d8c2705245274f1dae64308",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-12",
+      "benchmark": "textcraft",
+      "seed": 353,
+      "task_id": "4985fb6b9f825a60285616a829b361720e348af22d60deb45c02978fd9d38fde",
+      "depth": 2,
+      "initial_inputs_sha256": "41add963ad815aa27ef14dd9bfde1167a46e1927e7e042546c9f23edbf8865fd",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-13",
+      "benchmark": "textcraft",
+      "seed": 71,
+      "task_id": "ab822aa00000ba84e2a7a825f84a6847e32b6a4ba2cf7b4c8d4795cc6772c820",
+      "depth": 3,
+      "initial_inputs_sha256": "506d2287684ab3f2e8ae0c32527039c0cce856e43371c6df3d69b8a4713bf2fa",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-14",
+      "benchmark": "textcraft",
+      "seed": 20,
+      "task_id": "42b7fca3fe92ad730e70cc3e672efd2842e13cb69aa046e39a9dc4136ff3bace",
+      "depth": 3,
+      "initial_inputs_sha256": "250ee8b9cd7d02c6a1cd954246fcfdb71691807fad6e26b3220a23dd69a49d2f",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-15",
+      "benchmark": "textcraft",
+      "seed": 102,
+      "task_id": "9fa28036d8029f01f4961fc35236a55eff22d1230e3ba41082795588f73094d6",
+      "depth": 3,
+      "initial_inputs_sha256": "54b3d0a641670b1f5ceb4c9377e9d734724c466a26e52cf86192f3ce22ef5e23",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-16",
+      "benchmark": "textcraft",
+      "seed": 39,
+      "task_id": "6d4115b392dc48e5c74a7ac2b94a24a4c8b0ece32f3d2bc6835a6dcd6e3c3773",
+      "depth": 3,
+      "initial_inputs_sha256": "75571237ab66db7741a9a6c7df37098876f5ef2996dd1c621ee027d311b32d27",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-17",
+      "benchmark": "textcraft",
+      "seed": 303,
+      "task_id": "f2e6813f30852a41a9271a2158e6db8bf9709eefcfb186e708e8d1796e13cc44",
+      "depth": 2,
+      "initial_inputs_sha256": "e51a5e069392c9cb6d4bf793ff708790f7839936220117e1c43c6210536e4e4e",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-18",
+      "benchmark": "textcraft",
+      "seed": 332,
+      "task_id": "b7d5573869a90c4feb045808bdccc97a8f6b9c99e4b5aa5588b4d113b3453f53",
+      "depth": 2,
+      "initial_inputs_sha256": "f7f8a7084dc7d696cd72b507ce2ecdad2f032dbc6e58126196eb3956ebd1b461",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-19",
+      "benchmark": "textcraft",
+      "seed": 233,
+      "task_id": "c4b28b6f035b9d29f9c8ce6bf20810361da4ffa72e1b6a47b0a88519f6cb6a29",
+      "depth": 2,
+      "initial_inputs_sha256": "29043e33030348a6dbda32d24fcf9aa0bf82eb00fce1bbf71f140a59736ecc8a",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-20",
+      "benchmark": "textcraft",
+      "seed": 45,
+      "task_id": "da1d8b66313c4f87d0ccdad57c2859d8fba1865d880187282727a1fe7eddeb05",
+      "depth": 3,
+      "initial_inputs_sha256": "767984c908f9178be09220ba186d25f42801a3a75071f93431682edd56184a03",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-21",
+      "benchmark": "textcraft",
+      "seed": 55,
+      "task_id": "35ccae48916b39a8d7f46fa719bff36b5b2908726986dae52b189b8ce710eb9b",
+      "depth": 3,
+      "initial_inputs_sha256": "227f5d4ab07947b2fdfb9794b8bced1faff2c475dc2c9be0099b5871c2b599ee",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-22",
+      "benchmark": "textcraft",
+      "seed": 264,
+      "task_id": "9408b63119f0715271e62f0f5193cb88d808fada6ab3e4fda8b96f91e06a2294",
+      "depth": 2,
+      "initial_inputs_sha256": "040631988f59a80d3f72d533d0795b320daa1744c51059d9c5324bd6734e4d61",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-23",
+      "benchmark": "textcraft",
+      "seed": 381,
+      "task_id": "13c7b1503beaa2bacf83f96a3f28d578810ade9e8877e321d92dbb23b737d605",
+      "depth": 2,
+      "initial_inputs_sha256": "1ca78b7e85a3ee190a07b304e75684b20ce5835b1bff89a58dd8801016f4d8a9",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-24",
+      "benchmark": "textcraft",
+      "seed": 383,
+      "task_id": "a6ccad774b29e5b989a0b6e4fd046bd5280b589d1767d982c329ab862c25e29f",
+      "depth": 2,
+      "initial_inputs_sha256": "703984adb671d8f0dc8ca8215584951a0a0d9af2d07c8f8ffac30b8dfe433f91",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-25",
+      "benchmark": "textcraft",
+      "seed": 321,
+      "task_id": "8f9053fcab90d3f014f70edf5c91f9a25ccd5083d26390f9d4b6113b5cf6dd34",
+      "depth": 2,
+      "initial_inputs_sha256": "4c689860f7b85a7861caa489eadb48b2d01bbf8dc5d39f93a70667694654ea77",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-26",
+      "benchmark": "textcraft",
+      "seed": 267,
+      "task_id": "ba2ef383446539012a192bf1d086fcbde443372ef6b3dd47a5c9441be9db3fee",
+      "depth": 2,
+      "initial_inputs_sha256": "3ef0889880d6c8844b23dd8df94c30a117e178124dd0bdd9ea0b574f02a9bb5b",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-27",
+      "benchmark": "textcraft",
+      "seed": 288,
+      "task_id": "d754489e934216036ff854107ac706d09be76eefbca45a2f8e0d22482645785b",
+      "depth": 2,
+      "initial_inputs_sha256": "f01c533341c87a3a18990bb73038141e0ed651ed98e4c53a82838248c15e0345",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-28",
+      "benchmark": "textcraft",
+      "seed": 328,
+      "task_id": "adaaa31f06f2848fd9349648d14214454cdd00695f030a7887dc6138dc52abad",
+      "depth": 2,
+      "initial_inputs_sha256": "80c1158700eeea9e6e808827f9f3994c560e9b83aabcca98458d129e8b2627f7",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-29",
+      "benchmark": "textcraft",
+      "seed": 25,
+      "task_id": "ed7ac0cb3c4fc54ea084639bbfc7c9e27a1abf08dfea851e60ec8d64dacd306a",
+      "depth": 3,
+      "initial_inputs_sha256": "bea3d68d6ef6be76f5105a47a7cccaf60a91ef39b359c1853d876cf639d6d11d",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-30",
+      "benchmark": "textcraft",
+      "seed": 111,
+      "task_id": "91479cdab3fd0c11ce7565cdf35859f852f3507fe420c09c76a05041f94b496d",
+      "depth": 3,
+      "initial_inputs_sha256": "55383c84cb4f374af9238bbcdc3d220208346bedfc650aed86e2767839d202b5",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-31",
+      "benchmark": "textcraft",
+      "seed": 291,
+      "task_id": "373367013cae0ecc5c1d478ad34ba7f2cb5e0085d64a023082f56a4a38539928",
+      "depth": 2,
+      "initial_inputs_sha256": "73ef3d1b4c86119da0e6b84a62d26abf5e81c45f878f58bc3a0a55fc1673437a",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-32",
+      "benchmark": "textcraft",
+      "seed": 107,
+      "task_id": "9c208b38aba1014f6e22308ba3dd327e7820b236496273db5c7146f95d057488",
+      "depth": 3,
+      "initial_inputs_sha256": "299c62e34394640a60be3bfaf610e9a115e47247e66dc73863e4f6a695cb3c4c",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-33",
+      "benchmark": "textcraft",
+      "seed": 127,
+      "task_id": "6ad51e9b064afb78c17a63ee46d9cc61e9cb1585a47ffeca9723c49922c7702c",
+      "depth": 2,
+      "initial_inputs_sha256": "173519a72570da84f452067977905563dcac6a54d198c316140939f5952de63e",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-34",
+      "benchmark": "textcraft",
+      "seed": 95,
+      "task_id": "a48e87ae7c38d180eb7f74a4d125a56f301b71bb9b4255279fa4a3f09d3ced13",
+      "depth": 3,
+      "initial_inputs_sha256": "d2662a76fe340e521a72ed180ea8abee1ee0465548f28ba1ff92d8178946a900",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-35",
+      "benchmark": "textcraft",
+      "seed": 77,
+      "task_id": "70916f32da79d7401b442909cfee450ffba7a4376ee5f42a11fbe94269b3977a",
+      "depth": 3,
+      "initial_inputs_sha256": "b5c30a5dcccc713cdefa50672a7ddce55b6f0a4f86842231a070c50f36b72960",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    },
+    {
+      "key": "textcraft-retest-36",
+      "benchmark": "textcraft",
+      "seed": 86,
+      "task_id": "7788f042b45f400a977fac6f4dab5f7c91d2de5a26d7ef3d7c33502ffcd10b74",
+      "depth": 3,
+      "initial_inputs_sha256": "76c2a06bdc9d6c7f8d693bf35a31a16d49c6eb4a2d66627247daaff8bc6992c6",
+      "variants": [
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only",
+        "feedback"
+      ]
+    },
+    {
+      "key": "textcraft-retest-37",
+      "benchmark": "textcraft",
+      "seed": 317,
+      "task_id": "046d9da3fa798dcfe93ca9f0aea35831f944e9f8cefac456b21a27bb6dadb5bc",
+      "depth": 2,
+      "initial_inputs_sha256": "212c3cabc5bf242b56371861098bd2f58b646e4b3093bcdee28705daac9b0abb",
+      "variants": [
+        "raw_actor",
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands"
+      ]
+    },
+    {
+      "key": "textcraft-retest-38",
+      "benchmark": "textcraft",
+      "seed": 337,
+      "task_id": "0a7bb3ff662645e856a6857cc49c496175421976ef039b1a26619a880c590ba5",
+      "depth": 2,
+      "initial_inputs_sha256": "9e6d78605c6f7ed5a7cccb68f6306e1900ab20bd1695e56b84db33a4ad2c74b6",
+      "variants": [
+        "grounding_only",
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor"
+      ]
+    },
+    {
+      "key": "textcraft-retest-39",
+      "benchmark": "textcraft",
+      "seed": 220,
+      "task_id": "e61254c1750159d9c37434163608f4ac14c1ca113463f28aa06843f7775ff4eb",
+      "depth": 2,
+      "initial_inputs_sha256": "30de237364ba1325214dd77f9258d1404b42e508248fd8aa382ac3b86a957673",
+      "variants": [
+        "feedback",
+        "feedback_open_commands",
+        "raw_actor",
+        "grounding_only"
+      ]
+    }
+  ]
+}

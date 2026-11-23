@@ -1,0 +1,5 @@
+# Recorded direct runtime versions; not a complete transitive lock.
+pydantic==2.14.2
+numpy==2.5.4
+textcraft==0.0.3
+gymnasium==1.4.0

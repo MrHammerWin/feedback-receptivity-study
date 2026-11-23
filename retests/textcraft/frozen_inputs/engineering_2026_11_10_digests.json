@@ -1,0 +1,13 @@
+{
+  "role": "engineering_2026_11_10",
+  "coverage_verified": true,
+  "visibility": "goal-digests-only; private coverage evidence is not distributed",
+  "source_file_field": "Compatibility field: availability marker, not an original source path.",
+  "rows": [
+    {
+      "phase": "engineering_2026_11_10",
+      "source_file": "private-record-not-distributed",
+      "task_id": "026327a4c661338d8025b9137e5243ee683600649d4fc3c68e7e0950416d8083"
+    }
+  ]
+}

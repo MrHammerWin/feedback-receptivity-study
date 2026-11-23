@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "campaign": "textcraft-open-commands-retest",
+  "status": "closed",
+  "reason": "planned_study_complete",
+  "opened_at_utc": "2026-11-22T19:04:35.311494+00:00",
+  "first_reserved_launch_at_utc": "2026-11-22T19:04:35.565100+00:00",
+  "last_reserved_launch_at_utc": "2026-11-23T00:55:48.817327+00:00",
+  "last_episode_written_at_utc": "2026-11-23T00:56:00.701607+00:00",
+  "closed_at_utc": "2026-11-23T00:59:10.066819+00:00",
+  "closed_at_source": "checkpoint_file_mtime",
+  "benchmark": "textcraft",
+  "textcraft_version": "0.0.3",
+  "backend": "chatgpt_subscription",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "paid_api_calls": 0,
+  "authorized_launches": 5120,
+  "reserved_physical_launches": 2724,
+  "physical_launch_outcomes": 2724,
+  "unspent_launches": 2396,
+  "call_outcomes_without_errors": 2724,
+  "call_outcomes_with_complete_telemetry": 2724,
+  "goal_count": 40,
+  "variants": [
+    "feedback",
+    "feedback_open_commands",
+    "grounding_only",
+    "raw_actor"
+  ],
+  "planned_episodes": 160,
+  "completed_episodes": 160,
+  "episode_status_counts": {
+    "success": 124,
+    "episode_compute_cap": 36
+  },
+  "episode_call_cap": 32,
+  "max_observed_episode_calls": 32,
+  "episode_calls": 2724,
+  "episode_calls_by_variant": {
+    "feedback_open_commands": 686,
+    "raw_actor": 417,
+    "grounding_only": 686,
+    "feedback": 935
+  },
+  "stop_after": 0,
+  "executed_source_sha256": "d03d898cc15f86ea6f01fa9ffe17f041bc9339a1792ce98d829d55cd62a1da08",
+  "historical_campaign": {
+    "reserved_launches": 4416,
+    "authorized_launches": 5000,
+    "status": "closed"
+  },
+  "evidence_scope": "Reported closure counters; private authorization and model-call logs are not distributed."
+}

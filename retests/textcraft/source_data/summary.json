@@ -1,0 +1,148 @@
+{
+  "campaign": "textcraft-open-commands-retest",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "paid_api": false,
+  "episodes": 160,
+  "goals": 40,
+  "episode_call_cap": 32,
+  "physical_starts": 2724,
+  "launch_limit": 5120,
+  "statuses": {
+    "success": 124,
+    "episode_compute_cap": 36
+  },
+  "first_launch_utc": "2026-11-22T19:04:35.565100+00:00",
+  "last_launch_utc": "2026-11-23T00:55:48.817327+00:00",
+  "manifest_sha256": "f34c5c929e10b27a0ad6bc7976497803f6b6696c3e6e9ccaed5fa0e9e635fc18",
+  "audit_sha256": "52edee2371638810daf9d3bdf75a53cc9cdcd381f00eabd19d99946d2934b144",
+  "physical_ledger_sha256": "8156788a630d04c64876e06501eace0e1866ea03eefbba7d70a6542ae498871d",
+  "per_arm": {
+    "feedback": {
+      "success": {
+        "count": 21,
+        "total": 40,
+        "rate": 0.525
+      },
+      "calls": 935,
+      "mean_calls": 23.375,
+      "commands": 370,
+      "rejected": {
+        "count": 185,
+        "total": 370,
+        "rate": 0.5
+      },
+      "unrecognized": {
+        "count": 177,
+        "total": 370,
+        "rate": 0.4783783783783784
+      },
+      "complete_probe_pairs": 60,
+      "both_probes_passed": 59
+    },
+    "feedback_open_commands": {
+      "success": {
+        "count": 32,
+        "total": 40,
+        "rate": 0.8
+      },
+      "calls": 686,
+      "mean_calls": 17.15,
+      "commands": 305,
+      "rejected": {
+        "count": 10,
+        "total": 305,
+        "rate": 0.03278688524590164
+      },
+      "unrecognized": {
+        "count": 0,
+        "total": 305,
+        "rate": 0.0
+      },
+      "complete_probe_pairs": 23,
+      "both_probes_passed": 21
+    },
+    "grounding_only": {
+      "success": {
+        "count": 34,
+        "total": 40,
+        "rate": 0.85
+      },
+      "calls": 686,
+      "mean_calls": 17.15,
+      "commands": 325,
+      "rejected": {
+        "count": 12,
+        "total": 325,
+        "rate": 0.036923076923076927
+      },
+      "unrecognized": {
+        "count": 0,
+        "total": 325,
+        "rate": 0.0
+      },
+      "complete_probe_pairs": 0,
+      "both_probes_passed": 0
+    },
+    "raw_actor": {
+      "success": {
+        "count": 37,
+        "total": 40,
+        "rate": 0.925
+      },
+      "calls": 417,
+      "mean_calls": 10.425,
+      "commands": 417,
+      "rejected": {
+        "count": 51,
+        "total": 417,
+        "rate": 0.1223021582733813
+      },
+      "unrecognized": {
+        "count": 0,
+        "total": 417,
+        "rate": 0.0
+      },
+      "complete_probe_pairs": 0,
+      "both_probes_passed": 0
+    }
+  },
+  "paired_new_instruction_vs": {
+    "feedback": {
+      "n": 40,
+      "a_only": 12,
+      "b_only": 1,
+      "difference": 0.275,
+      "interval95": [
+        0.0016478603124399083,
+        0.487408838278012
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.00341796875
+    },
+    "grounding_only": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 2,
+      "difference": -0.05,
+      "interval95": [
+        -0.18811899971333995,
+        0.0995413000938612
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.5
+    },
+    "raw_actor": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 5,
+      "difference": -0.125,
+      "interval95": [
+        -0.28923022953668254,
+        0.06873976837890827
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.0625
+    }
+  }
+}

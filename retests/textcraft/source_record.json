@@ -1,0 +1,42 @@
+{
+  "base_public_commit": "759323d42b412f90145190bbfc3a07fb8041a891",
+  "documentation_commit": "7eeba726947d44919abb197adaeb717130cc3bbf",
+  "executed_source_sha256": "d03d898cc15f86ea6f01fa9ffe17f041bc9339a1792ce98d829d55cd62a1da08",
+  "frozen_source_files": {
+    "__init__.py": "b4f9835cc903942d63c35406d118badf45e03f05d883fd4514ce8f31fa6dd1f7",
+    "ablations.py": "daed3ac748aa883233ab4c21815fb612f51df65dde9e38862e30ba8b218318e7",
+    "agents.py": "22a95a95365378729777a9bfe3c6ed0ba9e19aeed628dd675ccf956b5863182f",
+    "codex_provider.py": "df320dd65d5aba7d71ff177b20b81c6d327d2b122dd7cd7c45d4af0c4e30bfd3",
+    "controller.py": "f3bff056cd22f715dcc1d6995348be676f3d54fa60006b681ae7bb159c6d9bba",
+    "environments.py": "cd62c463b25fd4b62cf55bd86a4b5657608fd2b98d88bc5b14edd59d6dc9009a",
+    "experiment.py": "a6f183b04a40bcd6d9f1bab51d4943640f6731c9ad5c807b73bfba13aff235e1",
+    "feedback_control.py": "59998ca5ef571201ebc7c79ec6a99bd3eb9799120ac187fb6e10de43a5be6204",
+    "grounding.py": "ab21ce8521d610cec9382de1d05f978a8050a8c9935a09147ab4f0f51cb2e2e8",
+    "providers.py": "500d6f7af5551cc2ad9381d98e35f3b62178f9cb3195646fe3a65569e73d6d54",
+    "public_authorization.py": "a5f96c972dc8c4436c44688c15cee8828f4b136fd83e90816060641715fa9297",
+    "schemas.py": "11ebc5302933b3c194e3f9121ef14af277e7f9ce4095f0d4bc42c80774355255"
+  },
+  "runner_patch_sha256": "26ecf2986e02573601f8e9f31d8786bd9a91df3f551f1d0ad5c9d61690455df2",
+  "recorded_manifest_sha256": "f34c5c929e10b27a0ad6bc7976497803f6b6696c3e6e9ccaed5fa0e9e635fc18",
+  "recorded_private_audit_sha256": "52edee2371638810daf9d3bdf75a53cc9cdcd381f00eabd19d99946d2934b144",
+  "public_redacted_audit_sha256": "d438352b20fd91f891c6493fed3482562d096d18ae7bb6c93848ce9a08817915",
+  "recorded_environment": {
+    "python": "3.12.3",
+    "textcraft": "0.0.3",
+    "pydantic": "2.14.2",
+    "numpy": "2.5.4",
+    "gymnasium": "1.4.0",
+    "codex_cli": "0.147.0",
+    "PYTHONHASHSEED": "0"
+  },
+  "availability": {
+    "own_executed_source": true,
+    "goal_digests_and_numeric_results": true,
+    "raw_dialogues": false,
+    "private_authorization_ledgers": false,
+    "private_pilot_source_exports": false,
+    "original_private_coverage_audit": false,
+    "digital_signature": false
+  },
+  "fresh_replica": "New local copy changes only the campaign identifier in experiment.py. The new source fingerprint must differ from the recorded source. This does not replay model answers or reopen a closed ledger."
+}
