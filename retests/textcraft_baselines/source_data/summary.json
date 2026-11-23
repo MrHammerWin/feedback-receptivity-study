@@ -1,0 +1,520 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-23T20:24:32.472835+00:00",
+  "campaign": "textcraft-published-baselines",
+  "new_variants": [
+    "stateact",
+    "reflact_paper"
+  ],
+  "all_comparable_variants": [
+    "feedback_open_commands",
+    "grounding_only",
+    "raw_actor",
+    "stateact",
+    "reflact_paper"
+  ],
+  "protocol": {
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "episode_call_cap": 32,
+    "action_horizon": 100,
+    "textcraft": "0.0.3",
+    "shared_open_commands_note": true,
+    "published_adapter_calls_per_action": 1,
+    "published_adapter_max_tokens_argument": 1400,
+    "published_adapter_token_cap_caveat": "CLI backend does not enforce that argument as a hard output-token ceiling.",
+    "published_history": "full_history, including complete prior structured responses",
+    "sample_depths": {
+      "2": 20,
+      "3": 20
+    },
+    "new_authorized_launch_limit": 2560
+  },
+  "per_arm": {
+    "feedback_open_commands": {
+      "n": 40,
+      "n_goals": 40,
+      "successes": 32,
+      "success_rate": 0.8,
+      "success_16": 24,
+      "success_at_16": 24,
+      "success_at_32": 32,
+      "success_interval95": [
+        0.6435219813207651,
+        0.9094775906000092
+      ],
+      "logical_calls": 686,
+      "calls": 686,
+      "mean_calls_per_goal": 17.15,
+      "executed_actions": 305,
+      "commands": 305,
+      "explicit_rejections": 10,
+      "rejected": 10,
+      "explicit_rejection_rate_per_executed_action": 0.03278688524590164,
+      "unrecognized_commands": 0,
+      "unrecognized": 0,
+      "unrecognized_rate_per_executed_action": 0.0,
+      "rejection_categories": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 3,
+        "invalid_recipe": 7,
+        "unavailable_get_item": 0,
+        "other_explicit_rejection": 0
+      },
+      "command_outcomes": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 3,
+        "invalid_recipe": 7,
+        "unavailable_get_item": 0,
+        "other_explicit_rejection": 0,
+        "accepted_get": 115,
+        "accepted_craft": 167,
+        "accepted_inventory": 13
+      },
+      "input_tokens": 5351610,
+      "output_tokens": 90640,
+      "cached_input_tokens": 3657600,
+      "cached_input_fraction": 0.6834578752936032,
+      "cached_tokens_are_subset_of_input_tokens": true,
+      "calls_with_complete_token_telemetry": 686,
+      "cache_telemetry_complete": true,
+      "model_seconds": 5494.01510217699,
+      "execution_wall_seconds": 5495.794353936009,
+      "unexecuted_turn_calls": 7,
+      "status_counts": {
+        "success": 32,
+        "episode_compute_cap": 8
+      }
+    },
+    "grounding_only": {
+      "n": 40,
+      "n_goals": 40,
+      "successes": 34,
+      "success_rate": 0.85,
+      "success_16": 23,
+      "success_at_16": 23,
+      "success_at_32": 34,
+      "success_interval95": [
+        0.7016473331604236,
+        0.942897741845474
+      ],
+      "logical_calls": 686,
+      "calls": 686,
+      "mean_calls_per_goal": 17.15,
+      "executed_actions": 325,
+      "commands": 325,
+      "explicit_rejections": 12,
+      "rejected": 12,
+      "explicit_rejection_rate_per_executed_action": 0.036923076923076927,
+      "unrecognized_commands": 0,
+      "unrecognized": 0,
+      "unrecognized_rate_per_executed_action": 0.0,
+      "rejection_categories": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 5,
+        "invalid_recipe": 4,
+        "unavailable_get_item": 3,
+        "other_explicit_rejection": 0
+      },
+      "command_outcomes": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 5,
+        "invalid_recipe": 4,
+        "unavailable_get_item": 3,
+        "other_explicit_rejection": 0,
+        "accepted_get": 119,
+        "accepted_craft": 173,
+        "accepted_inventory": 21
+      },
+      "input_tokens": 5386839,
+      "output_tokens": 103170,
+      "cached_input_tokens": 3744000,
+      "cached_input_fraction": 0.695027269238973,
+      "cached_tokens_are_subset_of_input_tokens": true,
+      "calls_with_complete_token_telemetry": 686,
+      "cache_telemetry_complete": true,
+      "model_seconds": 5741.608557932026,
+      "execution_wall_seconds": 5743.38088775,
+      "unexecuted_turn_calls": 4,
+      "status_counts": {
+        "success": 34,
+        "episode_compute_cap": 6
+      }
+    },
+    "raw_actor": {
+      "n": 40,
+      "n_goals": 40,
+      "successes": 37,
+      "success_rate": 0.925,
+      "success_16": 34,
+      "success_at_16": 34,
+      "success_at_32": 37,
+      "success_interval95": [
+        0.7961352512671009,
+        0.9842578201489585
+      ],
+      "logical_calls": 417,
+      "calls": 417,
+      "mean_calls_per_goal": 10.425,
+      "executed_actions": 417,
+      "commands": 417,
+      "explicit_rejections": 51,
+      "rejected": 51,
+      "explicit_rejection_rate_per_executed_action": 0.1223021582733813,
+      "unrecognized_commands": 0,
+      "unrecognized": 0,
+      "unrecognized_rate_per_executed_action": 0.0,
+      "rejection_categories": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 26,
+        "invalid_recipe": 14,
+        "unavailable_get_item": 11,
+        "other_explicit_rejection": 0
+      },
+      "command_outcomes": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 26,
+        "invalid_recipe": 14,
+        "unavailable_get_item": 11,
+        "other_explicit_rejection": 0,
+        "accepted_get": 134,
+        "accepted_craft": 194,
+        "accepted_inventory": 38
+      },
+      "input_tokens": 3296884,
+      "output_tokens": 67618,
+      "cached_input_tokens": 2298240,
+      "cached_input_fraction": 0.6970945899218778,
+      "cached_tokens_are_subset_of_input_tokens": true,
+      "calls_with_complete_token_telemetry": 417,
+      "cache_telemetry_complete": true,
+      "model_seconds": 3573.300368487997,
+      "execution_wall_seconds": 3575.352044935994,
+      "unexecuted_turn_calls": 0,
+      "status_counts": {
+        "success": 37,
+        "episode_compute_cap": 3
+      }
+    },
+    "stateact": {
+      "n": 40,
+      "n_goals": 40,
+      "successes": 38,
+      "success_rate": 0.95,
+      "success_16": 34,
+      "success_at_16": 34,
+      "success_at_32": 38,
+      "success_interval95": [
+        0.8308031360405823,
+        0.9938863534006492
+      ],
+      "logical_calls": 399,
+      "calls": 399,
+      "mean_calls_per_goal": 9.975,
+      "executed_actions": 399,
+      "commands": 399,
+      "explicit_rejections": 38,
+      "rejected": 38,
+      "explicit_rejection_rate_per_executed_action": 0.09523809523809523,
+      "unrecognized_commands": 0,
+      "unrecognized": 0,
+      "unrecognized_rate_per_executed_action": 0.0,
+      "rejection_categories": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 15,
+        "invalid_recipe": 5,
+        "unavailable_get_item": 18,
+        "other_explicit_rejection": 0
+      },
+      "command_outcomes": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 15,
+        "invalid_recipe": 5,
+        "unavailable_get_item": 18,
+        "other_explicit_rejection": 0,
+        "accepted_get": 107,
+        "accepted_craft": 184,
+        "accepted_inventory": 70
+      },
+      "input_tokens": 3788511,
+      "output_tokens": 49622,
+      "cached_input_tokens": 1952640,
+      "cached_input_fraction": 0.5154109358531623,
+      "cached_tokens_are_subset_of_input_tokens": true,
+      "calls_with_complete_token_telemetry": 399,
+      "cache_telemetry_complete": true,
+      "model_seconds": 3288.169281428001,
+      "execution_wall_seconds": 3306.4027131079997,
+      "unexecuted_turn_calls": 0,
+      "status_counts": {
+        "success": 38,
+        "episode_compute_cap": 2
+      }
+    },
+    "reflact_paper": {
+      "n": 40,
+      "n_goals": 40,
+      "successes": 39,
+      "success_rate": 0.975,
+      "success_16": 35,
+      "success_at_16": 35,
+      "success_at_32": 39,
+      "success_interval95": [
+        0.8684141415172342,
+        0.9993672550679507
+      ],
+      "logical_calls": 378,
+      "calls": 378,
+      "mean_calls_per_goal": 9.45,
+      "executed_actions": 378,
+      "commands": 378,
+      "explicit_rejections": 42,
+      "rejected": 42,
+      "explicit_rejection_rate_per_executed_action": 0.1111111111111111,
+      "unrecognized_commands": 0,
+      "unrecognized": 0,
+      "unrecognized_rate_per_executed_action": 0.0,
+      "rejection_categories": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 20,
+        "invalid_recipe": 14,
+        "unavailable_get_item": 8,
+        "other_explicit_rejection": 0
+      },
+      "command_outcomes": {
+        "unrecognized_command": 0,
+        "recipe_parse_failure": 0,
+        "insufficient_items": 20,
+        "invalid_recipe": 14,
+        "unavailable_get_item": 8,
+        "other_explicit_rejection": 0,
+        "accepted_get": 129,
+        "accepted_craft": 197,
+        "accepted_inventory": 10
+      },
+      "input_tokens": 3049498,
+      "output_tokens": 50108,
+      "cached_input_tokens": 1860480,
+      "cached_input_fraction": 0.6100938580710661,
+      "cached_tokens_are_subset_of_input_tokens": true,
+      "calls_with_complete_token_telemetry": 378,
+      "cache_telemetry_complete": true,
+      "model_seconds": 3027.711295957993,
+      "execution_wall_seconds": 3035.570367547,
+      "unexecuted_turn_calls": 0,
+      "status_counts": {
+        "success": 39,
+        "episode_compute_cap": 1
+      }
+    }
+  },
+  "paired_vs_feedback_at32": {
+    "stateact": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 6,
+      "difference": -0.15,
+      "interval95": [
+        -0.3199900466107456,
+        0.05489848477638848
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.03125,
+      "a": "feedback_open_commands",
+      "b": "stateact",
+      "cutoff": 32,
+      "difference_direction": "FeedbackAgent minus published baseline",
+      "both_success": 32,
+      "both_failure": 2,
+      "p_holm_family4": 0.09375
+    },
+    "reflact_paper": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 7,
+      "difference": -0.175,
+      "interval95": [
+        -0.3497581802998809,
+        0.03991257108268664
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.015625,
+      "a": "feedback_open_commands",
+      "b": "reflact_paper",
+      "cutoff": 32,
+      "difference_direction": "FeedbackAgent minus published baseline",
+      "both_success": 32,
+      "both_failure": 1,
+      "p_holm_family4": 0.0625
+    }
+  },
+  "paired_vs_feedback_at16": {
+    "stateact": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 10,
+      "difference": -0.25,
+      "interval95": [
+        -0.43440291638594186,
+        -0.010259537485156955
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.001953125,
+      "a": "feedback_open_commands",
+      "b": "stateact",
+      "cutoff": 16,
+      "difference_direction": "FeedbackAgent minus published baseline",
+      "both_success": 24,
+      "both_failure": 6
+    },
+    "reflact_paper": {
+      "n": 40,
+      "a_only": 0,
+      "b_only": 11,
+      "difference": -0.275,
+      "interval95": [
+        -0.46133785038210207,
+        -0.028380357072931406
+      ],
+      "interval_method": "conservative exact discordant-cell Bonferroni",
+      "mcnemar_exact_two_sided_p": 0.0009765625,
+      "a": "feedback_open_commands",
+      "b": "reflact_paper",
+      "cutoff": 16,
+      "difference_direction": "FeedbackAgent minus published baseline",
+      "both_success": 24,
+      "both_failure": 5
+    }
+  },
+  "published_family4_primary_caps": {
+    "definition": "FeedbackAgent versus StateAct and ReflAct in ALFWorld at64 and TextCraft at32; four tests, Holm correction.",
+    "members": [
+      {
+        "benchmark": "alfworld",
+        "a": "feedback",
+        "b": "stateact",
+        "cutoff": 64,
+        "n": 12,
+        "p": 0.5,
+        "p_holm_family4": 1.0
+      },
+      {
+        "benchmark": "alfworld",
+        "a": "feedback",
+        "b": "reflact_paper",
+        "cutoff": 64,
+        "n": 12,
+        "p": 0.5,
+        "p_holm_family4": 1.0
+      },
+      {
+        "benchmark": "textcraft",
+        "a": "feedback_open_commands",
+        "b": "stateact",
+        "cutoff": 32,
+        "n": 40,
+        "p": 0.03125,
+        "p_holm_family4": 0.09375
+      },
+      {
+        "benchmark": "textcraft",
+        "a": "feedback_open_commands",
+        "b": "reflact_paper",
+        "cutoff": 32,
+        "n": 40,
+        "p": 0.015625,
+        "p_holm_family4": 0.0625
+      }
+    ],
+    "cutoff16_is_secondary_unadjusted": true
+  },
+  "new_two_arm_totals": {
+    "episodes": 80,
+    "goals": 40,
+    "successes": 77,
+    "logical_calls": 777,
+    "executed_actions": 777,
+    "input_tokens": 6838009,
+    "output_tokens": 99730,
+    "cached_input_tokens": 3813120
+  },
+  "all_five_selected_totals": {
+    "episodes": 200,
+    "goals": 40,
+    "successes": 180,
+    "logical_calls": 2566,
+    "executed_actions": 1824,
+    "explicit_rejections": 153,
+    "unrecognized_commands": 0,
+    "input_tokens": 20873342,
+    "output_tokens": 361158,
+    "cached_input_tokens": 13512960,
+    "model_seconds": 21124.80460598301,
+    "execution_wall_seconds": 21156.500367277004
+  },
+  "dates": {
+    "baseline_run_created_at_utc": "2026-11-23T18:31:56.004545+00:00",
+    "baseline_first_reserved_launch_at_utc": "2026-11-23T18:31:56.236497+00:00",
+    "baseline_last_reserved_launch_at_utc": "2026-11-23T20:19:00.118245+00:00",
+    "baseline_last_episode_written_at_utc": "2026-11-23T20:19:07.888348+00:00",
+    "baseline_closed_at_utc": "2026-11-23T20:19:42.181014+00:00",
+    "previous_run_created_at_utc": "2026-11-22T19:04:35.311494+00:00",
+    "previous_last_episode_written_at_utc": "2026-11-23T00:56:00.701607+00:00",
+    "previous_closed_at_utc": "2026-11-23T00:59:10.066819+00:00",
+    "basis": "Dates are copied from run metadata and existing closure receipts; no new closure operation performed."
+  },
+  "interpretation": [
+    "FeedbackAgent solved32 goals; StateAct38 and ReflAct39. FeedbackAgent solved no goal missed by either published adapter at32.",
+    "At32 exact unadjusted p-values are .03125 and .015625. The retained four-comparison Holm family gives .09375 and .0625.",
+    "The conservative exact Bonferroni intervals and McNemar tests are different constructions. An interval can include zero when the unadjusted McNemar p-value is below .05.",
+    "At16 StateAct solved34 and ReflAct35, versus FeedbackAgent24. These are secondary cutoffs.",
+    "All five arms share40 goals and initial public inputs. The two published arms were generated in a later batch; a shared cloud model alias does not guarantee identical frozen weights across dates.",
+    "Cached input tokens are part of input tokens. Backend prompt caching is not reuse of a previous model response. No response replay was observed.",
+    "Command rejection rates use executed environment actions as denominator. Within-goal actions are dependent; rates are descriptive, not independent Bernoulli trials.",
+    "These are same-backbone adaptations with JSON transport and common environment rules, not unchanged authors original systems or proof of SOTA."
+  ],
+  "per_episode_schema_note": "Rows contain identifiers, categorical status and numerical metrics only. No actions, prompts, environment prose or model replies.",
+  "recorded_private_validation": {
+    "new_episodes": 80,
+    "new_successes": 77,
+    "new_budget_exhaustions": 3,
+    "matched_distinct_goals": 40,
+    "new_physical_launches": 777,
+    "new_logical_calls": 777,
+    "new_model_call_rows": 777,
+    "launches_unique_contiguous": true,
+    "new_model_error_rows": 0,
+    "new_backend_failure_rows": 0,
+    "new_replayed_rows": 0,
+    "all_inputs_match_frozen_manifest_and_previous_arms": true,
+    "all_backgrounds_match_after_shared_note_removal": true,
+    "previous_numeric_csv_matches_all_160_source_episodes": true,
+    "per_episode_tokens_match_backend_receipts": true,
+    "new_source_fingerprint_matches": true,
+    "new_paid_api": false,
+    "new_telemetry_complete_calls": 777,
+    "new_closure_receipt_matches_result_hashes": true,
+    "closure_files_changed_by_this_audit": false
+  },
+  "verification_scope": "Public CSV recomputes at32 and basic prior metrics, plus detailed new-arm telemetry. Prior at16 vectors and detailed old-arm telemetry are not contained in the older public CSV; their private audit is not re-executed.",
+  "source_hashes": {
+    "manifest_sha256": "f34c5c929e10b27a0ad6bc7976497803f6b6696c3e6e9ccaed5fa0e9e635fc18",
+    "paired_statistics_sha256": "50271d76b4c9753ac2c562002671b30a10dc9b4389f1a521dc3b6c0bc2aa3602",
+    "previous_numeric_csv_sha256": "777686b6692c762f23da8e1111d3245ebe879dbe2fb8dbbfacc5f95e3d1c2a5d",
+    "new_numeric_csv_sha256": "e171dd0fc538063f944315ca17535ca9c6123db8251aad1ebfef1893abef0d6e",
+    "new_source_fingerprint_sha256": "cc1a9b304f20fac8e741fed36b6891c7fd8b2617038f230aaffeace1c81d4a05",
+    "new_episode_set_sha256_filename_then_bytes": "9b545e495aafcca9d7c5a23a30b4673b5d97b25def984dd48edeee6c0acc77c7",
+    "baseline_closure_receipt_sha256": "7beb2760af3fa13e10865951bfdae5845ea9a2ea02f01b85cee782629b03193d",
+    "alfworld_paired_csv_sha256": "77816b889d56b757fc50563713f526d3e35f5009d1e6f4cb8683d821d2016add"
+  },
+  "original_private_stats_sha256": "7e47633e4dab85ece915bc97a511dd03c20184e6702faaae4af89920b0fedec7"
+}

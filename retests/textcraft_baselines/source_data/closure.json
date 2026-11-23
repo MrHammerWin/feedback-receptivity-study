@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "campaign": "textcraft-published-baselines",
+  "status": "closed",
+  "reason": "planned_study_complete",
+  "opened_at_utc": "2026-11-23T18:31:56.004545+00:00",
+  "first_reserved_launch_at_utc": "2026-11-23T18:31:56.236497+00:00",
+  "last_reserved_launch_at_utc": "2026-11-23T20:19:00.118245+00:00",
+  "last_episode_written_at_utc": "2026-11-23T20:19:07.888348+00:00",
+  "closed_at_utc": "2026-11-23T20:19:42.181014+00:00",
+  "benchmark": "textcraft",
+  "textcraft_version": "0.0.3",
+  "backend": "chatgpt_subscription",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "paid_api_calls": 0,
+  "authorized_launches": 2560,
+  "reserved_physical_launches": 777,
+  "physical_launch_outcomes": 777,
+  "unspent_launches": 1783,
+  "goal_count": 40,
+  "variants": [
+    "stateact",
+    "reflact_paper"
+  ],
+  "completed_episodes": 80,
+  "planned_episodes": 80,
+  "episode_status_counts": {
+    "success": 77,
+    "episode_compute_cap": 3
+  },
+  "episode_call_cap": 32,
+  "max_observed_episode_calls": 32,
+  "call_outcome_error_counts": {
+    "none": 777
+  },
+  "call_outcomes_with_complete_telemetry": 777,
+  "executed_source_sha256": "cc1a9b304f20fac8e741fed36b6891c7fd8b2617038f230aaffeace1c81d4a05",
+  "paired_design_sha256": "893d1de87c0e9a2340f84dd4bf0cb70a73ea2c0080535dd19efeaf3da8b9a50f",
+  "stop_after": 0,
+  "evidence_scope": "Recorded closure counters; no private ledgers or model responses are distributed."
+}

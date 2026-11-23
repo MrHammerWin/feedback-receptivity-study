@@ -1,0 +1,176 @@
+diff --git a/src/crmn_agent/experiment.py b/src/crmn_agent/experiment.py
+index 6a373b4..c090c59 100644
+--- a/src/crmn_agent/experiment.py
++++ b/src/crmn_agent/experiment.py
+@@ -1,4 +1,4 @@
+-"""Frozen TextCraft retest with per-step checkpoints and a distinct launch ledger."""
++"""Published TextCraft baselines on the 40 frozen retest goals."""
+ import argparse
+ import hashlib
+ import importlib.metadata
+@@ -12,6 +12,7 @@ from datetime import UTC, datetime
+ from pathlib import Path
+ from zipfile import ZipFile
+ 
++from .asset_download import resolve_assets
+ from .environments import OPEN_COMMANDS_NOTE, make_env
+ from .providers import (
+     BackendTransportError,
+@@ -20,13 +21,17 @@ from .providers import (
+     ModelOutputError,
+ )
+ from .public_authorization import RESOURCE_PROFILES
++from .published_baselines import PublishedAgent
+ 
+ 
+-VARIANTS = ('feedback', 'feedback_open_commands', 'grounding_only', 'raw_actor')
+-CAMPAIGN = 'textcraft-open-commands-retest'
+-LIMIT = 5120
++VARIANTS = ('stateact', 'reflact_paper')
++RETEST_VARIANTS = ('feedback', 'feedback_open_commands', 'grounding_only', 'raw_actor')
++CAMPAIGN = 'textcraft-published-baselines'
++LIMIT = 2560
+ EPISODE_CAP = 32
+ MODEL = 'gpt-5.6-luna'
++RETEST_MANIFEST_SHA256 = 'f34c5c929e10b27a0ad6bc7976497803f6b6696c3e6e9ccaed5fa0e9e635fc18'
++RETEST_AUDIT_SHA256 = '52edee2371638810daf9d3bdf75a53cc9cdcd381f00eabd19d99946d2934b144'
+ PUBLISHED_PLAN_SHA256 = 'fea3c727a5b6fe439f9455f09d5f34f76cd600544caef6dd82d381d032de798e'
+ PILOT_ROLES = {'prior_main', 'pilot_2026_11_08', 'engineering_2026_11_10', 'early_crmn_reconciled'}
+ SHA256 = re.compile(r'[0-9a-f]{64}')
+@@ -45,7 +50,7 @@ def initial_inputs_sha256(env, obs):
+     return sha256(json.dumps(inputs, ensure_ascii=False, separators=(',', ':')).encode('utf-8'))
+ 
+ 
+-def validate_design(tasks):
++def validate_design(tasks, variants=VARIANTS):
+     if not isinstance(tasks, list) or len(tasks) != 40:
+         raise ValueError('Exactly forty distinct TextCraft goals are required')
+     keys, ids = set(), set()
+@@ -55,7 +60,7 @@ def validate_design(tasks):
+                 or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,100}', key)
+                 or key in keys or task_id in ids or not SHA256.fullmatch(task_id)
+                 or not SHA256.fullmatch(task['initial_inputs_sha256'])
+-                or sorted(task['variants']) != sorted(VARIANTS)):
++                or sorted(task['variants']) != sorted(variants)):
+             raise ValueError('Invalid TextCraft task, duplicate goal/key or unapproved variant order')
+         keys.add(key)
+         ids.add(task_id)
+@@ -131,6 +136,29 @@ def verify_pilot_audit(audit_path, manifest_hash, selected_ids):
+     return sha256(path.read_bytes())
+ 
+ 
++def load_study(manifest_path, audit_path):
++    content = Path(manifest_path).read_bytes()
++    manifest_hash = sha256(content)
++    if manifest_hash != RETEST_MANIFEST_SHA256:
++        raise ValueError('The approved frozen 40-goal manifest is required')
++    original = json.loads(content)['tasks']
++    ids = validate_design(original, RETEST_VARIANTS)
++    audit_hash = verify_pilot_audit(audit_path, manifest_hash, ids)
++    if audit_hash != RETEST_AUDIT_SHA256:
++        raise ValueError('The approved frozen pilot audit is required')
++    counts = {2: 0, 3: 0}
++    tasks = []
++    # Preserve the original goal order and alternate the first baseline within each depth.
++    for row in original:
++        depth = row['depth']
++        order = VARIANTS if counts[depth] % 2 == 0 else VARIANTS[::-1]
++        counts[depth] += 1
++        tasks.append({**row, 'variants': list(order)})
++    if counts != {2: 20, 3: 20} or validate_design(tasks) != ids:
++        raise ValueError('The paired baseline design must retain all forty approved goals')
++    return tasks, manifest_hash, audit_hash
++
++
+ def check_provider(config):
+     provider = config['provider']
+     expected = {
+@@ -164,8 +192,9 @@ def check_provider(config):
+ 
+ 
+ def start_env(task, variant):
+-    return make_env('textcraft', 'default', task['seed'],
+-                    {'textcraft_open_commands_note': variant != 'feedback'})
++    if variant not in VARIANTS:
++        raise ValueError('Only StateAct and ReflAct can run in this campaign')
++    return make_env('textcraft', 'default', task['seed'], {'textcraft_open_commands_note': True})
+ 
+ 
+ def verified_observation(env, task, variant):
+@@ -173,10 +202,9 @@ def verified_observation(env, task, variant):
+     if (env.task_id != task['task_id'] or env.task_id != sha256(obs.mission.encode('utf-8'))
+             or initial_inputs_sha256(env, obs) != task['initial_inputs_sha256']):
+         raise ValueError(f'Frozen TextCraft inputs differ for {task["key"]} / {variant}')
+-    note = OPEN_COMMANDS_NOTE if variant != 'feedback' else ''
+-    if obs.background.startswith(OPEN_COMMANDS_NOTE) != bool(note):
+-        raise ValueError('TextCraft note was applied to the wrong comparison arm')
+-    return obs, obs.background.removeprefix(note) if note else obs.background
++    if not obs.background.startswith(OPEN_COMMANDS_NOTE):
++        raise ValueError('Both baselines must receive the shared TextCraft command note')
++    return obs, obs.background.removeprefix(OPEN_COMMANDS_NOTE)
+ 
+ 
+ def preflight_tasks(tasks):
+@@ -212,19 +240,6 @@ def fingerprint():
+     return digest.hexdigest()
+ 
+ 
+-def build_agent(provider, variant):
+-    if variant == 'raw_actor':
+-        from .ablations import DraftOnlyAgent
+-        return DraftOnlyAgent(provider, history_turns=100)
+-    if variant not in VARIANTS:
+-        raise ValueError('Unknown TextCraft retest variant')
+-    from .feedback_control import FeedbackAgent
+-    grounding = variant == 'grounding_only'
+-    return FeedbackAgent(provider, history_turns=100, revision_only=True,
+-                         probe_policy='never' if grounding else 'on_revision',
+-                         gate_mode='grounding_only' if grounding else 'controlled')
+-
+-
+ def run(config_path):
+     config_path = Path(config_path)
+     config = read_json(config_path)
+@@ -233,20 +248,20 @@ def run(config_path):
+     if (os.environ.get('PYTHONHASHSEED') != '0' or sys.implementation.name != 'cpython'
+             or sys.flags.hash_randomization != 0):
+         raise ValueError('Set PYTHONHASHSEED=0 before starting CPython')
+-    manifest_path = Path(config['manifest'])
+-    tasks = read_json(manifest_path)['tasks']
+-    manifest_hash = sha256(manifest_path.read_bytes())
+-    audit_hash = verify_pilot_audit(config['pilot_audit'], manifest_hash, validate_design(tasks))
++    tasks, manifest_hash, audit_hash = load_study(config['manifest'], config['pilot_audit'])
++    design_hash = sha256(json.dumps(tasks, sort_keys=True, separators=(',', ':')).encode('utf-8'))
+     provider_config, output = check_provider(config)
+     packages = {name: importlib.metadata.version(name) for name in ('pydantic', 'numpy', 'textcraft', 'gymnasium')}
+     if packages['textcraft'] != '0.0.3':
+         raise ValueError('TextCraft 0.0.3 is required for the retest')
++    resolve_assets()
+     bases = preflight_tasks(tasks)
+     source_hash = fingerprint()
+     output.mkdir(parents=True, exist_ok=True)
+     record_path = output / 'run.json'
+     config_hash = sha256(config_path.read_bytes())
+     identity = {'config_sha256': config_hash, 'source_sha256': source_hash, 'manifest_sha256': manifest_hash,
++                'baseline_design_sha256': design_hash,
+                 'pilot_audit_sha256': audit_hash, 'packages': packages, 'python_version': sys.version,
+                 'initial_base_backgrounds': bases}
+     if record_path.exists():
+@@ -258,7 +273,7 @@ def run(config_path):
+             raise ValueError('A new, empty results directory is required')
+         dump(record_path, {'created_at': datetime.now(UTC).isoformat(), 'config': config,
+                            **identity, 'paid_api': False, 'episode_call_cap': EPISODE_CAP,
+-                           'variants': VARIANTS, 'comparison': 'TextCraft open-command instruction retest'})
++                           'variants': VARIANTS, 'comparison': 'Published scaffold adapters on the frozen TextCraft goals'})
+     snapshot = output / 'source_snapshot.zip'
+     if not snapshot.exists():
+         with ZipFile(snapshot, 'w') as zipped:
+@@ -285,7 +300,7 @@ def run(config_path):
+                 obs, background = verified_observation(env, task, variant)
+                 if sha256(background.encode('utf-8')) != bases[task['key']]:
+                     raise ValueError('The actual episode background differs from its verified starting frame')
+-                agent = build_agent(provider, variant)
++                agent = PublishedAgent(provider, variant, task['benchmark'], task['task_id'])
+                 episode = {'key': task['key'], 'benchmark': task['benchmark'], 'seed': task['seed'],
+                            'task_id': env.task_id, 'variant': variant, 'protocol': env.protocol,
+                            'initial_inputs_sha256': task['initial_inputs_sha256'],

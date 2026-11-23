@@ -1,0 +1,71 @@
+{
+  "schema_version": "runtime-baseline-sources-v1",
+  "stateact": {
+    "repository": "https://github.com/ai-nikolai/StateAct",
+    "commit": "8fb47be6f5f3978a38726608ae347987341f1d82",
+    "raw_prefix": "https://raw.githubusercontent.com/ai-nikolai/StateAct/8fb47be6f5f3978a38726608ae347987341f1d82/",
+    "paper": "https://aclanthology.org/2025.realm-1.27/",
+    "alfworld_runner": "alfworld_runs/alfworld_run.py",
+    "textcraft_runner": "textcraft_runs/run_textcraft_adapt.py",
+    "alfworld_sources": {
+      "clean": "alfworld_runs/prompts/alfworld_prompts_utils_v4_clean_base.py",
+      "cool": "alfworld_runs/prompts/alfworld_prompts_utils_v4_cool_base.py",
+      "examine": "alfworld_runs/prompts/alfworld_prompts_utils_v4_examine_base.py",
+      "heat": "alfworld_runs/prompts/alfworld_prompts_utils_v4_heat_base.py",
+      "put": "alfworld_runs/prompts/alfworld_prompts_utils_v4_put_base.py",
+      "puttwo": "alfworld_runs/prompts/alfworld_prompts_utils_v4_puttwo_base.py"
+    },
+    "families": [
+      "clean",
+      "cool",
+      "examine",
+      "heat",
+      "put",
+      "puttwo"
+    ],
+    "keys": [
+      "goal",
+      "locations_visited",
+      "current_location",
+      "current_inventory",
+      "thought",
+      "action"
+    ],
+    "prompt_ids": [
+      1,
+      0
+    ],
+    "source_sha256": {
+      "alfworld_runs/alfworld_run.py": "1d6c6594fb48e07d2dffd24ca72f575084d256bcbd78d403dc58928a1c1dd72c",
+      "textcraft_runs/run_textcraft_adapt.py": "2dfa42afc860c69c34a77bf147b5e386244eb0547c028cab655f4fe41997ba1f",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_clean_base.py": "5b53bdc302519f6a86cfa60c70831a4997d8e977a7298deb7c609a186821568f",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_cool_base.py": "fb6b64bc16ca03a335cfaae04efbc1d85ebe8013e434db11e23767e448eff86d",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_examine_base.py": "f8ad2dfe091908626b39e7101cc648c4d17b8d6a2e70adac1ae10cf37f0adcfe",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_heat_base.py": "fbb08b8a7a15bfcfd6c95ab4c55f3383ad1b3d671c633011b3db0946a868e95a",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_put_base.py": "b08b6a714beecb00329d893df13cb90a70f2f816d629848e226760243cbc2e9d",
+      "alfworld_runs/prompts/alfworld_prompts_utils_v4_puttwo_base.py": "72fbd15e6ba5429737aebc851cc4e90a8e545e7847947623e78ec65b600de474"
+    },
+    "license_status": "No license file identified at pinned repository tree; no upstream prompt/code assets bundled."
+  },
+  "reflact": {
+    "paper": "https://aclanthology.org/2025.emnlp-main.1697/",
+    "url": "https://arxiv.org/html/2505.15182v2",
+    "version": "2505.15182v2",
+    "provenance": "No official standalone repository located in primary article or searches; paper-based reproduction, not official-code reproduction",
+    "license_status": "Paper snapshot states arXiv perpetual non-exclusive licence; paper/prompts are not redistributed."
+  },
+  "assets": {
+    "reflact_alfworld_clean_example.txt": "8faac7575f636f9dab6b4639dfd5e7b161a4e02cad96a35a53a2bb2cd183fa9a",
+    "reflact_alfworld_instruction.txt": "53d3ed4e06743f9fdbb6eeb3b91fd9023aa866b110e91d9901297b1319c2b484",
+    "reflact_alfworld_put_example.txt": "2d2ed34a710a3df6cc9ab88fb7bd6fb651402e028fabe9a80e86f7f2c3b66552",
+    "reflact_core_instruction.txt": "3ca4c98c7f2901cc9ef68ee96afb3dc7c222af3f249e5b3fa78fcdbe21e3dbf5",
+    "stateact_alfworld_clean_system.txt": "6acbc9e5624f05caa28df7081afdef332a2ae525f9599a69bd9f6de7cf088cbf",
+    "stateact_alfworld_cool_system.txt": "70009bdfd86e7c4c54014667149b4d049023268c7139df0434ed360677a2c458",
+    "stateact_alfworld_examine_system.txt": "47de99360234a683e8eb76fc67ed451111f1a9b7c94f2cfc3ec3cabd92ae80f4",
+    "stateact_alfworld_heat_system.txt": "af1f3ffc45b90c22aec38b52b715e31ecf5562a1871b5ff4ae4ab30501a94b71",
+    "stateact_alfworld_put_system.txt": "887bcec444f10b09101ee1ee86047b159aec7f27da4fe404edfa66a690cd37d7",
+    "stateact_alfworld_puttwo_system.txt": "97afb77cb6238789d48b1610e86e734efc2a372e52a5635472039cf3e9e0309e",
+    "stateact_textcraft_environment_context.txt": "0fdd106cd12ebeaf73815776a8c471ca86624eb1a1b710c798d54283f4972339",
+    "stateact_textcraft_system.txt": "024f4fda68e802c0e93fbd2ff9b42c0400181190f747e351c6f07cb95365e9ae"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format": "textcraft-baselines-public-v1",
+  "files": {
+    "prepare_replica.py": "44566d03e0e4f85b40ff33f12648aa6ef157cb79498859781bc2f5e9cea535a6",
+    "README_RU.md": "fa81db48133e518a88d7e7aad61060fbf272be3f4dd8b3230e4365d77195847b",
+    "runner.patch": "54ce9269cd89952106340c430f2929c93bdd2ddc8ce17828a51797f6e082dd05",
+    "source_data/closure.json": "075c3d213e7d209682934c1a4621716823679fc8043d0f5b8a7106b43d304c30",
+    "source_data/episodes.csv": "e171dd0fc538063f944315ca17535ca9c6123db8251aad1ebfef1893abef0d6e",
+    "source_data/prior_episodes.csv": "a329387b1978588e87e36fd5de536564d00b513c0815124d3d7dc020173ba84f",
+    "source_data/summary.json": "5b959a09922853feba63cb88578cbfad99a521e65f9eca8a5f94d6722b8422c1",
+    "source_delta/asset_download.py": "8e6f2006e14f6d7f3b40132bc616967d91b59df963e039486be60231558e7f46",
+    "source_delta/baseline_sources.json": "77be6c18267953937bad6d3e1a368dfc3ab534b6e037d26f07a770460f6aa4b8",
+    "source_delta/experiment.py": "c0b0a9779034f4168733876c88ee29866ba6def08e605bff40e51e7d66fd8279",
+    "source_delta/published_baselines.py": "df89fe1c1a6791670149099b5865c67742f13b60b59a367f3439a6a437917803",
+    "source_record.json": "e32f1fd8530ed7913e88727e023069b9a0019fa33ae981bf2c056a288624f8a5",
+    "verify_numeric.py": "0df051c12174f643228bda6a67becdf2fadc8abd41984e3d79d49b2aaf96eedd"
+  }
+}
