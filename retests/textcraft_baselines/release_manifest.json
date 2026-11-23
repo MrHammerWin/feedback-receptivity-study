@@ -2,7 +2,7 @@
   "format": "textcraft-baselines-public-v1",
   "files": {
     "prepare_replica.py": "44566d03e0e4f85b40ff33f12648aa6ef157cb79498859781bc2f5e9cea535a6",
-    "README_RU.md": "fa81db48133e518a88d7e7aad61060fbf272be3f4dd8b3230e4365d77195847b",
+    "README_RU.md": "1c7da07b191d1f6ad03f92b15a5ebf89ff8eaec8534938369ab6df70311549f7",
     "runner.patch": "54ce9269cd89952106340c430f2929c93bdd2ddc8ce17828a51797f6e082dd05",
     "source_data/closure.json": "075c3d213e7d209682934c1a4621716823679fc8043d0f5b8a7106b43d304c30",
     "source_data/episodes.csv": "e171dd0fc538063f944315ca17535ca9c6123db8251aad1ebfef1893abef0d6e",

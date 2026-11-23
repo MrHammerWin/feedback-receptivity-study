@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.23622pt" height="328.818898pt" viewBox="0 0 510.23622 328.818898" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-22T20:43:19.721836</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>FeedbackAgent illustrative example</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 328.818898 
+L 510.23622 328.818898 
+L 510.23622 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 21.940157 105.222047 
+L 488.296063 105.222047 
+Q 492.377953 105.222047 492.377953 102.591496 
+L 492.377953 50.309291 
+Q 492.377953 47.67874 488.296063 47.67874 
+L 21.940157 47.67874 
+Q 17.858268 47.67874 17.858268 50.309291 
+L 17.858268 102.591496 
+Q 17.858268 105.222047 21.940157 105.222047 
+z
+" clip-path="url(#pe43a51dd84)" style="fill: #ffffff; stroke: #9da4aa; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 21.940157 246.614173 
+L 243.382677 246.614173 
+Q 247.464567 246.614173 247.464567 243.983622 
+L 247.464567 152.24315 
+Q 247.464567 149.612598 243.382677 149.612598 
+L 21.940157 149.612598 
+Q 17.858268 149.612598 17.858268 152.24315 
+L 17.858268 243.983622 
+Q 17.858268 246.614173 21.940157 246.614173 
+z
+" clip-path="url(#pe43a51dd84)" style="fill: #ffffff; stroke: #0072b2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 266.853543 246.614173 
+L 488.296063 246.614173 
+Q 492.377953 246.614173 492.377953 243.983622 
+L 492.377953 152.24315 
+Q 492.377953 149.612598 488.296063 149.612598 
+L 266.853543 149.612598 
+Q 262.771654 149.612598 262.771654 152.24315 
+L 262.771654 243.983622 
+Q 262.771654 246.614173 266.853543 246.614173 
+z
+" clip-path="url(#pe43a51dd84)" style="fill: #ffffff; stroke: #0072b2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 134.645185 246.869859 
+Q 183.685999 253.190675 231.839724 259.397155 
+" clip-path="url(#pe43a51dd84)" style="fill: none; stroke: #0072b2; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 228.499356 257.151729 
+L 231.839724 259.397155 
+L 228.039162 260.722194 
+z
+" clip-path="url(#pe43a51dd84)" style="fill: #0072b2; stroke: #0072b2; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 375.591036 246.869859 
+Q 326.550221 253.190675 278.396496 259.397155 
+" clip-path="url(#pe43a51dd84)" style="fill: none; stroke: #0072b2; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 282.197058 260.722194 
+L 278.396496 259.397155 
+L 281.736865 257.151729 
+z
+" clip-path="url(#pe43a51dd84)" style="fill: #0072b2; stroke: #0072b2; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="20.409449" y="18.313992" transform="rotate(-0 20.409449 18.313992)">Условный пример: ключ в закрытой коробке</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="20.409449" y="34.71064" transform="rotate(-0 20.409449 34.71064)">Цель: взять ключ. Черновик: «открой коробку».</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="62.646027" transform="rotate(-0 30.614173 62.646027)">Текст игры</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="79.73666" transform="rotate(-0 30.614173 79.73666)">The box is closed</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="93.837885" transform="rotate(-0 30.614173 93.837885)">The key is inside</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="265.322835" y="62.688684" transform="rotate(-0 265.322835 62.688684)">Основное замечание критика</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="265.322835" y="78.391894" transform="rotate(-0 265.322835 78.391894)">«сразу возьми ключ»</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="265.322835" y="93.878901" transform="rotate(-0 265.322835 93.878901)">Цитата критика: The box is closed</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="255.11811" y="121.833429" transform="rotate(-0 255.11811 121.833429)">Два отдельных запроса к модели</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="255.11811" y="136.685514" transform="rotate(-0 255.11811 136.685514)">Основное замечание и черновик в пробы не входят.</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="164.592464" transform="rotate(-0 30.614173 164.592464)">Проба 1: исправить искажённую строку</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="180.026423" transform="rotate(-0 30.614173 180.026423)">Источник: The box is closed</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="194.211321" transform="rotate(-0 30.614173 194.211321)">Строка: The box is open</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="208.984656" transform="rotate(-0 30.614173 208.984656)">Совет пробы: «Верни исходную строку»</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="30.614173" y="230.60179" transform="rotate(-0 30.614173 230.60179)">Ожидаемый ответ: The box is closed</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="275.527559" y="164.592464" transform="rotate(-0 275.527559 164.592464)">Проба 2: сохранить верную строку</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="275.527559" y="180.026423" transform="rotate(-0 275.527559 180.026423)">Источник: The box is closed</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="275.527559" y="194.211321" transform="rotate(-0 275.527559 194.211321)">Строка: The box is closed</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="275.527559" y="209.025671" transform="rotate(-0 275.527559 209.025671)">Совет пробы: «Замени closed на open»</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: start" x="275.527559" y="230.60179" transform="rotate(-0 275.527559 230.60179)">Ожидаемый ответ: The box is closed</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="255.11811" y="274.792732" transform="rotate(-0 255.11811 274.792732)">Обе пройдены → основное замечание может попасть в запрос на пересмотр</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="255.11811" y="292.773318" transform="rotate(-0 255.11811 292.773318)">Условия: цитата критика есть в тексте игры; черновик допустим.</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="255.11811" y="312.603624" transform="rotate(-0 255.11811 312.603624)">Полезность основного замечания эти пробы не проверили.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe43a51dd84">
+   <rect x="0" y="0" width="510.23622" height="328.818898"/>
+  </clipPath>
+ </defs>
+</svg>

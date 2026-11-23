@@ -1,5 +1,21 @@
 # Reproduce analysis without model calls
 
+## Current coursework
+
+The four [coursework figures](../figures/coursework) match the Russian manuscript. The quotation example and QA plots are curated SVG exports. The two game charts use the 40-goal TextCraft comparison and the 12-task ALFWorld comparison. They show solved tasks and mean calls per episode.
+
+With the `reports` extra installed, run these commands from the repository root:
+
+```sh
+python -B scripts/verify_scored_data.py --source-data source_data
+python -B retests/textcraft_baselines/verify_numeric.py
+python -B analysis/plot_coursework_games.py --out rebuilt_figures
+```
+
+The first verifier covers the archived QA and native datasets. The coursework uses the QA and ALFWorld rows from them. The second verifier recomputes the current TextCraft comparison at 32 calls from the published numeric rows. The game renderer reads the [TextCraft summary](../retests/textcraft_baselines/source_data/summary.json) and the [ALFWorld rows in the original study summary](../source_data/aggregated_stats.json). It writes `game-success.svg` and `game-calls.svg`.
+
+## Archived analysis
+
 The analysis separates independent questions from policy records, and native tasks from individual game steps. Replaying a saved model response does not create another independent observation.
 
 After installing the `reports` extra, the reviewed numerical release can be checked and plotted from the repository root:

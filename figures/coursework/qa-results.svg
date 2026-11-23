@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.23622pt" height="221.102362pt" viewBox="0 0 510.23622 221.102362" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-17T21:52:17.395353</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>FeedbackAgent frozen-data figure</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 221.102362 
+L 510.23622 221.102362 
+L 510.23622 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 119.905512 154.771654 
+L 280.629921 154.771654 
+L 280.629921 59.697638 
+L 119.905512 59.697638 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mb47d8d0c9b" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="119.905512" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="119.905512" y="166.867845" transform="rotate(-0 119.905512 166.867845)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="200.267717" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="200.267717" y="166.867845" transform="rotate(-0 200.267717 166.867845)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="280.629921" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="280.629921" y="166.867845" transform="rotate(-0 280.629921 166.867845)">100%</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="200.267717" y="178.437181" transform="rotate(-0 200.267717 178.437181)">Доля ответов</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4"/>
+     <g id="text_5">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end" x="110.905512" y="89.114477" transform="rotate(-0 110.905512 89.114477)">FeedbackAgent</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5"/>
+     <g id="text_6">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end" x="110.905512" y="130.468301" transform="rotate(-0 110.905512 130.468301)">Без двух проб</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 119.905512 154.771654 
+L 280.629921 154.771654 
+" style="fill: none; stroke: #000000; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial'; text-anchor: start" x="104.636693" y="39.618546" transform="rotate(-0 104.636693 39.618546)">a</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 119.905512 79.539172 
+L 236.174234 79.539172 
+L 236.174234 93.593591 
+L 119.905512 93.593591 
+z
+" clip-path="url(#pc387403fe7)" style="fill: #0072b2"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="119.905512" y="75.563513" transform="rotate(-0 119.905512 75.563513)">68/94  (72,3%)</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 119.905512 120.8757 
+L 231.044731 120.8757 
+L 231.044731 134.93012 
+L 119.905512 134.93012 
+z
+" clip-path="url(#pc387403fe7)" style="fill: #93989d"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="119.905512" y="116.900041" transform="rotate(-0 119.905512 116.900041)">65/94  (69,1%)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'" transform="translate(119.905512 40.078985)">Ошибочный совет</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'" transform="translate(119.905512 47.697638)">Сохранённые верные ответы</text>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 219.802468 86.566381 
+L 250.205742 86.566381 
+" clip-path="url(#pc387403fe7)" style="fill: none; stroke: #000000; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_6">
+    <defs>
+     <path id="m1b261e5228" d="M 0 2 
+L 0 -2 
+" style="stroke: #000000; stroke-width: 0.7"/>
+    </defs>
+    <g clip-path="url(#pc387403fe7)">
+     <use xlink:href="#m1b261e5228" x="219.802468" y="86.566381" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <g clip-path="url(#pc387403fe7)">
+     <use xlink:href="#m1b261e5228" x="250.205742" y="86.566381" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 214.38209 127.90291 
+L 245.705608 127.90291 
+" clip-path="url(#pc387403fe7)" style="fill: none; stroke: #000000; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_8">
+    <g clip-path="url(#pc387403fe7)">
+     <use xlink:href="#m1b261e5228" x="214.38209" y="127.90291" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_9">
+    <g clip-path="url(#pc387403fe7)">
+     <use xlink:href="#m1b261e5228" x="245.705608" y="127.90291" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_6">
+    <path d="M 326.551181 154.771654 
+L 487.275591 154.771654 
+L 487.275591 59.697638 
+L 326.551181 59.697638 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="326.551181" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="326.551181" y="166.867845" transform="rotate(-0 326.551181 166.867845)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="406.913386" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="406.913386" y="166.867845" transform="rotate(-0 406.913386 166.867845)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mb47d8d0c9b" x="487.275591" y="154.771654" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="487.275591" y="166.867845" transform="rotate(-0 487.275591 166.867845)">100%</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="406.913386" y="178.437181" transform="rotate(-0 406.913386 178.437181)">Доля ответов</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 326.551181 154.771654 
+L 487.275591 154.771654 
+" style="fill: none; stroke: #000000; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial'; text-anchor: start" x="311.282362" y="39.618546" transform="rotate(-0 311.282362 39.618546)">b</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 326.551181 79.539172 
+L 419.276802 79.539172 
+L 419.276802 93.593591 
+L 326.551181 93.593591 
+z
+" clip-path="url(#pb526d7a1f3)" style="fill: #0072b2"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="326.551181" y="75.563513" transform="rotate(-0 326.551181 75.563513)">15/26  (57,7%)</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 326.551181 120.8757 
+L 437.821926 120.8757 
+L 437.821926 134.93012 
+L 326.551181 134.93012 
+z
+" clip-path="url(#pb526d7a1f3)" style="fill: #93989d"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="326.551181" y="116.900041" transform="rotate(-0 326.551181 116.900041)">18/26  (69,2%)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'" transform="translate(326.551181 40.047677)">Правильный совет</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial'" transform="translate(326.551181 47.697638)">Исправленные ошибки</text>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 385.88748 86.566381 
+L 449.742908 86.566381 
+" clip-path="url(#pb526d7a1f3)" style="fill: none; stroke: #000000; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_15">
+    <g clip-path="url(#pb526d7a1f3)">
+     <use xlink:href="#m1b261e5228" x="385.88748" y="86.566381" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <g clip-path="url(#pb526d7a1f3)">
+     <use xlink:href="#m1b261e5228" x="449.742908" y="86.566381" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 404.036992 127.90291 
+L 464.250212 127.90291 
+" clip-path="url(#pb526d7a1f3)" style="fill: none; stroke: #000000; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_17">
+    <g clip-path="url(#pb526d7a1f3)">
+     <use xlink:href="#m1b261e5228" x="404.036992" y="127.90291" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <g clip-path="url(#pb526d7a1f3)">
+     <use xlink:href="#m1b261e5228" x="464.250212" y="127.90291" style="stroke: #000000; stroke-width: 0.7"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="15.307087" y="192.359055" transform="rotate(-0 15.307087 192.359055)">Без двух проб: тот же агент без двух проверок цитаты.</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start" x="15.307087" y="211.152756" transform="rotate(-0 15.307087 211.152756)">Отрезки: точные 95% интервалы для каждой доли.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc387403fe7">
+   <rect x="119.905512" y="59.697638" width="160.724409" height="95.074016"/>
+  </clipPath>
+  <clipPath id="pb526d7a1f3">
+   <rect x="326.551181" y="59.697638" width="160.724409" height="95.074016"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,28 +1,36 @@
-# Feedback receptivity in language agents
+# FeedbackAgent
 
-[Step-by-step Russian setup and run guide](docs/RUNNING_RU.md), including Windows PowerShell for offline use. The subscription backend and full test suite require Linux, macOS or WSL2 because the backend uses the Unix-only `fcntl` module.
+[Описание по-русски](README.ru.md) · [Пошаговая установка и запуск](docs/RUNNING_RU.md)
 
-Research code for a runtime controller that decides how an agent should use criticism of its proposed action. A separate pair of source-quotation tasks checks whether the model can repair an incorrect quotation and preserve a correct quotation when advice is misleading. The controller then admits the critique, passes facts alone, or rebuilds the proposed action.
+FeedbackAgent asks a model to propose an action, then asks the same model in a separate call to review it. When the reviewer requests a change, two small tasks check whether the model corrects a misquote and keeps an exact quote despite bad advice. The controller uses the results to decide whether to show the reviewer’s full note to the model, show only facts, or ask for a new proposal.
 
-The quotation controls measure a narrow ability. Their success does not establish that a critique of a game action is correct. Testing whether that measurement transfers to useful action revision is the research question.
-
-This release includes FeedbackAgent, grounding-only and other ablations, StateAct and ReflAct reproduction adapters, three evaluation settings, reviewed numerical source data, figure code and offline tests. The comparison uses published agent architectures on a shared model; it does not establish current world-leading performance or global priority. The Russian course paper is a separate deliverable.
+The checks use text the agent can see. A correct quote can still support a flawed recommendation. The study tests whether these checks help the agent decide when to follow advice.
 
 ## Recorded study
 
 The held-out question-answering experiment used 120 WAFER-derived questions from 20 topics and five admission policies under correct and misleading advice. Each question had one shared natural initial answer. Correct advice intentionally supplied the dataset target; misleading advice used a different option with a counterargument. This is a modified WAFER protocol, not the benchmark's official score.
 
-Among 94 initially correct answers, the controller retained 68 after misleading advice, compared with 65 for grounding-only: +3.19 percentage points, conservative paired 95% interval −4.05 to +10.00, exact two-sided McNemar p = 0.25. Superiority was not demonstrated. With correct advice, repair was 15/26 versus 18/26; the small natural-error sample makes that endpoint preliminary. The controller used four logical calls per QA case versus two, including the shared initial draft and excluding generation of the externally fixed critique.
+Among 94 initially correct answers, FeedbackAgent kept 68 after misleading advice. The variant that only checked the critic’s quote kept 65. The paired difference was +3.19 percentage points (conservative 95% interval −4.05 to +10.00, exact McNemar p = 0.25). With correct advice, the variants repaired 15 and 18 of 26 initially wrong answers. The results did not establish a benefit from the two extra checks.
 
-All 100 native episodes reached a protocol endpoint: five architectures on each of 12 ALFWorld and eight TextCraft tasks, with no infrastructure-censored outcomes. At the primary cap of 64 logical calls, FeedbackAgent solved 10/12 ALFWorld and 5/8 TextCraft tasks; grounding-only solved 9/12 and 4/8, the raw actor 8/12 and 8/8, and both StateAct and ReflAct adapters 12/12 and 8/8. All 16 unsuccessful episodes exhausted the call cap. The small samples yield wide paired intervals; none excludes zero. These are descriptive transfer checks on a shared backbone, not evidence of current world-SOTA superiority. Additional cutoffs, cost telemetry, routes and task-level results are in `source_data/`.
+Each game variant attempted the same tasks within its environment. In TextCraft, all five received the same explanation of valid commands. The game comparison covers 260 episodes and 4,377 model launches.
 
-The recorded model was `gpt-5.6-luna`, reasoning effort `low`, through Codex CLI 0.147.0 and an explicitly authorized ChatGPT subscription. Paid API calls were disabled. Cloud model names do not provide immutable weight snapshots. Earlier engineering pilots and the other candidate are excluded from the held-out estimates.
+| Agent variant | TextCraft tasks solved (32 calls) | ALFWorld tasks solved (64 calls) |
+| --- | ---: | ---: |
+| FeedbackAgent | 32/40 | 10/12 |
+| Quote check only, no two extra checks | 34/40 | 9/12 |
+| Direct action, no critic | 37/40 | 8/12 |
+| StateAct adapter | 38/40 | 12/12 |
+| ReflAct adapter | 39/40 | 12/12 |
 
-![Controlled QA results](figures/fig2_qa.svg)
+StateAct uses a summary of the current game state to choose the next action. ReflAct uses a short check of progress toward the goal. Both adapters solved more tasks and used fewer calls on average than FeedbackAgent in these samples. The TextCraft comparisons with FeedbackAgent had Holm-adjusted p-values of 0.09375 and 0.0625, respectively. The estimates remain uncertain.
 
-![Native success and paired differences](figures/fig3_native.svg)
+![Solved tasks for five variants in TextCraft and ALFWorld](figures/coursework/game-success.svg)
 
-The controller also used more mean calls and tokens than either published-architecture adapter on both environments. In TextCraft, 60 of its 61 explicit environment rejections were unrecognized phrases instead of game commands. They were model outputs, not programmed fallbacks: an empty enumerated action list coexisted with public open-command rules. This interface behavior limits attribution of the game deficit to the quotation probes alone. [All four figures and reconstruction commands](analysis/README.md).
+![Average model calls per episode in TextCraft and ALFWorld](figures/coursework/game-calls.svg)
+
+[Russian figures and interpretation](README.ru.md#результаты) · [Current TextCraft verification and replication guide](retests/textcraft_baselines/README_RU.md) · [Data and figure provenance](analysis/README.md)
+
+The model was `gpt-5.6-luna` with reasoning effort `low`, accessed via Codex CLI 0.147.0 on an authorized ChatGPT subscription. The study used no paid API. TextCraft runs were collected in separate windows. The model name does not certify that the underlying weights stayed fixed.
 
 ## Offline quick start
 
@@ -37,6 +45,8 @@ python -m pip install -e '.[dev,reports]'
 python examples/offline_demo.py
 python -m pytest -q -p no:cacheprovider
 python tools/check_public_tree.py .
+python -B scripts/verify_scored_data.py --source-data source_data
+python -B retests/textcraft_baselines/verify_numeric.py
 ```
 
 The demo returns a synthetic action and explicitly marks it as a scripted example. It is not a benchmark score. Tests block socket connections to catch accidental network access.
@@ -142,6 +152,8 @@ Exact-request replay is separated from fresh inference. Shared QA caches are sco
 
 ### Use the recorded task selection
 
+This section covers the archived QA and initial game protocols. For the coursework comparison on 40 TextCraft goals and five variants, use the [current TextCraft instructions](retests/textcraft_baselines/README_RU.md). They distinguish the two verified source bundles and describe preparation without inference.
+
 For QA, prepare a full local manifest from the pinned data and check it against the public identifier manifest:
 
 ```sh
@@ -199,7 +211,7 @@ python scripts/verify_scored_data.py --source-data source_data --qa-data local/p
 
 The verifier itself makes no network calls. A mismatched dataset hash is rejected before parsing. Option indices are zero-based; missing or invalid decisions remain null. Presence fields describe parsed Decision records, not proof of a physical server reply. Full raw output provenance and quote scoring still require the locally retained original records. Figure and topic-sensitivity commands are in [analysis/README.md](analysis/README.md). The separate post-hoc quotation audit recombines exactly matched saved responses and publishes its numerical result in `source_data/posthoc_span_replay.json`. Repeating its full hash audit requires the original local logs, scoped cache and compatible frozen agent source; these private inputs are not distributed. It never launches a model and does not measure a new online agent or its inference cost.
 
-`EXPORT_MANIFEST.json` records source and output hashes using relative filenames. `tools/check_public_tree.py` rejects raw study artifacts, baseline assets, machine-specific paths and common credential patterns. Run this export check on a clean release checkout. Ignored local study data and rebuilt binary figures intentionally trigger it; it is not a general working-directory linter or a comprehensive security or licensing certification. The GitHub workflow runs the source audit and offline tests; it never launches models.
+`EXPORT_MANIFEST.json` preserves the hashes from the [original study export](https://github.com/MrHammerWin/feedback-receptivity-study/tree/759323d42b412f90145190bbfc3a07fb8041a891). Each TextCraft package has its own manifest. `tools/check_public_tree.py` checks a clean checkout for raw study artifacts, baseline assets, machine-specific paths and common credential patterns. Keep local study data and rebuilt binary figures outside the tree when running this check. The GitHub workflow runs only offline checks.
 
 ## License and provenance
 

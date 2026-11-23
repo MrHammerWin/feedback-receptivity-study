@@ -21,7 +21,7 @@
     "frozen_runner/src/crmn_agent/public_authorization.py": "a5f96c972dc8c4436c44688c15cee8828f4b136fd83e90816060641715fa9297",
     "frozen_runner/src/crmn_agent/schemas.py": "11ebc5302933b3c194e3f9121ef14af277e7f9ce4095f0d4bc42c80774355255",
     "prepare_replica.py": "99be5de995c60c3b70f27a5def1439e31a6ad65bc178ab62af1f3fdb949ee6cb",
-    "README_RU.md": "f74eac3ca2ee089fc11bfc9c5bd5b718a897d611606773a5a5e080da02e3a08a",
+    "README_RU.md": "cda53c5cb65bfaec5a2f378ea2a6b4bf89c3515877406658560a550f030fd936",
     "requirements-retest.txt": "5cb304f8b1b2a42e307fca21df8a4b2aee917ac943626322ba631a7565f6f411",
     "run_replica.sh": "62fa36c71c3c0c0cc04e2d1ee621ba324af2a4f8a061c5f416531ebb57fec187",
     "runner.patch": "26ecf2986e02573601f8e9f31d8786bd9a91df3f551f1d0ad5c9d61690455df2",

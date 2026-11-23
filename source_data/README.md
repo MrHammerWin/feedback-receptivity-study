@@ -1,5 +1,7 @@
 # Numerical source data
 
+This directory preserves the original QA and native results. The coursework uses its WAFER-derived QA and ALFWorld rows. The [current TextCraft comparison on 40 goals](../retests/textcraft_baselines/README_RU.md) has separate numerical data and a separate verifier.
+
 These files describe the closed `main-v5` study. They contain scored indices, IDs, hashes, counts and resource telemetry. They do not distribute question text, counterarguments, source quotations, model transcripts, credentials or authorization ledgers. Upstream data terms apply separately from the code's MIT licence.
 
 ## Units and filters
